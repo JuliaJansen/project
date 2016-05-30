@@ -1,6 +1,5 @@
 # project proposal
 Julia Jansen
-Programmeerproject, minor programmeren
 
 Doel
 ----
