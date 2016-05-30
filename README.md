@@ -41,7 +41,6 @@ Seperate parts
 1. energiegebruik
 
 2. transport naar werk
-http://appsso.eurostat.ec.europa.eu/nui/show.do
 
 3. afval 
 
@@ -58,18 +57,23 @@ Tot nu is er geen data over energiegebruik van alle steden in europa in één da
 
 Vergelijkbare data/visualisaties
 --------------------------
-* Energiegebruik
+* Energiegebruik:
 http://coolclimate.berkeley.edu/maps
+
 Op deze map zijn per regio de carbon emissions te zien en wanneer je met je muis over een regio beweegt verschijnt een staafdiagram met een specificatie waar die uitstoot uit is opgebouwd. De interactie werkt goed en de kleuren in de staafdiagram maken duidelijk dat het om nominale data gaat. Het is wel jammer dat de samenstelling van de uitstoot van verschillende regio's niet gemakkelijk met elkaar te vergelijken is om dat er maar 1 staafdiagram verschijnt. Het zou interessant zijn als de gebruiker er twee of meerdere aan kan klikken en die dus met elkaar kan vergelijken. Dan wordt inzichtelijker of er voor grote en kleine uitstoters typische verhoudingen zijn in de soort uitstoot of niet. 
 
-* Transport 
+* Transport: 
 http://flowingdata.com/2015/01/20/how-americans-get-to-work/
+
 De visualisatie op bovengenoemde pagina geeft voor de VS weer hoe mensen tussen werk en huis reizen. Door de knoppen bovenaan de pagina kunnen verschillende filters aan en uit worden gezet. Dit geeft de gebruiker goed de mogelijkheid om de data de exploreren naar eigen interesse. Het is niet helemaal duidelijk hoe de kleur wordt bepaald als alle filters aan staan. De pop up (wanneer er over een regio bewogen wordt) geeft echter mooi weer wat de precieze data is. Het zou wel handiger zijn als het mogelijk is om die specificatie van verschillende regio's tegelijkertijd te zien. De kleuren zijn mooi subtiel. 
 
-* Afval
+* Afval: 
 http://www.opendata.rs/visualizations/composition-municipal-waste
+
 Deze visualisatie maakt het onderwerp meteen duidelijk aan de gebruiker door met typische symbolen te werken. De cijfers zijn daardoor wel iets minder goed te interpreteren, maar worden er ook bij vermeld. Het interactieve element van deze visualisatie laat geen extra verbanden in de data zien. Het maakt de afbeelding slechts leesbaarder. 
 
+
 https://data.oecd.org/waste/municipal-waste.htm
+
 Deze data geeft meteen data voor verschillende landen weer waardoor ze goed met elkaar te vergelijken zijn. Het interactieve effect zorgt ervoor dat de focus op één land komt te liggen en geeft exacte waardes weer aan de gebruiker. Ook de vergelijking met het gemiddelde is goed mogelijk omdat die lijn vet zwart wordt weergegeven. De slider onder de grafiek geeft heel mooi de mogelijkheid om de tijdsperiode die wordt weergegeven in de grafiek te veranderen en zo dus ook in te zoomen op een periode die de gebruiker interesseert. Het trekken van lijnen tussen de datapunten wordt wel twijfelachtig als er heel erg wordt ingezoomd (op bijvoorbeeld twee jaren) aangezien het gaat om data per jaar. 
 
