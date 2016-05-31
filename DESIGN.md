@@ -11,20 +11,14 @@ advanced sketches of your UI that clearly explain which features are connected t
 ### Data
 * Energy:  
 eurostat   
--
+_complete energy, gas, oil, heat, solid fuels, waste-consumption, renewable energy, nuclear energy, primary production of energy, energy savings since 2005:  
+
 * Emissions:  
 eurostat  
-- per country. all greenhouse gas emissions  
-
+_per country. all greenhouse gas emissions:  
 http://ec.europa.eu/eurostat/statistics-explained/index.php/Greenhouse_gas_emission_statistics
 
-- per industry and per household:  
-
+_per industry and per household:  
 http://ec.europa.eu/eurostat/statistics-explained/index.php/Greenhouse_gas_emissions_by_industries_and_households
 
 * Waste:  
-
-
-a list of data sources if you will get data from an external source
-
-a list of database tables and fields (and their types) if you will use a database
