@@ -3,9 +3,17 @@ Julia Jansen
 
 #### Sketches  
 see doc folder for the images. They are named 'advanced_nr.png'.
-- advanced 1: lalala  
-- advanced 2: lalala  
-- advanced 3: lalala  
+- 1.0: parallel coordinates met drie assen en voor elk land een lijn. 1 jaar wordt weergegeven en een slider geeft de optie om een ander jaar weer te geven. 
+- 1.1: slider
+- 1.2: option to select several lines, following values on (one of) te axes.  
+
+- 2.0: wanneer een land is aangeklikt, volgt een barchart onder de parallel coordinates met data over de jaren (jaren op x-as). Stacked bars zodat de specificatie in verschillende categoriën duidelijk wordt:  
+http://bl.ocks.org/mbostock/3943967  
+met een menu om te switchen tussen energy use/emissions/waste.  
+- 2.1: menu om te kiezen tussen data die moet worden weergegeven.
+- 2.2: menu te kiezen tussen stacked of grouped bars
+
+- 3.0: landen uitlichten?
 
 advanced sketches of your UI that clearly explain which features are connected to which underlying part of the code
 
