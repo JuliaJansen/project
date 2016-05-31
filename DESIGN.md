@@ -1,19 +1,19 @@
 # DESIGN
 Julia Jansen
 
-###### Sketches  
-see doc folder for the images. They are named 'advanced_nr.png'.  
+#### Sketches  
+see doc folder for the images. They are named 'advanced_nr.png'.
 - advanced 1: lalala  
 - advanced 2: lalala  
 - advanced 3: lalala  
 
 advanced sketches of your UI that clearly explain which features are connected to which underlying part of the code
 
-###### Plugins
+#### Plugins
 * d3.js
 * bootstrap
 
-###### Data
+#### Data
 * Energy:  
 eurostat   
 _complete energy, gas, oil, heat, solid fuels, waste-consumption, renewable energy, nuclear energy, primary production of energy, energy savings since 2005:  
