@@ -1,0 +1,22 @@
+# Julia Jansen
+# Process book programmeerproject
+
+#### Day 2:  
+* Data  
+Helaas is er over steden in Europa nauwelijks centraal data te vinden over energie verbruik. Dit betekent dat ik voorlopig bij een vergelijking tussen landen blijf. Mijn verhaal "steden als voorlopers voor verduurzaming" is daarmee wel verdwenen. Vandaar na wat data zoeken en bekijken van meer visualisaties een kleine verandering qua insteek.  
+
+De nadruk in het verhaal komt nu te liggen op energieverbruik van alle landen in Europa aan de ene kant. Daarbij wil ik ook laten zien hoe het energieverbruik per land verdeeld is over verschillende bronnen en natuurlijk de focus leggen op een vergelijking tussen renewable energies en de rest.  
+
+Het verhaal gaat vervolgens de link leggen naar waar het verbruik van energie uiteeeeeindelijk toe leidt: uitstoot van broeikasgassen en afval generatie. Vandaag heb ik alle data gevonden voor deze drie onderwerpen. Voor de uitstoot heb ik data per land en verder gespecificeerd per economische activiteit. Zie voor meer achtergrondinformatie om in het verhaal te verwerken nog een keer hier: http://ec.europa.eu/eurostat/statistics-explained/index.php/Greenhouse_gas_emissions_by_industries_and_households. 
+
+De data over afval in europa heb ik per land in kilotonnen en verder gespecificeerd per economische activiteit en per soort afval. Ik weet nog niet of ik alles daarvan zal gebruiken. 
+
+* Advanced sketches  
+Parallel coordinates met drie assen en voor elk land een lijn. 1 jaar wordt weergegeven en een slider geeft de optie om een ander jaar weer te geven. 
+
+Wanneer een land is aangeklikt:  
+Een barchart met data over de jaren (jaren op x-as). Stacked bars zodat de specificatie in verschillende categoriën duidelijk wordt:  
+http://bl.ocks.org/mbostock/3943967  
+met een menu om te switchen tussen energy use/emissions/waste. 
+
+#### Day 3:  
