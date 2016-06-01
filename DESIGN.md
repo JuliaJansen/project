@@ -1,21 +1,45 @@
 # DESIGN
 Julia Jansen
 
-#### Sketches  
-see doc folder for the images. They are named 'advanced_nr.png'.
-- 1.0: parallel coordinates met drie assen en voor elk land een lijn. 1 jaar wordt weergegeven en een slider geeft de optie om een ander jaar weer te geven. 
-- 1.1: slider
-- 1.2: option to select several lines, following values on (one of) te axes.  
+### Sketches  
 
-- 2.0: wanneer een land is aangeklikt, volgt een barchart onder de parallel coordinates met data over de jaren (jaren op x-as). Stacked bars zodat de specificatie in verschillende categoriën duidelijk wordt:  
+#### Page 1:  
+![](doc/page_1.png)
+This is the first thing the user will see. Underneath the title a short description will follow of the story: "what goes in, what comes out". From energy to problematic outcomes: (carbon) emissions and waste.  
+
+Under the banner, the three topics are briefly defined: how are these concepts approached in this visualisation.  
+
+C L I C K on the downwards pointing triangle at the bottom of the page and the whole layout changes to page 2.  
+
+#### Page 2:   
+![](doc/page_2_new.png)   
+
+On this page two graphs are shown. 
+GRAPH 1 = A parallel coordinates graph shows a line for each county of Europe and connects their values on three axes:
+* use of Energy / capita. Value in thousand tonnes of oil equivalent.
+* greenhouse gas emissions / capita. Value in tonnes CO2 equivalent. 
+* waste generation / capita. Value in tonnes.  
+The European Average is displayed as a thick black line. Some explanation aobut the graph is offered next to the graph. Also the invitation to click on a line to see more specific information. 
+
+###### Interactivity  
+__On hover__ over a line that line becomes thicker and changes color. Also, a tooltip shows up close to every ax that contains the exact data for that subject and that country.  When a line is clicked, graph 2 is changed according to country specific data.
+__The slider__ offers the opportunity to change the year that is displayed. 
+
+GRAPH 2 = A bar graph
+The default data for this graph is the European average. The user can choose by using buttons to either show energy use data, emission data or waste generation data. Also, the user can choose if the bars show the data stacked (all specific categories on top of each other) or grouped (one bar for each sub-topic). For example, energy are divided in different energy sources and waste generation can be specified by type of waste. The emissions are be specified by economic activity. 
+
+###### Interactivity  
+__on hover__ a tooltip is shown for the bar which one hovers over.
+__buttons__ the user can choose a topic by clicking buttons. The graph title will change according to the topic. 
+
+Sketch for grouped bars:  
+![](doc/page_2_grouped.png)
+
+Example of grouped/stacked bars:  
 http://bl.ocks.org/mbostock/3943967  
-met een menu om te switchen tussen energy use/emissions/waste.  
-- 2.1: menu om te kiezen tussen data die moet worden weergegeven.
-- 2.2: menu te kiezen tussen stacked of grouped bars
 
-- 3.0: landen uitlichten?
+##### Page 3: 
 
-advanced sketches of your UI that clearly explain which features are connected to which underlying part of the code
 
 #### Plugins
 * d3.js
