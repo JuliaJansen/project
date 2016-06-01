@@ -1,7 +1,7 @@
 # project proposal
 Julia Jansen
 
-Doel
+### Doel
 ----
 
 Steden zijn de cruciale factor om de klimaatverandering te verminderen! In deze visualisatie wil ik van (enkele) steden twee beelden tegenover elkaar zetten. BAD en GOOD gedrag wanneer het gaat om verschillende oorzaken van klimaatverandering en het verder ontwikkelen daarvan. 
