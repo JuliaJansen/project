@@ -12,22 +12,22 @@ C L I C K on the downwards pointing triangle at the bottom of the page and the w
 #### Page 2:   
 ![](doc/page_2_new.png)   
 
-On this page two graphs are shown.   
-GRAPH 1 = A parallel coordinates graph shows a line for each county of Europe and connects their values on three axes:
+On this page two graphs are shown.  
+*GRAPH 1* = A parallel coordinates graph shows a line for each county of Europe and connects their values on three axes:
 * use of Energy / capita. Value in thousand tonnes of oil equivalent.
 * greenhouse gas emissions / capita. Value in tonnes CO2 equivalent. 
 * waste generation / capita. Value in tonnes.  
 The European Average is displayed as a thick black line. Some explanation aobut the graph is offered next to the graph. Also the invitation to click on a line to see more specific information. 
 
-###### Interactivity  
+###### Interactivity
 __*on hover*__ over a line that line becomes thicker and changes color. Also, a tooltip shows up close to every ax that contains the exact data for that subject and that country.  When a line is clicked, graph 2 is changed according to country specific data.  
 __*the slider*__ offers the opportunity to change the year that is displayed. 
 
-GRAPH 2 = A bar graph
+*GRAPH 2* = A bar graph
 The default data for this graph is the European average. The user can choose by using buttons to either show energy use data, emission data or waste generation data. Also, the user can choose if the bars show the data stacked (all specific categories on top of each other) or grouped (one bar for each sub-topic). For example, energy are divided in different energy sources and waste generation can be specified by type of waste. The emissions are be specified by economic activity. 
 
-###### Interactivity   
-__*on hover*__ a tooltip is shown for the bar which one hovers over.  
+###### Interactivity
+__*on hover*__ a tooltip is shown for the bar which one hovers over.   
 __*buttons*__ the user can choose a topic by clicking buttons. The graph title will change according to the topic. 
 
 Sketch for grouped bars:  
@@ -66,7 +66,7 @@ The data will be formatted from csv to json and then loaded using the d3.json lo
 * folder: scripts  
 > voor elk datafile een python script die de data (ofwel csv ofwel tsv) naar json omzet  
 * folder sources:  
-> * project.js __hierin wordt de data uit json geladen en de functie aangeroepen die de eerste grafiek tekent.
+> * project.js __hierin wordt de data uit json geladen en de functie aangeroepen die de eerste grafiek tekent. De data wordt geladen met de d3 load json functie.
 > * helper_functions.js __hierin worden helper functions gedefinieerd om bijvoorbeeld waardes om te rekenen of kleuren aan datapunten te linken. 
 > * graphic_functions.js __hierin worden de functies beschreven die alle grafieken/tabellen vormen en op de pagina plaatsen.
 > * project.css __style sheet van de webpagina.
