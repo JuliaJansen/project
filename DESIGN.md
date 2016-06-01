@@ -4,13 +4,13 @@ Julia Jansen
 This document presents the design of the visualisation and sets out the underlaying code file structure. The data sources and plugins are listed underneath the sketches.
 
 ### Sketches  
-#### Page 1:  
+#### Tab 1 - Homepage:  
 ![](doc/page_1.png)
 This is the first thing the user will see. Underneath the title a short description will follow of the story: "what goes in, what comes out". From energy to problematic outcomes: (carbon) emissions and waste. Under the banner, the three topics are briefly defined: how are these concepts approached in this visualisation.  
 
 C L I C K on the downwards pointing triangle at the bottom of the page and the whole layout changes to page 2. That is a new tab in the webpage's structure.  
 
-#### Page 2:   
+#### Tab 2:   
 ![](doc/page_2_new.png)   
 
 On this page two graphs are shown.  
@@ -36,7 +36,7 @@ Sketch for grouped bars:
 Example of grouped/stacked bars:  
 http://bl.ocks.org/mbostock/3943967  
 
-##### Page 3: 
+##### Tab 3: 
 Page 3 will show interesting data for a few countries, based on their values for one of the three topics. It is hard to show an example of a specific point of interest now, because visualisations 1 and 2 will show what can be of interest to give some extra focus. I'm thinking of using a Sankey Diagram to emphasize specific flows from energy to either waste or emission for a specific country. Typical big industries in a certain country can for example be the cause of typical data for a country. An example:
 ![](doc/page_4.png)
 
