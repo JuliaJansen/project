@@ -67,7 +67,7 @@ The data will be formatted from csv to json and then loaded using the d3.json lo
 * folder: scripts  
 > voor elk datafile een python script die de data (ofwel csv ofwel tsv) naar json omzet  
 * folder sources:  
-> project.js __hierin wordt de data uit json geladen en de functie aangeroepen die de eerste grafiek tekent. De data wordt geladen met de d3 load json functie.
-> helper_functions.js __hierin worden helper functions gedefinieerd om bijvoorbeeld waardes om te rekenen of kleuren aan datapunten te linken. 
-> graphic_functions.js __hierin worden de functies beschreven die alle grafieken/tabellen vormen en op de pagina plaatsen.
+> project.js __hierin wordt de data uit json geladen en de functie aangeroepen die de eerste grafiek tekent. De data wordt geladen met de d3 load json functie.  
+> helper_functions.js __hierin worden helper functions gedefinieerd om bijvoorbeeld waardes om te rekenen of kleuren aan datapunten te linken.  
+> graphic_functions.js __hierin worden de functies beschreven die alle grafieken/tabellen vormen en op de pagina plaatsen.  
 > project.css __style sheet van de webpagina.
