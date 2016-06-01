@@ -1,8 +1,9 @@
 # DESIGN
 Julia Jansen
 
-### Sketches  
+This document presents the design of the visualisation and sets out the underlaying code file structure. The data sources and plugins are listed underneath the sketches.
 
+### Sketches  
 #### Page 1:  
 ![](doc/page_1.png)
 This is the first thing the user will see. Underneath the title a short description will follow of the story: "what goes in, what comes out". From energy to problematic outcomes: (carbon) emissions and waste. Under the banner, the three topics are briefly defined: how are these concepts approached in this visualisation.  
@@ -19,14 +20,14 @@ On this page two graphs are shown.
 * waste generation / capita. Value in tonnes.  
 The European Average is displayed as a thick black line. Some explanation aobut the graph is offered next to the graph. Also the invitation to click on a line to see more specific information. 
 
-###### Interactivity
+**Interactivity**:
 __*on hover*__ over a line that line becomes thicker and changes color. Also, a tooltip shows up close to every ax that contains the exact data for that subject and that country.  When a line is clicked, graph 2 is changed according to country specific data.  
 __*the slider*__ offers the opportunity to change the year that is displayed. 
 
 *GRAPH 2* = A bar graph
 The default data for this graph is the European average. The user can choose by using buttons to either show energy use data, emission data or waste generation data. Also, the user can choose if the bars show the data stacked (all specific categories on top of each other) or grouped (one bar for each sub-topic). For example, energy are divided in different energy sources and waste generation can be specified by type of waste. The emissions are be specified by economic activity. 
 
-###### Interactivity
+**Interactivity**:
 __*on hover*__ a tooltip is shown for the bar which one hovers over.   
 __*buttons*__ the user can choose a topic by clicking buttons. The graph title will change according to the topic. 
 
