@@ -5,11 +5,9 @@ Julia Jansen
 
 #### Page 1:  
 ![](doc/page_1.png)
-This is the first thing the user will see. Underneath the title a short description will follow of the story: "what goes in, what comes out". From energy to problematic outcomes: (carbon) emissions and waste.  
+This is the first thing the user will see. Underneath the title a short description will follow of the story: "what goes in, what comes out". From energy to problematic outcomes: (carbon) emissions and waste. Under the banner, the three topics are briefly defined: how are these concepts approached in this visualisation.  
 
-Under the banner, the three topics are briefly defined: how are these concepts approached in this visualisation.  
-
-C L I C K on the downwards pointing triangle at the bottom of the page and the whole layout changes to page 2.  
+C L I C K on the downwards pointing triangle at the bottom of the page and the whole layout changes to page 2. That is a new tab in the webpage's structure.  
 
 #### Page 2:   
 ![](doc/page_2_new.png)   
