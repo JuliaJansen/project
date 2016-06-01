@@ -35,7 +35,7 @@ Sketch for grouped bars:
 Example of grouped/stacked bars:  
 http://bl.ocks.org/mbostock/3943967  
 
-##### Tab 3: 
+#### Tab 3: 
 Page 3 will show interesting data for a few countries, based on their values for one of the three topics. It is hard to show an example of a specific point of interest now, because visualisations 1 and 2 will show what can be of interest to give some extra focus. I'm thinking of using a Sankey Diagram to emphasize specific flows from energy to either waste or emission for a specific country. Typical big industries in a certain country can for example be the cause of typical data for a country. An example:
 ![](doc/page_4.png)
 
