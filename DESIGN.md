@@ -14,7 +14,7 @@ C L I C K on the downwards pointing triangle at the bottom of the page and the w
 ![](doc/page_2_new.png)   
 
 On this page two graphs are shown.  
-*GRAPH 1* = A parallel coordinates graph shows a line for each county of Europe and connects their values on three axes:
+GRAPH 1 = A parallel coordinates graph shows a line for each county of Europe and connects their values on three axes:
 * use of Energy / capita. Value in thousand tonnes of oil equivalent.
 * greenhouse gas emissions / capita. Value in tonnes CO2 equivalent. 
 * waste generation / capita. Value in tonnes.  
@@ -24,7 +24,7 @@ The European Average is displayed as a thick black line. Some explanation aobut 
 __*on hover*__ over a line that line becomes thicker and changes color. Also, a tooltip shows up close to every ax that contains the exact data for that subject and that country.  When a line is clicked, graph 2 is changed according to country specific data.  
 __*the slider*__ offers the opportunity to change the year that is displayed. 
 
-*GRAPH 2* = A bar graph
+GRAPH 2 = A bar graph
 The default data for this graph is the European average. The user can choose by using buttons to either show energy use data, emission data or waste generation data. Also, the user can choose if the bars show the data stacked (all specific categories on top of each other) or grouped (one bar for each sub-topic). For example, energy are divided in different energy sources and waste generation can be specified by type of waste. The emissions are be specified by economic activity. 
 
 **Interactivity**:
@@ -37,7 +37,8 @@ Example of grouped/stacked bars:
 http://bl.ocks.org/mbostock/3943967  
 
 ##### Page 3: 
-
+Page 3 will show interesting data for a few countries, based on their values for one of the three topics. It is hard to show an example of a specific point of interest now, because visualisations 1 and 2 will show what can be of interest to give some extra focus. I'm thinking of using a Sankey Diagram to emphasize specific flows from energy to either waste or emission for a specific country. Typical big industries in a certain country can for example be the cause of typical data for a country. An example:
+![](doc/page_4.png)
 
 ### Plugins
 * d3.js
