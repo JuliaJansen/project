@@ -64,6 +64,12 @@ h2 {
   color: #d9d9d9;
 }
 
+/* slider */
+#slider {
+	width: 500px;
+}
+
+/* welcome text */
 #welcometext {
 	text-align: center;
 }
