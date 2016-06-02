@@ -25,7 +25,7 @@ Een parallel coordinates grafiek verbind de scores voor de drie categorieën met
 
 Sketches
 --------
-See design.md
+Zie design.md
 
 
 Seperate parts

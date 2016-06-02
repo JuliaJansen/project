@@ -1,3 +1,5 @@
+/* source: http://sujeetsr.github.io/d3.slider/ */
+
 .d3slider {
   z-index: 2;
   height: 100%;
@@ -10,7 +12,7 @@
 }
 
 .d3slider-rect-value {
-  fill: #006EE3;
+  fill: #004d1a;
   stroke: none;
 }
 
@@ -50,13 +52,13 @@
 }
 
 .dragger rect {
-  fill: #71ACE3;
+  fill: #71ACE3; 
   stroke: none;
   z-index: 3;
 }
 
 .dragger line {
-  stroke: #aa0000;
+  stroke: #001a00;
   fill: none;
 }
 
@@ -66,12 +68,12 @@
 }
 
 .dragger-inner {
-  fill: #B30424;
+  fill: #B30424; /* dark */
   stroke: none;
 }
 
 .min-marker line {
-  stroke: #aa0000;
+  stroke: #001a00; /*red*/
   fill: none;
 }
 
@@ -80,5 +82,4 @@
   pointer-events: all;
   z-index: 1;
 }
-
 

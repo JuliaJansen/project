@@ -6,7 +6,7 @@
  */
 
 window.onload = function() {
-	var slider = d3.slider().min(2004).max(2015).showRange(true).value(2008);
+	var slider = d3.slider().min(2004).max(2015).showRange(true).value(2008).tickFormat(d3.format("d"));
 	d3.select('#slider').call(slider);
 }
 

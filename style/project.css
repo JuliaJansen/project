@@ -64,9 +64,31 @@ h2 {
   color: #d9d9d9;
 }
 
+/* buttons for bargraph */
+#energybutton {
+
+}
+
+#emissionbutton {
+
+}
+
+#wastebutton {
+
+}
+
 /* slider */
 #slider {
 	width: 500px;
+  margin-left: 50px;
+}
+
+#strikingtext {
+  padding-left: 50px;
+}
+
+#toggle {
+  align: right;
 }
 
 /* welcome text */
