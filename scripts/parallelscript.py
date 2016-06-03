@@ -15,27 +15,28 @@ with open('../data/totaleemissie.csv', 'r') as emissie_infile:
 		emissions.append(row)
 
 with open('../data/waste.csv', 'r') as waste_infile:
-	waste_reader = csv.reader(waste_infile, delimiter=',')
+	waste_reader = csv.reader(waste_infile, delimiter=';')
 	for row in waste_reader:
 		waste.append(row)
 
 with open('../data/energy.csv', 'r') as energy_infile:
-	energy_reader = csv.reader(energy_infile, delimiter=',')
+	energy_reader = csv.reader(energy_infile, delimiter=';')
 	for row in energy_reader:
 		energy.append(row)
 
-for element in waste:
-	for thing in energy:
-		if thing[0] ==  element[0] and thing[1] == element[1]:
-			print thing[3]
-
-	for thang in energy:
-		if thang[0] ==  element[0] and thang[1] == element[1]:
-			print thang[3]
+with open('../data/parallelgraph.csv', 'wb') as outfile:
+	writer = csv.writer(outfile)
+	writer.writerow(['TIME', 'GEO', 'ENERGY', 'EMISSIONS', 'WASTE'])
 
 
-	# with open('../data/totaleemissie.csv', 'wb') as outfile:
-	# 	writer = csv.writer(outfile)
-	# 	for i, row in enumerate(reader):
-	# 		if i % 3 == 0:
-	# 			writer.writerow(row)
+	for element in energy:
+		writethis = []
+		for thing in emissions:
+			if thing[0] ==  element[0] and thing[1] == element[1]:
+				element.append(thing[3])
+
+		for thang in waste:
+			if thang[0] ==  element[0] and thang[1] == element[1]:
+				element.append(thang[2])
+
+		writer.writerow(element)
