@@ -1,0 +1,847 @@
+TIME;GEO;UNIT;WASTE
+1992;Australia;Tonnes;12000
+2000;Australia;Tonnes;13200
+2009;Australia;Tonnes;14035
+2011;Australia;Tonnes;14037
+1990;Austria;Tonnes;3204
+1991;Austria;Tonnes;3126
+1992;Austria;Tonnes;3176
+1993;Austria;Tonnes;3341
+1994;Austria;Tonnes;3400
+1995;Austria;Tonnes;3476
+1996;Austria;Tonnes;3845
+1997;Austria;Tonnes;3977
+1998;Austria;Tonnes;3983
+1999;Austria;Tonnes;4171
+2000;Austria;Tonnes;4321
+2001;Austria;Tonnes;4309
+2002;Austria;Tonnes;4589
+2003;Austria;Tonnes;4607
+2004;Austria;Tonnes;4686.7
+2005;Austria;Tonnes;4731.7
+2006;Austria;Tonnes;4932.5
+2007;Austria;Tonnes;4951.1
+2008;Austria;Tonnes;4996.9
+2009;Austria;Tonnes;4921
+2010;Austria;Tonnes;4700.8
+2011;Austria;Tonnes;4806.9
+2012;Austria;Tonnes;4883.3
+2013;Austria;Tonnes;4905.2
+2014;Austria;Tonnes;4832.5
+1990;Belgium;Tonnes;3436
+1995;Belgium;Tonnes;4613
+1996;Belgium;Tonnes;4567
+1997;Belgium;Tonnes;4650
+1998;Belgium;Tonnes;4603
+1999;Belgium;Tonnes;4702
+2000;Belgium;Tonnes;4830
+2001;Belgium;Tonnes;4802
+2002;Belgium;Tonnes;4981
+2003;Belgium;Tonnes;4824
+2004;Belgium;Tonnes;5059
+2005;Belgium;Tonnes;5052
+2006;Belgium;Tonnes;5115
+2007;Belgium;Tonnes;5243
+2008;Belgium;Tonnes;5134
+2009;Belgium;Tonnes;5037
+2010;Belgium;Tonnes;4973
+2011;Belgium;Tonnes;5035
+2012;Belgium;Tonnes;4970
+2013;Belgium;Tonnes;4892
+2014;Belgium;Tonnes;4886
+1994;Czech Republic;Tonnes;2489.8
+1995;Czech Republic;Tonnes;3120
+1996;Czech Republic;Tonnes;3200
+1997;Czech Republic;Tonnes;3280
+1998;Czech Republic;Tonnes;3017
+1999;Czech Republic;Tonnes;3365
+2000;Czech Republic;Tonnes;3434
+2001;Czech Republic;Tonnes;2798
+2002;Czech Republic;Tonnes;2845
+2003;Czech Republic;Tonnes;2857
+2004;Czech Republic;Tonnes;2841
+2005;Czech Republic;Tonnes;2954
+2006;Czech Republic;Tonnes;3039
+2007;Czech Republic;Tonnes;3025
+2008;Czech Republic;Tonnes;3176
+2009;Czech Republic;Tonnes;3310
+2010;Czech Republic;Tonnes;3334
+2011;Czech Republic;Tonnes;3358
+2012;Czech Republic;Tonnes;3233
+2013;Czech Republic;Tonnes;3228.23
+2014;Czech Republic;Tonnes;3260.58
+1994;Denmark;Tonnes;2802.6
+1995;Denmark;Tonnes;2725
+1996;Denmark;Tonnes;3037
+1997;Denmark;Tonnes;2870
+1998;Denmark;Tonnes;2892
+1999;Denmark;Tonnes;3070
+2000;Denmark;Tonnes;3257
+2001;Denmark;Tonnes;3249
+2002;Denmark;Tonnes;3313
+2003;Denmark;Tonnes;3221
+2004;Denmark;Tonnes;3353
+2005;Denmark;Tonnes;3586
+2006;Denmark;Tonnes;3620
+2007;Denmark;Tonnes;3860
+2008;Denmark;Tonnes;4072
+2009;Denmark;Tonnes;3827
+2010;Denmark;Tonnes;3732
+2011;Denmark;Tonnes;4349
+2012;Denmark;Tonnes;4196
+2013;Denmark;Tonnes;4223
+2014;Denmark;Tonnes;4279
+1994;Finland;Tonnes;2100
+1995;Finland;Tonnes;2108.6
+1996;Finland;Tonnes;2100
+1997;Finland;Tonnes;2300
+1998;Finland;Tonnes;2400
+1999;Finland;Tonnes;2500
+2000;Finland;Tonnes;2600
+2001;Finland;Tonnes;2412
+2002;Finland;Tonnes;2384.4
+2003;Finland;Tonnes;2427.9
+2004;Finland;Tonnes;2453.4
+2005;Finland;Tonnes;2505.8
+2006;Finland;Tonnes;2600.1
+2007;Finland;Tonnes;2674.9
+2008;Finland;Tonnes;2768
+2009;Finland;Tonnes;2562
+2010;Finland;Tonnes;2519
+2011;Finland;Tonnes;2719
+2012;Finland;Tonnes;2738
+2013;Finland;Tonnes;2681.55
+2014;Finland;Tonnes;2629.88
+1992;France;Tonnes;27000
+1993;France;Tonnes;27757
+1995;France;Tonnes;28253
+1996;France;Tonnes;28950
+1997;France;Tonnes;29677
+1998;France;Tonnes;30449
+1999;France;Tonnes;30612
+2000;France;Tonnes;31232
+2001;France;Tonnes;32198
+2002;France;Tonnes;32684
+2003;France;Tonnes;31400
+2004;France;Tonnes;32444
+2005;France;Tonnes;33366
+2006;France;Tonnes;33990
+2007;France;Tonnes;34630
+2008;France;Tonnes;34714
+2009;France;Tonnes;34504
+2010;France;Tonnes;34535
+2011;France;Tonnes;35019
+2012;France;Tonnes;34198
+2013;France;Tonnes;33996
+2014;France;Tonnes;33703
+1990;Germany;Tonnes;49857
+1995;Germany;Tonnes;50893.9
+1996;Germany;Tonnes;52544
+1997;Germany;Tonnes;53966
+1998;Germany;Tonnes;53058
+1999;Germany;Tonnes;52373
+2000;Germany;Tonnes;52810
+2001;Germany;Tonnes;52075
+2002;Germany;Tonnes;52772
+2003;Germany;Tonnes;49622
+2004;Germany;Tonnes;48434
+2005;Germany;Tonnes;46555
+2006;Germany;Tonnes;46426
+2007;Germany;Tonnes;47887
+2008;Germany;Tonnes;48367
+2009;Germany;Tonnes;48466
+2010;Germany;Tonnes;49237
+2011;Germany;Tonnes;50237
+2012;Germany;Tonnes;49759
+2013;Germany;Tonnes;49570
+2014;Germany;Tonnes;50064
+1990;Greece;Tonnes;3000
+1992;Greece;Tonnes;3200
+1995;Greece;Tonnes;3200
+1996;Greece;Tonnes;3600
+1997;Greece;Tonnes;3900
+1998;Greece;Tonnes;4082
+1999;Greece;Tonnes;4264
+2000;Greece;Tonnes;4447
+2001;Greece;Tonnes;4559
+2002;Greece;Tonnes;4640.1
+2003;Greece;Tonnes;4710.3
+2004;Greece;Tonnes;4781.5
+2005;Greece;Tonnes;4853
+2006;Greece;Tonnes;4927.1
+2007;Greece;Tonnes;5001.6
+2008;Greece;Tonnes;5077
+2009;Greece;Tonnes;5154
+2010;Greece;Tonnes;5917
+2011;Greece;Tonnes;5586
+2012;Greece;Tonnes;5585
+1990;Hungary;Tonnes;5500
+1995;Hungary;Tonnes;4752
+1996;Hungary;Tonnes;4834
+1997;Hungary;Tonnes;5016
+1998;Hungary;Tonnes;4976
+1999;Hungary;Tonnes;4943
+2000;Hungary;Tonnes;4552
+2001;Hungary;Tonnes;4603
+2002;Hungary;Tonnes;4646
+2003;Hungary;Tonnes;4700
+2004;Hungary;Tonnes;4591.6
+2005;Hungary;Tonnes;4646
+2006;Hungary;Tonnes;4711
+2007;Hungary;Tonnes;4593.5
+2008;Hungary;Tonnes;4553
+2009;Hungary;Tonnes;4312
+2010;Hungary;Tonnes;4033
+2011;Hungary;Tonnes;3809
+2012;Hungary;Tonnes;3988
+2013;Hungary;Tonnes;3738
+2014;Hungary;Tonnes;3795
+1995;Iceland;Tonnes;114
+1996;Iceland;Tonnes;117
+1997;Iceland;Tonnes;120
+1998;Iceland;Tonnes;123
+1999;Iceland;Tonnes;126
+2000;Iceland;Tonnes;130
+2001;Iceland;Tonnes;133
+2002;Iceland;Tonnes;137
+2003;Iceland;Tonnes;140
+2004;Iceland;Tonnes;147
+2005;Iceland;Tonnes;153
+2006;Iceland;Tonnes;171
+2007;Iceland;Tonnes;174
+2008;Iceland;Tonnes;157.17
+2009;Iceland;Tonnes;113.09
+2010;Iceland;Tonnes;97.28
+2011;Iceland;Tonnes;101.99
+2012;Iceland;Tonnes;108.32
+2013;Iceland;Tonnes;111.68
+1995;Ireland;Tonnes;1848.2
+1996;Ireland;Tonnes;1898
+1997;Ireland;Tonnes;2000
+1998;Ireland;Tonnes;2056.7
+1999;Ireland;Tonnes;2168
+2000;Ireland;Tonnes;2278.7
+2001;Ireland;Tonnes;2704
+2002;Ireland;Tonnes;2720.4
+2003;Ireland;Tonnes;2917.9
+2004;Ireland;Tonnes;3000.6
+2005;Ireland;Tonnes;3040.7
+2006;Ireland;Tonnes;3384.6
+2007;Ireland;Tonnes;3397.7
+2008;Ireland;Tonnes;3224.28
+2009;Ireland;Tonnes;2952.98
+2010;Ireland;Tonnes;2846
+2011;Ireland;Tonnes;2823
+2012;Ireland;Tonnes;2692.5
+1990;Italy;Tonnes;20000
+1991;Italy;Tonnes;23200
+1993;Italy;Tonnes;26100
+1995;Italy;Tonnes;25780
+1996;Italy;Tonnes;25960
+1997;Italy;Tonnes;26605
+1998;Italy;Tonnes;26845.7
+1999;Italy;Tonnes;28363.9
+2000;Italy;Tonnes;28958.5
+2001;Italy;Tonnes;29408.9
+2002;Italy;Tonnes;29863.7
+2003;Italy;Tonnes;30035
+2004;Italy;Tonnes;31149.6
+2005;Italy;Tonnes;31668
+2006;Italy;Tonnes;32516
+2007;Italy;Tonnes;32536
+2008;Italy;Tonnes;32461
+2009;Italy;Tonnes;32107
+2010;Italy;Tonnes;32440
+2011;Italy;Tonnes;31386
+2012;Italy;Tonnes;29994
+2013;Italy;Tonnes;29573
+2014;Italy;Tonnes;29655
+1990;Japan;Tonnes;50.256.625
+1991;Japan;Tonnes;51132
+1992;Japan;Tonnes;50902.94
+1993;Japan;Tonnes;51267.9
+1994;Japan;Tonnes;51800
+1995;Japan;Tonnes;52224
+1996;Japan;Tonnes;52908
+1997;Japan;Tonnes;53098
+1998;Japan;Tonnes;53605
+1999;Japan;Tonnes;53699
+2000;Japan;Tonnes;54833
+2001;Japan;Tonnes;54681
+2002;Japan;Tonnes;54199
+2003;Japan;Tonnes;54271
+2004;Japan;Tonnes;53376
+2005;Japan;Tonnes;52720
+2006;Japan;Tonnes;52024
+2007;Japan;Tonnes;50816
+2008;Japan;Tonnes;48106
+2009;Japan;Tonnes;46252
+2010;Japan;Tonnes;45359
+2011;Japan;Tonnes;45430
+2012;Japan;Tonnes;45234
+2013;Japan;Tonnes;44874
+1990;Korea;Tonnes;30646.1
+1991;Korea;Tonnes;33669.8
+1992;Korea;Tonnes;27410
+1993;Korea;Tonnes;22973.1
+1994;Korea;Tonnes;21213.1
+1995;Korea;Tonnes;17438
+1996;Korea;Tonnes;18222.6
+1997;Korea;Tonnes;17481.7
+1998;Korea;Tonnes;16272.8
+1999;Korea;Tonnes;16649.1
+2000;Korea;Tonnes;16949.9
+2001;Korea;Tonnes;17702.1
+2002;Korea;Tonnes;18214.2
+2003;Korea;Tonnes;18518.9
+2004;Korea;Tonnes;18252
+2005;Korea;Tonnes;17665
+2006;Korea;Tonnes;17828
+2007;Korea;Tonnes;18376
+2008;Korea;Tonnes;19006
+2009;Korea;Tonnes;18581
+2010;Korea;Tonnes;17943
+2011;Korea;Tonnes;17861
+2012;Korea;Tonnes;17881
+2013;Korea;Tonnes;17786
+1990;Luxembourg;Tonnes;223.6
+1991;Luxembourg;Tonnes;216.8
+1992;Luxembourg;Tonnes;195.52
+1993;Luxembourg;Tonnes;200.98
+1994;Luxembourg;Tonnes;196.1
+1995;Luxembourg;Tonnes;240.04
+1996;Luxembourg;Tonnes;242.3
+1997;Luxembourg;Tonnes;253.19
+1998;Luxembourg;Tonnes;265.59
+1999;Luxembourg;Tonnes;277.89
+2000;Luxembourg;Tonnes;285.26
+2001;Luxembourg;Tonnes;285.21
+2002;Luxembourg;Tonnes;291.29
+2003;Luxembourg;Tonnes;306.43
+2004;Luxembourg;Tonnes;310.89
+2005;Luxembourg;Tonnes;312.76
+2006;Luxembourg;Tonnes;322.65
+2007;Luxembourg;Tonnes;333.37
+2008;Luxembourg;Tonnes;340.69
+2009;Luxembourg;Tonnes;338.14
+2010;Luxembourg;Tonnes;344.26
+2011;Luxembourg;Tonnes;345.33
+2012;Luxembourg;Tonnes;346.09
+2013;Luxembourg;Tonnes;334.72
+2014;Luxembourg;Tonnes;342.51
+1991;Mexico;Tonnes;21062.33
+1992;Mexico;Tonnes;21967.53
+1993;Mexico;Tonnes;28089.5
+1994;Mexico;Tonnes;29472.4
+1995;Mexico;Tonnes;30509.6
+1996;Mexico;Tonnes;31959.4
+1997;Mexico;Tonnes;29272.4
+1998;Mexico;Tonnes;30550.5
+1999;Mexico;Tonnes;30952
+2000;Mexico;Tonnes;30733
+2001;Mexico;Tonnes;31488.6
+2002;Mexico;Tonnes;32173.6
+2003;Mexico;Tonnes;32915.7
+2004;Mexico;Tonnes;34604
+2005;Mexico;Tonnes;35404.9
+2006;Mexico;Tonnes;36135
+2007;Mexico;Tonnes;36865
+2008;Mexico;Tonnes;37595
+2009;Mexico;Tonnes;38325
+2010;Mexico;Tonnes;40058.75
+2011;Mexico;Tonnes;41062.5
+2012;Mexico;Tonnes;42102.75
+1990;Netherlands;Tonnes;7430
+1991;Netherlands;Tonnes;7470
+1993;Netherlands;Tonnes;8377
+1994;Netherlands;Tonnes;8501
+1995;Netherlands;Tonnes;8337
+1996;Netherlands;Tonnes;8565
+1997;Netherlands;Tonnes;8986
+1998;Netherlands;Tonnes;9069
+1999;Netherlands;Tonnes;9205
+2000;Netherlands;Tonnes;9529
+2001;Netherlands;Tonnes;9550
+2002;Netherlands;Tonnes;9684
+2003;Netherlands;Tonnes;9504
+2004;Netherlands;Tonnes;9746
+2005;Netherlands;Tonnes;9769
+2006;Netherlands;Tonnes;9761
+2007;Netherlands;Tonnes;9922
+2008;Netherlands;Tonnes;9868
+2009;Netherlands;Tonnes;9738
+2010;Netherlands;Tonnes;9484
+2011;Netherlands;Tonnes;9479
+2012;Netherlands;Tonnes;9203
+2013;Netherlands;Tonnes;8842
+2014;Netherlands;Tonnes;8890
+1990;New Zealand;Tonnes;3330
+1995;New Zealand;Tonnes;3180
+2002;New Zealand;Tonnes;3022
+2003;New Zealand;Tonnes;3075
+2004;New Zealand;Tonnes;3186
+2006;New Zealand;Tonnes;3156
+2010;New Zealand;Tonnes;2531
+2011;New Zealand;Tonnes;2461
+2012;New Zealand;Tonnes;2595
+2013;New Zealand;Tonnes;2798
+2014;New Zealand;Tonnes;2931
+1990;Norway;Tonnes;2000
+1992;Norway;Tonnes;2222.8
+1993;Norway;Tonnes;2217
+1994;Norway;Tonnes;2366
+1995;Norway;Tonnes;2722.2
+1996;Norway;Tonnes;2761.2
+1997;Norway;Tonnes;2720.7
+1998;Norway;Tonnes;2858.2
+1999;Norway;Tonnes;2650
+2000;Norway;Tonnes;2755
+2001;Norway;Tonnes;1629
+2002;Norway;Tonnes;1780
+2003;Norway;Tonnes;1836
+2004;Norway;Tonnes;1903
+2005;Norway;Tonnes;1968
+2006;Norway;Tonnes;2140
+2007;Norway;Tonnes;2312
+2008;Norway;Tonnes;2324
+2009;Norway;Tonnes;2269
+2010;Norway;Tonnes;2295
+2011;Norway;Tonnes;2403
+2012;Norway;Tonnes;2392
+2013;Norway;Tonnes;2517.96
+2014;Norway;Tonnes;2175.44
+1990;Poland;Tonnes;11098
+1991;Poland;Tonnes;10638
+1992;Poland;Tonnes;10621
+1993;Poland;Tonnes;10645
+1994;Poland;Tonnes;11015
+1995;Poland;Tonnes;10985
+1996;Poland;Tonnes;11621
+1997;Poland;Tonnes;12183
+1998;Poland;Tonnes;11827
+1999;Poland;Tonnes;12317
+2000;Poland;Tonnes;12226
+2001;Poland;Tonnes;11109
+2002;Poland;Tonnes;10509
+2003;Poland;Tonnes;9925
+2004;Poland;Tonnes;9759
+2005;Poland;Tonnes;12169
+2006;Poland;Tonnes;12235
+2007;Poland;Tonnes;12264
+2008;Poland;Tonnes;12194
+2009;Poland;Tonnes;12053
+2010;Poland;Tonnes;12032
+2011;Poland;Tonnes;12129
+2012;Poland;Tonnes;12084
+2013;Poland;Tonnes;11295
+2014;Poland;Tonnes;10330
+1990;Portugal;Tonnes;3000
+1992;Portugal;Tonnes;3270
+1993;Portugal;Tonnes;3563
+1994;Portugal;Tonnes;3800
+1995;Portugal;Tonnes;3884
+1996;Portugal;Tonnes;4003
+1997;Portugal;Tonnes;4080
+1998;Portugal;Tonnes;4275
+1999;Portugal;Tonnes;4363.6
+2000;Portugal;Tonnes;4531.2
+2001;Portugal;Tonnes;4500.7
+2002;Portugal;Tonnes;4595.15
+2003;Portugal;Tonnes;4692.78
+2004;Portugal;Tonnes;4665.19
+2005;Portugal;Tonnes;4745.18
+2006;Portugal;Tonnes;4898.08
+2007;Portugal;Tonnes;4967.27
+2008;Portugal;Tonnes;5471.84
+2009;Portugal;Tonnes;5496.27
+2010;Portugal;Tonnes;5457.14
+2011;Portugal;Tonnes;5177.78
+2012;Portugal;Tonnes;4765.92
+2013;Portugal;Tonnes;4597.94
+2014;Portugal;Tonnes;4710.46
+1992;Slovak Republic;Tonnes;1600
+1993;Slovak Republic;Tonnes;1600
+1994;Slovak Republic;Tonnes;1600
+1995;Slovak Republic;Tonnes;1620
+1996;Slovak Republic;Tonnes;1.685.964
+1997;Slovak Republic;Tonnes;1.775.767
+1998;Slovak Republic;Tonnes;1.739.975
+1999;Slovak Republic;Tonnes;1.731.099
+2000;Slovak Republic;Tonnes;1.706.722
+2002;Slovak Republic;Tonnes;1.449.114
+2003;Slovak Republic;Tonnes;1.511.241
+2004;Slovak Republic;Tonnes;1.400.032
+2005;Slovak Republic;Tonnes;1.467.766
+2006;Slovak Republic;Tonnes;1.523.988
+2007;Slovak Republic;Tonnes;1.579.061
+2008;Slovak Republic;Tonnes;1.685.533
+2009;Slovak Republic;Tonnes;1.654.347
+2010;Slovak Republic;Tonnes;1719.01
+2011;Slovak Republic;Tonnes;1678.92
+2012;Slovak Republic;Tonnes;1656.57
+2013;Slovak Republic;Tonnes;1644.64
+2014;Slovak Republic;Tonnes;1741.74
+1995;Spain;Tonnes;18.731.763
+1996;Spain;Tonnes;19.710.711
+1997;Spain;Tonnes;20.689.286
+1998;Spain;Tonnes;20.921.613
+1999;Spain;Tonnes;22.831.552
+2000;Spain;Tonnes;24.730.284
+2001;Spain;Tonnes;24.833.764
+2002;Spain;Tonnes;26404
+2003;Spain;Tonnes;27270
+2004;Spain;Tonnes;25746
+2005;Spain;Tonnes;25683
+2006;Spain;Tonnes;26209.19
+2007;Spain;Tonnes;26153.99
+2008;Spain;Tonnes;25316.94
+2009;Spain;Tonnes;25107.98
+2010;Spain;Tonnes;23774.42
+2011;Spain;Tonnes;22672.41
+2012;Spain;Tonnes;21896.34
+2013;Spain;Tonnes;21184.2
+2014;Spain;Tonnes;20217.4
+1990;Sweden;Tonnes;3200
+1994;Sweden;Tonnes;3507
+1995;Sweden;Tonnes;3405
+1996;Sweden;Tonnes;3458
+1997;Sweden;Tonnes;3678
+1998;Sweden;Tonnes;3869
+1999;Sweden;Tonnes;3794
+2000;Sweden;Tonnes;3793
+2001;Sweden;Tonnes;3907.2
+2002;Sweden;Tonnes;4149
+2003;Sweden;Tonnes;4155.6
+2004;Sweden;Tonnes;4134.45
+2005;Sweden;Tonnes;4305.75
+2006;Sweden;Tonnes;4446.68
+2007;Sweden;Tonnes;4442.47
+2008;Sweden;Tonnes;4454.59
+2009;Sweden;Tonnes;4365.72
+2010;Sweden;Tonnes;4115.09
+2011;Sweden;Tonnes;4246.24
+2012;Sweden;Tonnes;4285.09
+2013;Sweden;Tonnes;4326.07
+2014;Sweden;Tonnes;4246.28
+1990;Switzerland;Tonnes;4101
+1991;Switzerland;Tonnes;4131.2
+1992;Switzerland;Tonnes;4096.7
+1993;Switzerland;Tonnes;4140.2
+1994;Switzerland;Tonnes;4161.5
+1995;Switzerland;Tonnes;4240
+1996;Switzerland;Tonnes;4280
+1997;Switzerland;Tonnes;4294.4
+1998;Switzerland;Tonnes;4369.4
+1999;Switzerland;Tonnes;4555.2
+2000;Switzerland;Tonnes;4731
+2001;Switzerland;Tonnes;4794
+2002;Switzerland;Tonnes;4936
+2003;Switzerland;Tonnes;4916
+2004;Switzerland;Tonnes;4900
+2005;Switzerland;Tonnes;4940
+2006;Switzerland;Tonnes;5330
+2007;Switzerland;Tonnes;5465
+2008;Switzerland;Tonnes;5653
+2009;Switzerland;Tonnes;5461
+2010;Switzerland;Tonnes;5565
+2011;Switzerland;Tonnes;5478
+2012;Switzerland;Tonnes;5576
+2013;Switzerland;Tonnes;5708
+2014;Switzerland;Tonnes;6006
+1991;Turkey;Tonnes;22315
+1994;Turkey;Tonnes;23448
+1995;Turkey;Tonnes;27234.13
+1996;Turkey;Tonnes;29347.98
+1997;Turkey;Tonnes;31943.77
+1998;Turkey;Tonnes;32972.89
+1999;Turkey;Tonnes;30470.03
+2000;Turkey;Tonnes;30617
+2001;Turkey;Tonnes;31030.87
+2002;Turkey;Tonnes;30999.26
+2003;Turkey;Tonnes;31081.37
+2004;Turkey;Tonnes;29736.19
+2005;Turkey;Tonnes;31351.87
+2006;Turkey;Tonnes;30081.82
+2007;Turkey;Tonnes;30365.59
+2008;Turkey;Tonnes;28454
+2009;Turkey;Tonnes;30196
+2010;Turkey;Tonnes;29733
+2011;Turkey;Tonnes;30862
+2012;Turkey;Tonnes;30786
+2013;Turkey;Tonnes;30920
+2014;Turkey;Tonnes;31230
+1990;United Kingdom;Tonnes;27100
+1995;United Kingdom;Tonnes;28900
+1996;United Kingdom;Tonnes;29750
+1997;United Kingdom;Tonnes;31042
+1998;United Kingdom;Tonnes;31697
+1999;United Kingdom;Tonnes;33392
+2000;United Kingdom;Tonnes;33954
+2001;United Kingdom;Tonnes;34945
+2002;United Kingdom;Tonnes;35532
+2003;United Kingdom;Tonnes;35279
+2004;United Kingdom;Tonnes;36121
+2005;United Kingdom;Tonnes;35121
+2006;United Kingdom;Tonnes;35479
+2007;United Kingdom;Tonnes;34780
+2008;United Kingdom;Tonnes;33424
+2009;United Kingdom;Tonnes;32507.45
+2010;United Kingdom;Tonnes;31954.51
+2011;United Kingdom;Tonnes;31066.06
+2012;United Kingdom;Tonnes;30413.35
+2013;United Kingdom;Tonnes;30890.25
+2014;United Kingdom;Tonnes;31130.99
+1990;United States;Tonnes;188939
+1991;United States;Tonnes;188949
+1992;United States;Tonnes;194990
+1993;United States;Tonnes;197748
+1994;United States;Tonnes;200742
+1995;United States;Tonnes;197113
+1996;United States;Tonnes;195943
+1997;United States;Tonnes;202393
+1998;United States;Tonnes;206040
+1999;United States;Tonnes;213080
+2000;United States;Tonnes;220854
+2001;United States;Tonnes;218450
+2002;United States;Tonnes;222560
+2003;United States;Tonnes;223548
+2004;United States;Tonnes;230534
+2005;United States;Tonnes;230180
+2006;United States;Tonnes;233237
+2007;United States;Tonnes;232693
+2008;United States;Tonnes;229046
+2009;United States;Tonnes;221861
+2010;United States;Tonnes;227177
+2011;United States;Tonnes;227141
+2012;United States;Tonnes;227604
+2000;Brazil;Tonnes;57563
+2001;Brazil;Tonnes;55677
+2002;Brazil;Tonnes;56524
+2003;Brazil;Tonnes;57587
+2004;Brazil;Tonnes;59214
+2005;Brazil;Tonnes;60142
+2007;Brazil;Tonnes;51432
+2009;Brazil;Tonnes;53000
+2010;Brazil;Tonnes;53000
+2011;Brazil;Tonnes;53000
+2012;Brazil;Tonnes;57900
+2000;Chile;Tonnes;4520.3
+2001;Chile;Tonnes;4514.7
+2002;Chile;Tonnes;4647.1
+2003;Chile;Tonnes;4802.3
+2004;Chile;Tonnes;4964.1
+2005;Chile;Tonnes;5113.7
+2006;Chile;Tonnes;5310.9
+2007;Chile;Tonnes;5492.9
+2008;Chile;Tonnes;5608
+2009;Chile;Tonnes;5779.5
+2010;Chile;Tonnes;5935.7
+2011;Chile;Tonnes;6142.4
+1990;China (People's Republic of);Tonnes;67668
+1991;China (People's Republic of);Tonnes;76360
+1992;China (People's Republic of);Tonnes;82620
+1993;China (People's Republic of);Tonnes;87910
+1994;China (People's Republic of);Tonnes;99520
+1995;China (People's Republic of);Tonnes;106710
+1996;China (People's Republic of);Tonnes;108254
+1997;China (People's Republic of);Tonnes;109819
+1998;China (People's Republic of);Tonnes;113018
+1999;China (People's Republic of);Tonnes;114152
+2000;China (People's Republic of);Tonnes;118190
+2001;China (People's Republic of);Tonnes;134700
+2002;China (People's Republic of);Tonnes;136500
+2003;China (People's Republic of);Tonnes;148570
+2004;China (People's Republic of);Tonnes;155090
+2005;China (People's Republic of);Tonnes;155770
+2006;China (People's Republic of);Tonnes;148410
+2007;China (People's Republic of);Tonnes;152150
+2008;China (People's Republic of);Tonnes;154380
+2009;China (People's Republic of);Tonnes;157340
+2010;China (People's Republic of);Tonnes;158048
+2011;China (People's Republic of);Tonnes;163953
+2012;China (People's Republic of);Tonnes;170809
+1995;Estonia;Tonnes;533
+1996;Estonia;Tonnes;565
+1997;Estonia;Tonnes;593
+1998;Estonia;Tonnes;557
+1999;Estonia;Tonnes;569
+2000;Estonia;Tonnes;633
+2001;Estonia;Tonnes;508.53
+2002;Estonia;Tonnes;553.24
+2003;Estonia;Tonnes;566.8
+2004;Estonia;Tonnes;606.2
+2005;Estonia;Tonnes;587.19
+2006;Estonia;Tonnes;536
+2007;Estonia;Tonnes;602
+2008;Estonia;Tonnes;524
+2009;Estonia;Tonnes;452
+2010;Estonia;Tonnes;406
+2011;Estonia;Tonnes;399
+2012;Estonia;Tonnes;371
+2013;Estonia;Tonnes;386.29
+2014;Estonia;Tonnes;469.55
+2001;Indonesia;Tonnes;4.726.108
+2002;Indonesia;Tonnes;4859.61
+2003;Indonesia;Tonnes;5.470.788
+2004;Indonesia;Tonnes;6044.45
+2005;Indonesia;Tonnes;6044.45
+2006;Indonesia;Tonnes;5256.52
+2007;Indonesia;Tonnes;7.576.772
+2008;Indonesia;Tonnes;7.576.772
+2009;Indonesia;Tonnes;6.866.198
+2010;Indonesia;Tonnes;7.245.246
+2011;Indonesia;Tonnes;7.742.343
+2012;Indonesia;Tonnes;7.650.389
+2000;Israel;Tonnes;3967.58
+2001;Israel;Tonnes;3.590.481
+2002;Israel;Tonnes;3.855.364
+2003;Israel;Tonnes;3.846.939
+2004;Israel;Tonnes;3978
+2005;Israel;Tonnes;4086
+2006;Israel;Tonnes;4227
+2007;Israel;Tonnes;4304
+2008;Israel;Tonnes;4434
+2009;Israel;Tonnes;4550.8
+2010;Israel;Tonnes;4623.18
+2011;Israel;Tonnes;4745.8
+2012;Israel;Tonnes;4837.4
+2013;Israel;Tonnes;4906.6
+2014;Israel;Tonnes;5033.6
+1999;Russia;Tonnes;50835.65
+2000;Russia;Tonnes;51828.63
+2001;Russia;Tonnes;51115.2
+2002;Russia;Tonnes;54010.5
+2003;Russia;Tonnes;55068.43
+2004;Russia;Tonnes;57822.48
+2005;Russia;Tonnes;57695.05
+2006;Russia;Tonnes;60847.25
+2007;Russia;Tonnes;62868.18
+2008;Russia;Tonnes;64605.13
+2009;Russia;Tonnes;66871.68
+2010;Russia;Tonnes;69256.63
+2011;Russia;Tonnes;69198.28
+2012;Russia;Tonnes;80564.33
+1995;Slovenia;Tonnes;1185.93
+1996;Slovenia;Tonnes;1175
+1997;Slovenia;Tonnes;1170
+1998;Slovenia;Tonnes;1158.79
+1999;Slovenia;Tonnes;1090
+2000;Slovenia;Tonnes;1020
+2001;Slovenia;Tonnes;952.68
+2002;Slovenia;Tonnes;812.06
+2003;Slovenia;Tonnes;834.02
+2004;Slovenia;Tonnes;969.21
+2005;Slovenia;Tonnes;988.73
+2006;Slovenia;Tonnes;1036.47
+2007;Slovenia;Tonnes;1060.09
+2008;Slovenia;Tonnes;1094.76
+2009;Slovenia;Tonnes;1069.35
+2010;Slovenia;Tonnes;1003.9
+2011;Slovenia;Tonnes;852.12
+2012;Slovenia;Tonnes;744.01
+2013;Slovenia;Tonnes;853.39
+2014;Slovenia;Tonnes;891.71
+1990;OECD - Total;Tonnes;538404.75
+1991;OECD - Total;Tonnes;548964.88
+1992;OECD - Total;Tonnes;567830.81
+1993;OECD - Total;Tonnes;577013.88
+1994;OECD - Total;Tonnes;582373
+1995;OECD - Total;Tonnes;581961.88
+1996;OECD - Total;Tonnes;593057.31
+1997;OECD - Total;Tonnes;606661.25
+1998;OECD - Total;Tonnes;613626.44
+1999;OECD - Total;Tonnes;625830.31
+2000;OECD - Total;Tonnes;640738.75
+2001;OECD - Total;Tonnes;639739.75
+2002;OECD - Total;Tonnes;650325.25
+2003;OECD - Total;Tonnes;649727.75
+2004;OECD - Total;Tonnes;658309.75
+2005;OECD - Total;Tonnes;662449.56
+2006;OECD - Total;Tonnes;669321.75
+2007;OECD - Total;Tonnes;672113.06
+2008;OECD - Total;Tonnes;664877.31
+2009;OECD - Total;Tonnes;655144.19
+2010;OECD - Total;Tonnes;659326.06
+2011;OECD - Total;Tonnes;660314.44
+2012;OECD - Total;Tonnes;656713.06
+2013;OECD - Total;Tonnes;654362.38
+2014;OECD - Total;Tonnes;653802
+1990;OECD - Europe;Tonnes;223.869.891
+1991;OECD - Europe;Tonnes;227614.88
+1992;OECD - Europe;Tonnes;230870.2
+1993;OECD - Europe;Tonnes;235219.22
+1994;OECD - Europe;Tonnes;237400.84
+1995;OECD - Europe;Tonnes;242901.77
+1996;OECD - Europe;Tonnes;251817.16
+1997;OECD - Europe;Tonnes;261770.11
+1998;OECD - Europe;Tonnes;264065.84
+1999;OECD - Europe;Tonnes;267904.28
+2000;OECD - Europe;Tonnes;273361.66
+2001;OECD - Europe;Tonnes;272869.5
+2002;OECD - Europe;Tonnes;277269.72
+2003;OECD - Europe;Tonnes;273340.34
+2004;OECD - Europe;Tonnes;272938.56
+2005;OECD - Europe;Tonnes;276520.44
+2006;OECD - Europe;Tonnes;279432.19
+2007;OECD - Europe;Tonnes;282220.66
+2008;OECD - Europe;Tonnes;279505.69
+2009;OECD - Europe;Tonnes;277974.31
+2010;OECD - Europe;Tonnes;276247.41
+2011;OECD - Europe;Tonnes;276018.75
+2012;OECD - Europe;Tonnes;270864.5
+2013;OECD - Europe;Tonnes;268696.63
+2014;OECD - Europe;Tonnes;267876.22
+2003;Colombia;Tonnes;5289
+2004;Colombia;Tonnes;6128
+2005;Colombia;Tonnes;7567
+2006;Colombia;Tonnes;7580
+2007;Colombia;Tonnes;9192
+2008;Colombia;Tonnes;11273
+2009;Colombia;Tonnes;8980
+2010;Colombia;Tonnes;9686
+2011;Colombia;Tonnes;8975
+1995;Latvia;Tonnes;657
+1996;Latvia;Tonnes;650
+1997;Latvia;Tonnes;621
+1998;Latvia;Tonnes;597
+1999;Latvia;Tonnes;613
+2000;Latvia;Tonnes;642
+2001;Latvia;Tonnes;713
+2002;Latvia;Tonnes;793
+2003;Latvia;Tonnes;695
+2004;Latvia;Tonnes;720.38
+2005;Latvia;Tonnes;716
+2006;Latvia;Tonnes;760
+2007;Latvia;Tonnes;860.92
+2008;Latvia;Tonnes;751.92
+2009;Latvia;Tonnes;752.96
+2010;Latvia;Tonnes;680.1
+2011;Latvia;Tonnes;720.64
+2012;Latvia;Tonnes;612.54
+2013;Latvia;Tonnes;627
+2014;Latvia;Tonnes;648
+2010;Costa Rica;Tonnes;1506
+2011;Costa Rica;Tonnes;1659
+2012;Costa Rica;Tonnes;1698
+2013;Costa Rica;Tonnes;1752
+2014;Costa Rica;Tonnes;1788
+1995;Lithuania;Tonnes;1546
+1996;Lithuania;Tonnes;1445
+1997;Lithuania;Tonnes;1510
+1998;Lithuania;Tonnes;1578
+1999;Lithuania;Tonnes;1236
+2000;Lithuania;Tonnes;1276
+2001;Lithuania;Tonnes;1313
+2002;Lithuania;Tonnes;1395
+2003;Lithuania;Tonnes;1328
+2004;Lithuania;Tonnes;1260
+2005;Lithuania;Tonnes;1287
+2006;Lithuania;Tonnes;1326
+2007;Lithuania;Tonnes;1.624.332
+2008;Lithuania;Tonnes;1.505.878
+2009;Lithuania;Tonnes;1.314.028
+2010;Lithuania;Tonnes;1.327.774
+2011;Lithuania;Tonnes;1.366.066
+2012;Lithuania;Tonnes;1.409.973
+2013;Lithuania;Tonnes;1318.45
+2014;Lithuania;Tonnes;1.308.352

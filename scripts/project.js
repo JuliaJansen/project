@@ -5,7 +5,11 @@
  * Loading data and preparing visualisations
  */
 
+"use strict";
+
 window.onload = function() {
+
+	console.log("hello?");
 	// load two datasets asynchronously
 	d3_queue.queue()
 		.defer(d3.csv, '/data/complete_energy_data.csv')
@@ -163,5 +167,8 @@ function prepareData(error, totalenergy, energysavings, totalemissions,
 		.entries(economicwaste);
 
 	console.log("waste specified by economic activity: ", economic_waste);
+
+	slider();
+	parallelGraph(total_energy, total_emissions, municipal_waste);
 
 }
