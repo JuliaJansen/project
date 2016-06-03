@@ -6,11 +6,11 @@ import csv
 
 '''
 This script reformats data from csv file
-into a useful json file that contains country, 
+into a useful csv file that contains country, 
 '''
 
 # transform waste file to municipal waste only
-with open ('../data/totalenergy.csv', 'r') as infile:
+with open ('../data/total_emissions.csv', 'r') as infile:
 	reader = csv.reader(infile, delimiter=';')
 	with open('../data/energy.csv', 'wb') as outfile:
 		writer = csv.writer(outfile)
