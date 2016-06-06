@@ -9,7 +9,7 @@ window.onload = function() {
 
 	// load two datasets asynchronously
 	d3_queue.queue()
-		.defer(d3.csv, '/data/parallelgraph.csv')
+		.defer(d3.csv, '/data/parallelgraph_capita.csv')
 		.defer(d3.csv, '/data/energysavings.csv')
 		.defer(d3.csv, '/data/emissions_what_industries.csv')
 		.defer(d3.csv, '/data/waste_sector.csv')

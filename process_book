@@ -33,3 +33,9 @@ municipal waste: oecd stats
 energy: eurostat
 emissions eurostats
 population: eurostat
+
+Alle data voor de parallel graph nu omgezet in data/capita.
+Eenheden:
+energy: tonnes of oil equivalent
+emissions: tonnes of CO2 equivalent
+waste: tonnes of waste

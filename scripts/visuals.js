@@ -11,9 +11,9 @@ function slider() {
 }
 
 function parallelGraph(data, year) {
-	var margin = {top: 30, right: 5, bottom: 10, left: 5},
-    width = 600 - margin.left - margin.right,
-    height = 300 - margin.top - margin.bottom;
+	var margin = {top: 70, right: 5, bottom: 10, left: 5},
+    width = 700 - margin.left - margin.right,
+    height = 430 - margin.top - margin.bottom;
 
 	var x = d3.scale.ordinal().rangePoints([0, width], 1),
 	    y = {},
@@ -30,6 +30,14 @@ function parallelGraph(data, year) {
 		.attr("height", height + margin.top + margin.bottom)
 	  .append("g")
 	  	.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+	//Create Title 
+    svg.append("text")
+    	.attr("x", 150)
+    	.attr("y", -20)
+    	.attr("id", "parallelgraph_title")
+    	.style("text-anchor", "middle")
+    	.text(function(d) { return year });
 
 	// get data of specific year
 	data = data[year];
@@ -124,6 +132,21 @@ function parallelGraph(data, year) {
 		} else {
 			return line(dimensions.map(function(p) { return [position(p), y[p](d[p])]; }));
 		}
+	}
+
+	function brushstart() {
+  		d3.event.sourceEvent.stopPropagation();
+	}
+
+	// handles a brush event, toggling the display of foreground lines.
+	function brush() {
+	  	var actives = dimensions.filter(function(p) { return !y[p].brush.empty(); }),
+	      	extents = actives.map(function(p) { return y[p].brush.extent(); });
+	  	foreground.style("display", function(d) {
+	    	return actives.every(function(p, i) {
+	      		return extents[i][0] <= d[p] && d[p] <= extents[i][1];
+	    	}) ? null : "none";
+	  	});
 	}
 
 };

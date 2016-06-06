@@ -77,6 +77,13 @@ h2 {
 
 }
 
+/* parallel coordinates graph */
+#parallelgraph_title {
+  font-weight: bold;
+  font-family: helvetica;
+  font-size: 48px;
+}
+
 /* slider */
 #slider {
 	width: 500px;
