@@ -23,3 +23,8 @@ met een menu om te switchen tussen energy use/emissions/waste.
 Enkele uren geprobeerd om mijn github weer clean in de lucht te krijgen wat dankzij Jaap succesvol is gelukt!
 
 Design.md bevat nu schetsen van pagina 1, 2 en grof van pagina 3. Voor pagina drie weet ik nog niet precies wat ik ga weergeven omdat ik daarvoor eerst uitzonderlijke landen moet zien te vinden aan de hand van de eerste twee visualisaties. Morgen data inladen via d3.json load!! 
+
+#### Day 5
+De data voor de parallel graph staat nu in het juiste format. De pagina's zijn allemaal zichtbaar en de navigatie tussen de pagina's werkt. De interactieve elementen staan op bij de plek waar de visualisaties moeten komen. Vanaf maandag ga ik de eerste grafiek tekenen. Volgende week hopelijk de grafiek en barchart af. 
+
+#### Day 6
