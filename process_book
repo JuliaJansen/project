@@ -39,3 +39,8 @@ Eenheden:
 energy: tonnes of oil equivalent
 emissions: tonnes of CO2 equivalent
 waste: tonnes of waste
+
+Parallel coordinates is zichtbaar op de site. MAAR
+....nog daaraan doen:
+-slider werkend (interactief) maken
+-landen namen weergeven + lijn dik on hover
