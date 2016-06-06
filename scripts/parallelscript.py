@@ -1,28 +1,47 @@
+# Julia Jansen
+# project
+
 import csv
 
 '''
 This script reformats data to data per capita.
 '''
 
-# merge data for parallel coordinates graph
-with open('../data/totaleemissie.csv', 'r') as emissie_infile:
-	emissie_reader = csv.reader(emissie_infile, delimiter=';')
-	for row in emissie_reader:
-		emissions.append(row)
+population = []
 
-with open('../data/parallelgraph_capita.csv', 'wb') as outfile:
-	writer = csv.writer(outfile)
-	writer.writerow(['TIME', 'GEO', 'ENERGY', 'EMISSIONS', 'WASTE'])
+# calculate data / capita
+with open('../data/population.csv', 'r') as population_infile:
+	population_reader = csv.reader(population_infile, delimiter=';')
+	for row in population_reader:
+		population.append(row)
+		
+# open parallelgraph as infile
+with open('../data/parallelgraph.csv', 'r') as infile:
+	reader = csv.reader(infile, delimiter=',')
 
+	# open outfile
+	with open('../data/parallelgraph_capita.csv', 'w') as outfile:
+		writer = csv.writer(outfile)
+	
+	# read and write
+	for i, element in enumerate(reader):
+		if i == 0:
+			writer.writerow(['TIME', 'GEO', 'ENERGY', 'EMISSIONS', 'WASTE'])
+		# else:
+		# 	# calculate index in population array
+		# 	index = int(element[0]) - 2003
+		# 	for country in population:
+		# 		emission = ''
+		# 		waste = ''
+		# 		if element[1] == country[0]:
+		# 			pop = float(country[index])
+		# 			if len(element) > 2:
+		# 				energy = float(element[2]) / pop
+		# 			if len(element) > 3:
+		# 				emission = float(element[3]) / pop
+		# 				waste = float(element[3]) * 1000 / pop
 
-	for element in energy:
-		writethis = []
-		for thing in emissions:
-			if thing[0] ==  element[0] and thing[1] == element[1]:
-				element.append(thing[3])
-
-		for thang in waste:
-			if thang[0] ==  element[0] and thang[1] == element[1]:
-				element.append(thang[2])
-
-		writer.writerow(element)
+		# 			# write row
+		# 			line = [element[0], element[1], energy, emission, waste]
+		# 			print line
+		# 			writer.writerow(line)
