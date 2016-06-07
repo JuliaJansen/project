@@ -1,6 +1,8 @@
 /* stylesheet graphs and charts */
 
-/* parallel coordinates graph */
+/* 
+ * parallel coordinates graph 
+ */
 svg {
   font: 10px sans-serif;
 }
@@ -34,3 +36,35 @@ svg {
   cursor: move;
 }
 
+#parallelgraph_title {
+  font-weight: bold;
+  font-family: helvetica;
+  font-size: 48px;
+}
+
+/* slider */
+#slider {
+  width: 500px;
+  margin-left: 50px;
+}
+
+#strikingtext {
+  padding-left: 50px;
+}
+
+#toggle {
+  align: right;
+}
+
+/* buttons for bargraph */
+#energybutton {
+
+}
+
+#emissionbutton {
+
+}
+
+#wastebutton {
+
+}

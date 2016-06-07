@@ -1,4 +1,5 @@
-/* Stylesheet Julia Jansen
+/* Stylesheet welcome page 
+ * Julia Jansen
  * Project 
  * Minor programmeren
  */
@@ -62,40 +63,6 @@ h2 {
 }
 .navbar-default .navbar-link {
   color: #d9d9d9;
-}
-
-/* buttons for bargraph */
-#energybutton {
-
-}
-
-#emissionbutton {
-
-}
-
-#wastebutton {
-
-}
-
-/* parallel coordinates graph */
-#parallelgraph_title {
-  font-weight: bold;
-  font-family: helvetica;
-  font-size: 48px;
-}
-
-/* slider */
-#slider {
-	width: 500px;
-  margin-left: 50px;
-}
-
-#strikingtext {
-  padding-left: 50px;
-}
-
-#toggle {
-  align: right;
 }
 
 /* welcome text */

@@ -1,15 +1,17 @@
-/* visuals.js
+/* parallelgraph.js
  *
  * Julia Jansen
  * Programmeerproject
  * Loading data and preparing visualisations
  */
 
+// calls slider
 function slider() {
 	var slider = d3.slider().min(2004).max(2015).showRange(true).value(2008).tickFormat(d3.format("d"));
 	d3.select('#slider').call(slider);
 }
 
+// draws parallel graph
 function parallelGraph(data, year) {
 	var margin = {top: 70, right: 5, bottom: 10, left: 5},
     width = 700 - margin.left - margin.right,
@@ -31,7 +33,7 @@ function parallelGraph(data, year) {
 	  .append("g")
 	  	.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-	//Create Title 
+	// create title 
     svg.append("text")
     	.attr("x", 150)
     	.attr("y", -20)
@@ -66,7 +68,7 @@ function parallelGraph(data, year) {
 	  .enter().append("path")
 	  	.attr("d", path);
 
-	// Add a group element for each dimension.
+	// add a group element for each dimension
 	var g = svg.selectAll(".dimension")
 	    .data(dimensions)
 	  .enter().append("g")
