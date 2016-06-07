@@ -36,6 +36,10 @@ svg {
   cursor: move;
 }
 
+#graph {
+  padding-top: 50px;
+}
+
 #parallelgraph_title {
   font-weight: bold;
   font-family: helvetica;
@@ -54,6 +58,35 @@ svg {
 
 #toggle {
   align: right;
+}
+
+/* bargraph */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  position: relative;
+  width: 960px;
+}
+
+text {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+form {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+#barchart {
+  padding-top: 50px;
 }
 
 /* buttons for bargraph */

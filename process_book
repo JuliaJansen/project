@@ -44,3 +44,13 @@ Parallel coordinates is zichtbaar op de site. MAAR
 ....nog daaraan doen:
 -slider werkend (interactief) maken
 -landen namen weergeven + lijn dik on hover
+
+#### Day 7
+Vandaag nog weer veel data bewerkt, omdat het format toch net weer anders moest dan ik dacht.
+Alle data voor de energy barchart is nu in het goede format, maar wordt per land weergegeven. Voor data per capita moet dit dus nog bewerkt worden. Dat lijkt me handig in javascript te doen.
+
+Voor de emissie en waste moet ik dezelfde databewerkingen ook nog doen. Dat kost me waarschijnlijk minstens een halve dag morgen.
+
+De layout van m'n webpagina heeft helaas opeens padding aan de zijkant waarvan ik niet weet hoe het ontstaan is en waar ik het kan veranderen. De site gebruikt opeens niet meer de hele breedte van de pagina. Dat is jammerrrr, morgen naar kijken. 
+
+

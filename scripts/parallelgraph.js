@@ -2,7 +2,8 @@
  *
  * Julia Jansen
  * Programmeerproject
- * Loading data and preparing visualisations
+ * Drawing parallel coordinates graph
+ * used as reference: https://bl.ocks.org/jasondavies/1341281
  */
 
 // calls slider
@@ -13,14 +14,18 @@ function slider() {
 
 // draws parallel graph
 function parallelGraph(data, year) {
-	var margin = {top: 70, right: 5, bottom: 10, left: 5},
-    width = 700 - margin.left - margin.right,
-    height = 430 - margin.top - margin.bottom;
 
+	// set margins
+	var margin = {top: 70, right: 5, bottom: 15, left: 5},
+    	width = 700 - margin.left - margin.right,
+    	height = 450 - margin.top - margin.bottom;
+
+    // x and y scale and dragging scale prepared
 	var x = d3.scale.ordinal().rangePoints([0, width], 1),
 	    y = {},
 	    dragging = {};
 
+	// lines axis, foreground and background
 	var line = d3.svg.line(),
 	    axis = d3.svg.axis().orient("left"),
 	    background,
@@ -43,7 +48,6 @@ function parallelGraph(data, year) {
 
 	// get data of specific year
 	data = data[year];
-	console.log("data = ", data);
 
 	// get dimensions and y domain per dimension
 	x.domain(dimensions = d3.keys(data[0]).filter(function(d) {
@@ -118,16 +122,18 @@ function parallelGraph(data, year) {
       .attr("x", -8)
       .attr("width", 16);
 
+    // return v
 	function position(d) {
 		var v = dragging[d];
 		return v == null ? x(d) : v;
 	}
 
+	// transitions of 500 ms
 	function transition(g) {
 		return g.transition().duration(500);
 	}
 
-	// Returns the path for a given data point.
+	// returns the path for a given data point
 	function path(d) {
 		if (isNaN(d.emissions) || isNaN(d.energy) || isNaN(d.waste)) {
 			console.log("d", d);
@@ -136,6 +142,7 @@ function parallelGraph(data, year) {
 		}
 	}
 
+	// 
 	function brushstart() {
   		d3.event.sourceEvent.stopPropagation();
 	}

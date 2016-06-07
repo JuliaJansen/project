@@ -1,0 +1,401 @@
+TIME,GEO,NUC_ENERGY
+2005,European Union (28 countries),257516.0
+2005,Euro area (19 countries),201544.1
+2005,Belgium,12277.3
+2005,Bulgaria,4826.0
+2005,Czech Republic,6404.9
+2005,Denmark,0.0
+2005,Germany,42060.6
+2005,Estonia,0.0
+2005,Ireland,0.0
+2005,Greece,0.0
+2005,Spain,14842.4
+2005,France,116473.5
+2005,Croatia,0.0
+2005,Italy,0.0
+2005,Cyprus,0.0
+2005,Latvia,0.0
+2005,Lithuania,2712.6
+2005,Luxembourg,0.0
+2005,Hungary,3584.5
+2005,Malta,0.0
+2005,Netherlands,1031.0
+2005,Austria,0.0
+2005,Poland,0.0
+2005,Portugal,0.0
+2005,Romania,1432.9
+2005,Slovenia,1517.8
+2005,Slovakia,4626.1
+2005,Finland,6002.8
+2005,Sweden,18669.9
+2005,United Kingdom,21053.7
+2005,Iceland,0.0
+2005,Norway,0.0
+2005,Montenegro,0.0
+2005,Former Yugoslav Republic of Macedonia the,0.0
+2005,Albania,0.0
+2005,Serbia,0.0
+2005,Turkey,0.0
+2005,Kosovo (under United Nations Security Council Resolution 1244/99),0.0
+2005,Moldova,0.0
+2005,Ukraine,22894.9
+2006,European Union (28 countries),255499.0
+2006,Euro area (19 countries),202033.4
+2006,Belgium,12032.2
+2006,Bulgaria,5042.3
+2006,Czech Republic,6744.2
+2006,Denmark,0.0
+2006,Germany,43147.6
+2006,Estonia,0.0
+2006,Ireland,0.0
+2006,Greece,0.0
+2006,Spain,15509.7
+2006,France,116128.4
+2006,Croatia,0.0
+2006,Italy,0.0
+2006,Cyprus,0.0
+2006,Latvia,0.0
+2006,Lithuania,2279.2
+2006,Luxembourg,0.0
+2006,Hungary,3486.5
+2006,Malta,0.0
+2006,Netherlands,894.8
+2006,Austria,0.0
+2006,Poland,0.0
+2006,Portugal,0.0
+2006,Romania,1452.8
+2006,Slovenia,1431.1
+2006,Slovakia,4701.6
+2006,Finland,5908.7
+2006,Sweden,17277.0
+2006,United Kingdom,19462.9
+2006,Iceland,0.0
+2006,Norway,0.0
+2006,Montenegro,0.0
+2006,Former Yugoslav Republic of Macedonia the,0.0
+2006,Albania,0.0
+2006,Serbia,0.0
+2006,Turkey,0.0
+2006,Kosovo (under United Nations Security Council Resolution 1244/99),0.0
+2006,Moldova,0.0
+2006,Ukraine,23273.9
+2007,European Union (28 countries),241409.9
+2007,Euro area (19 countries),191516.6
+2007,Belgium,12440.3
+2007,Bulgaria,3797.6
+2007,Czech Republic,6775.1
+2007,Denmark,0.0
+2007,Germany,36251.2
+2007,Estonia,0.0
+2007,Ireland,0.0
+2007,Greece,0.0
+2007,Spain,14214.0
+2007,France,113429.9
+2007,Croatia,0.0
+2007,Italy,0.0
+2007,Cyprus,0.0
+2007,Latvia,0.0
+2007,Lithuania,2582.5
+2007,Luxembourg,0.0
+2007,Hungary,3798.9
+2007,Malta,0.0
+2007,Netherlands,1083.4
+2007,Austria,0.0
+2007,Poland,0.0
+2007,Portugal,0.0
+2007,Romania,1988.6
+2007,Slovenia,1469.0
+2007,Slovakia,4004.1
+2007,Finland,6042.0
+2007,Sweden,17274.9
+2007,United Kingdom,16258.3
+2007,Iceland,0.0
+2007,Norway,0.0
+2007,Montenegro,0.0
+2007,Former Yugoslav Republic of Macedonia the,0.0
+2007,Albania,0.0
+2007,Serbia,0.0
+2007,Turkey,0.0
+2007,Kosovo (under United Nations Security Council Resolution 1244/99),0.0
+2007,Moldova,0.0
+2007,Ukraine,24027.8
+2008,European Union (28 countries),241908.7
+2008,Euro area (19 countries),194197.6
+2008,Belgium,11754.4
+2008,Bulgaria,4088.3
+2008,Czech Republic,6872.1
+2008,Denmark,0.0
+2008,Germany,38304.8
+2008,Estonia,0.0
+2008,Ireland,0.0
+2008,Greece,0.0
+2008,Spain,15212.3
+2008,France,113356.9
+2008,Croatia,0.0
+2008,Italy,0.0
+2008,Cyprus,0.0
+2008,Latvia,0.0
+2008,Lithuania,2597.0
+2008,Luxembourg,0.0
+2008,Hungary,3835.6
+2008,Malta,0.0
+2008,Netherlands,1075.4
+2008,Austria,0.0
+2008,Poland,0.0
+2008,Portugal,0.0
+2008,Romania,2895.8
+2008,Slovenia,1618.1
+2008,Slovakia,4356.5
+2008,Finland,5922.1
+2008,Sweden,16480.4
+2008,United Kingdom,13539.0
+2008,Iceland,0.0
+2008,Norway,0.0
+2008,Montenegro,0.0
+2008,Former Yugoslav Republic of Macedonia the,0.0
+2008,Albania,0.0
+2008,Serbia,0.0
+2008,Turkey,0.0
+2008,Kosovo (under United Nations Security Council Resolution 1244/99),0.0
+2008,Moldova,0.0
+2008,Ukraine,23327.7
+2009,European Union (28 countries),230772.4
+2009,Euro area (19 countries),181467.0
+2009,Belgium,12181.1
+2009,Bulgaria,3958.4
+2009,Czech Republic,7041.9
+2009,Denmark,0.0
+2009,Germany,34806.2
+2009,Estonia,0.0
+2009,Ireland,0.0
+2009,Greece,0.0
+2009,Spain,13609.9
+2009,France,105692.9
+2009,Croatia,0.0
+2009,Italy,0.0
+2009,Cyprus,0.0
+2009,Latvia,0.0
+2009,Lithuania,2845.8
+2009,Luxembourg,0.0
+2009,Hungary,3991.3
+2009,Malta,0.0
+2009,Netherlands,1095.8
+2009,Austria,0.0
+2009,Poland,0.0
+2009,Portugal,0.0
+2009,Romania,3031.5
+2009,Slovenia,1480.4
+2009,Slovakia,3686.4
+2009,Finland,6068.6
+2009,Sweden,13458.2
+2009,United Kingdom,17824.1
+2009,Iceland,0.0
+2009,Norway,0.0
+2009,Montenegro,0.0
+2009,Former Yugoslav Republic of Macedonia the,0.0
+2009,Albania,0.0
+2009,Serbia,0.0
+2009,Turkey,0.0
+2009,Kosovo (under United Nations Security Council Resolution 1244/99),0.0
+2009,Moldova,0.0
+2009,Ukraine,21543.7
+2010,European Union (28 countries),236562.5
+2010,Euro area (19 countries),187336.8
+2010,Belgium,12367.3
+2010,Bulgaria,3956.1
+2010,Czech Republic,7247.7
+2010,Denmark,0.0
+2010,Germany,36256.9
+2010,Estonia,0.0
+2010,Ireland,0.0
+2010,Greece,0.0
+2010,Spain,15990.5
+2010,France,110538.5
+2010,Croatia,0.0
+2010,Italy,0.0
+2010,Cyprus,0.0
+2010,Latvia,0.0
+2010,Lithuania,0.0
+2010,Luxembourg,0.0
+2010,Hungary,4077.6
+2010,Malta,0.0
+2010,Netherlands,1023.8
+2010,Austria,0.0
+2010,Poland,0.0
+2010,Portugal,0.0
+2010,Romania,2998.2
+2010,Slovenia,1459.2
+2010,Slovakia,3819.1
+2010,Finland,5881.3
+2010,Sweden,14916.9
+2010,United Kingdom,16029.2
+2010,Iceland,0.0
+2010,Norway,0.0
+2010,Montenegro,0.0
+2010,Former Yugoslav Republic of Macedonia the,0.0
+2010,Albania,0.0
+2010,Serbia,0.0
+2010,Turkey,0.0
+2010,Kosovo (under United Nations Security Council Resolution 1244/99),0.0
+2010,Moldova,0.0
+2010,Ukraine,23150.2
+2011,European Union (28 countries),234006.7
+2011,Euro area (19 countries),181977.1
+2011,Belgium,12442.1
+2011,Bulgaria,4230.3
+2011,Czech Republic,7317.7
+2011,Denmark,0.0
+2011,Germany,27851.5
+2011,Estonia,0.0
+2011,Ireland,0.0
+2011,Greece,0.0
+2011,Spain,14888.6
+2011,France,114114.3
+2011,Croatia,0.0
+2011,Italy,0.0
+2011,Cyprus,0.0
+2011,Latvia,0.0
+2011,Lithuania,0.0
+2011,Luxembourg,0.0
+2011,Hungary,4058.1
+2011,Malta,0.0
+2011,Netherlands,1068.2
+2011,Austria,0.0
+2011,Poland,0.0
+2011,Portugal,0.0
+2011,Romania,3030.2
+2011,Slovenia,1603.2
+2011,Slovakia,4028.1
+2011,Finland,5981.2
+2011,Sweden,15599.7
+2011,United Kingdom,17793.6
+2011,Iceland,0.0
+2011,Norway,0.0
+2011,Montenegro,0.0
+2011,Former Yugoslav Republic of Macedonia the,0.0
+2011,Albania,0.0
+2011,Serbia,0.0
+2011,Turkey,0.0
+2011,Kosovo (under United Nations Security Council Resolution 1244/99),0.0
+2011,Moldova,0.0
+2011,Ukraine,23432.7
+2012,European Union (28 countries),227718.5
+2012,Euro area (19 countries),174054.6
+2012,Belgium,10394.2
+2012,Bulgaria,4094.2
+2012,Czech Republic,7845.6
+2012,Denmark,0.0
+2012,Germany,25656.1
+2012,Estonia,0.0
+2012,Ireland,0.0
+2012,Greece,0.0
+2012,Spain,15856.4
+2012,France,109735.0
+2012,Croatia,0.0
+2012,Italy,0.0
+2012,Cyprus,0.0
+2012,Latvia,0.0
+2012,Lithuania,0.0
+2012,Luxembourg,0.0
+2012,Hungary,4086.5
+2012,Malta,0.0
+2012,Netherlands,1009.9
+2012,Austria,0.0
+2012,Poland,0.0
+2012,Portugal,0.0
+2012,Romania,2957.7
+2012,Slovenia,1426.0
+2012,Slovakia,4047.5
+2012,Finland,5929.6
+2012,Sweden,16518.6
+2012,United Kingdom,18161.2
+2012,Iceland,0.0
+2012,Norway,0.0
+2012,Montenegro,0.0
+2012,Former Yugoslav Republic of Macedonia the,0.0
+2012,Albania,0.0
+2012,Serbia,0.0
+2012,Turkey,0.0
+2012,Kosovo (under United Nations Security Council Resolution 1244/99),0.0
+2012,Moldova,0.0
+2012,Ukraine,23413.7
+2013,European Union (28 countries),226285.1
+2013,Euro area (19 countries),172328.7
+2013,Belgium,11000.2
+2013,Bulgaria,3671.1
+2013,Czech Republic,7955.5
+2013,Denmark,0.0
+2013,Germany,25096.3
+2013,Estonia,0.0
+2013,Ireland,0.0
+2013,Greece,0.0
+2013,Spain,14632.7
+2013,France,109291.1
+2013,Croatia,0.0
+2013,Italy,0.0
+2013,Cyprus,0.0
+2013,Latvia,0.0
+2013,Lithuania,0.0
+2013,Luxembourg,0.0
+2013,Hungary,3976.8
+2013,Malta,0.0
+2013,Netherlands,745.7
+2013,Austria,0.0
+2013,Poland,0.0
+2013,Portugal,0.0
+2013,Romania,2996.9
+2013,Slovenia,1367.2
+2013,Slovakia,4106.3
+2013,Finland,6089.3
+2013,Sweden,17142.8
+2013,United Kingdom,18213.3
+2013,Iceland,0.0
+2013,Norway,0.0
+2013,Montenegro,0.0
+2013,Former Yugoslav Republic of Macedonia the,0.0
+2013,Albania,0.0
+2013,Serbia,0.0
+2013,Turkey,0.0
+2013,Kosovo (under United Nations Security Council Resolution 1244/99),0.0
+2013,Moldova,0.0
+2013,Ukraine,21627.4
+2014,European Union (28 countries),226131.9
+2014,Euro area (19 countries),173942.5
+2014,Belgium,8693.8
+2014,Bulgaria,4107.4
+2014,Czech Republic,7843.3
+2014,Denmark,0.0
+2014,Germany,25054.8
+2014,Estonia,0.0
+2014,Ireland,0.0
+2014,Greece,0.0
+2014,Spain,14782.0
+2014,France,112590.0
+2014,Croatia,0.0
+2014,Italy,0.0
+2014,Cyprus,0.0
+2014,Latvia,0.0
+2014,Lithuania,0.0
+2014,Luxembourg,0.0
+2014,Hungary,4047.6
+2014,Malta,0.0
+2014,Netherlands,1055.3
+2014,Austria,0.0
+2014,Poland,0.0
+2014,Portugal,0.0
+2014,Romania,3011.9
+2014,Slovenia,1643.2
+2014,Slovakia,4040.9
+2014,Finland,6082.5
+2014,Sweden,16735.3
+2014,United Kingdom,16444.0
+2014,Iceland,0.0
+2014,Norway,0.0
+2014,Montenegro,0.0
+2014,Former Yugoslav Republic of Macedonia the,0.0
+2014,Albania,0.0
+2014,Serbia,0.0
+2014,Turkey,0.0
+2014,Kosovo (under United Nations Security Council Resolution 1244/99),0.0
+2014,Moldova,0.0
+2014,Ukraine,22957.1
