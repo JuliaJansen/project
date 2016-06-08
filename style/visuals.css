@@ -8,14 +8,18 @@ svg {
 }
 
 .background path {
+  position: relative;
   fill: none;
-  stroke: #ddd;
+  stroke: #e6e6e6;
+  stroke-width: 1px;
   shape-rendering: crispEdges;
 }
 
 .foreground path {
+  position: relative;
   fill: none;
-  stroke: steelblue;
+  stroke: #004d4d;
+  stroke-width: 1px;
 }
 
 .brush .extent {
@@ -59,6 +63,23 @@ svg {
 #toggle {
   align: right;
 }
+
+/* tooltips */
+div.tooltip 
+{ 
+    position: absolute;     
+    text-align: center;     
+    width: 73px;          
+    height: 30px;         
+    padding: 2px;       
+    font: 13px sans-serif; 
+    font-weight: bold;   
+    background: #ffcc80; 
+    border: 2;    
+    border-radius: 1px;     
+    pointer-events: none;     
+}
+
 
 /* bargraph */
 body {

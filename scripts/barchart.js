@@ -19,34 +19,54 @@ function barchart(country, gas, heat, oil, renewableenergy,
 
 	console.log("data =", data);
 
+	testdata = data;
+
+    // reformat data
+	testdata.forEach(function(d) {
+	    var y = 0;
+	    console.log('values', d.values);
+	    d.values = color.domain().map(function(type) { return {type: type, y: y, y0: y += +d[type]}; });
+	    d.total = d.values[d.values.length - 1].y0;
+	});
+
+	console.log("testdata", testdata);
+
+
 	var n = 7, // number of layers
 	    m = 10, // number of samples per layer
 	    stack = d3.layout.stack(),
-	    layers = stack(d3.range(n).map(function() { bump = bumpLayer(m, .1); return bump })),
+	    layers = stack(d3.range(n).map(function() { bump = bumpLayer(m, .1); console.log(bump); return bump })),
 	    yGroupMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y; }); }),
 	    yStackMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y0 + d.y; }); });
 
-	// console.log("stack, layers", stack, layers);
+	// console.log("layers", layers);
+	// console.log("yGroupMax", yGroupMax);
 
 	// set margins
 	var margin = {top: 70, right: 5, bottom: 15, left: 5},
     	width = 700 - margin.left - margin.right,
     	height = 450 - margin.top - margin.bottom;
-
-    // scale x axis
+	
 	var x = d3.scale.ordinal()
 	    .domain(d3.range(m))
 	    .rangeRoundBands([0, width], .08);
 
-	// scale y axis
 	var y = d3.scale.linear()
 	    .domain([0, yStackMax])
 	    .range([height, 0]);
 
+	// var x = d3.scale.ordinal()
+ //   		.rangeRoundBands([0, width], .1);
+
+	// var y = d3.scale.linear()
+ //   		.rangeRound([height, 0]);
+
 	// color scale
-	var color = d3.scale.linear()
-    .domain([0, n - 1])
-    .range(["#aad", "#556"]);
+	var color = d3.scale.ordinal()
+    	.range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+
+	// x.domain(data.map(function(d) { return d.State; }));
+ //  	y.domain([0, d3.max(data, function(d) { return d.total; })]);
 
     // define x axis
 	var xAxis = d3.svg.axis()
@@ -119,7 +139,7 @@ function barchart(country, gas, heat, oil, renewableenergy,
 	  y.domain([0, yStackMax]);
 
 	  rect.transition()
-	      .duration(500)
+	      .duration(300)
 	      .delay(function(d, i) { return i * 10; })
 	      .attr("y", function(d) { return y(d.y0 + d.y); })
 	      .attr("height", function(d) { return y(d.y0) - y(d.y0 + d.y); })

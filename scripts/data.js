@@ -54,113 +54,121 @@ function prepareData(error, paralleldata, energysavings, economicemissions,
 		.entries(energysavings);
 
 	// prepare gas data for energy bargraph
-	var gas = {};
-	gasdata.forEach(function(d) {
+	var energy = {};
+	gasdata.forEach(function(d, i) {
 		var country = d.GEO;
 		
 		// make index for country only if not existing yet
-		gas[country] = typeof gas[country] !== "undefined" ? gas[country] : [];
+		energy[country] = typeof energy[country] !== "undefined" ? energy[country] : [];
 
 		// push data to array
-		gas[country].push({
+		energy[country].push({
 			"year" : +d.TIME,
-			"gas" : +d.GAS
+			"gas" : +d.GAS,
+			"heat" : +heatdata[i].HEAT,
+			"oil" : +oildata[i].OIL,
+			"nuclEnergy" : +nucleardata[i].NUC_ENERGY,
+			"renewEnergy" : +renewabledata[i].REN_ENERGY,
+			"solidFuels" : +solidfuelsdata[i].SOLID_FUELS,
+			"wasteConsumption" : +wasteconsumption_data[i].WASTE_CONS
 		});
 	});
 
-	// prepare heat data for energy bargraph
-	var heat = {};
-	heatdata.forEach(function(d) {
-		var country = d.GEO;
+	console.log("energy", energy);
 
-		// make index for country only if not existing yet
-		heat[country] = typeof heat[country] !== "undefined" ? heat[country] : [];
+	// // prepare heat data for energy bargraph
+	// var heat = {};
+	// heatdata.forEach(function(d) {
+	// 	var country = d.GEO;
 
-		// push data to array
-		heat[country].push({
-			"year" : +d.TIME,
-			"heat" : +d.HEAT
-		});
-	});
+	// 	// make index for country only if not existing yet
+	// 	heat[country] = typeof heat[country] !== "undefined" ? heat[country] : [];
 
-	// prepare data for energy bargraph
-	var nuclearenergy = {};
-	nucleardata.forEach(function(d) {
-		var country = d.GEO;
+	// 	// push data to array
+	// 	heat[country].push({
+	// 		"year" : +d.TIME,
+	// 		"heat" : +d.HEAT
+	// 	});
+	// });
+
+	// // prepare data for energy bargraph
+	// var nuclearenergy = {};
+	// nucleardata.forEach(function(d) {
+	// 	var country = d.GEO;
 		
-		// make index for country only if not existing yet
-		nuclearenergy[country] = typeof nuclearenergy[country] !== "undefined" 
-		? nuclearenergy[country] : [];
+	// 	// make index for country only if not existing yet
+	// 	nuclearenergy[country] = typeof nuclearenergy[country] !== "undefined" 
+	// 	? nuclearenergy[country] : [];
 
-		// push data to array
-		nuclearenergy[country].push({
-			"year" : +d.TIME,
-			"nuc_energy" : +d.NUC_ENERGY
-		});
-	});
+	// 	// push data to array
+	// 	nuclearenergy[country].push({
+	// 		"year" : +d.TIME,
+	// 		"nuc_energy" : +d.NUC_ENERGY
+	// 	});
+	// });
 
-	// prepare array of oil data objects
-	var oil = {};
-	oildata.forEach(function(d) {
-		var country = d.GEO;
+	// // prepare array of oil data objects
+	// var oil = {};
+	// oildata.forEach(function(d) {
+	// 	var country = d.GEO;
 		
-		// make index for country only if not existing yet
-		oil[country] = typeof oil[country] !== "undefined" ? oil[country] : [];
+	// 	// make index for country only if not existing yet
+	// 	oil[country] = typeof oil[country] !== "undefined" ? oil[country] : [];
 
-		// push data to array
-		oil[country].push({
-			"year" : +d.TIME,
-			"oil" : +d.OIL
-		});
-	});
+	// 	// push data to array
+	// 	oil[country].push({
+	// 		"year" : +d.TIME,
+	// 		"oil" : +d.OIL
+	// 	});
+	// });
 
-	// prepare renewable energy data for energy bargraph
-	var renewableenergy = {};
-	renewabledata.forEach(function(d) {
-		var country = d.GEO;
+	// // prepare renewable energy data for energy bargraph
+	// var renewableenergy = {};
+	// renewabledata.forEach(function(d) {
+	// 	var country = d.GEO;
 		
-		// make index for country only if not existing yet
-		renewableenergy[country] = typeof renewableenergy[country] !== "undefined" 
-		? renewableenergy[country] : [];
+	// 	// make index for country only if not existing yet
+	// 	renewableenergy[country] = typeof renewableenergy[country] !== "undefined" 
+	// 	? renewableenergy[country] : [];
 		
-		// push data to array
-		renewableenergy[country].push({
-			"year" : +d.TIME,
-			"ren_energy" : +d.REN_ENERGY
-		})
-	})
+	// 	// push data to array
+	// 	renewableenergy[country].push({
+	// 		"year" : +d.TIME,
+	// 		"ren_energy" : +d.REN_ENERGY
+	// 	})
+	// })
 
-	// prepare solid fuels data for energy bargraph
-	var solidfuels = {};
-	solidfuelsdata.forEach(function(d) {
-		var country = d.GEO;
+	// // prepare solid fuels data for energy bargraph
+	// var solidfuels = {};
+	// solidfuelsdata.forEach(function(d) {
+	// 	var country = d.GEO;
 
-		// make index for country only if not existing yet
-		solidfuels[country] = typeof solidfuels[country] !== "undefined" 
-		? solidfuels[country] : [];
+	// 	// make index for country only if not existing yet
+	// 	solidfuels[country] = typeof solidfuels[country] !== "undefined" 
+	// 	? solidfuels[country] : [];
 
-		// push data to array
-		solidfuels[country].push({
-			"year" : +d.TIME,
-			"solidfuels" : +d.SOLID_FUELS
-		})
-	})
+	// 	// push data to array
+	// 	solidfuels[country].push({
+	// 		"year" : +d.TIME,
+	// 		"solidfuels" : +d.SOLID_FUELS
+	// 	})
+	// })
 
-	// prepare waste consumption data for bargraph
-	var wasteconsumption = {};
-	wasteconsumption_data.forEach(function(d) {
-		var country = d.GEO;
+	// // prepare waste consumption data for bargraph
+	// var wasteconsumption = {};
+	// wasteconsumption_data.forEach(function(d) {
+	// 	var country = d.GEO;
 
-		// make index for country only if not existing yet
-		wasteconsumption[country] = typeof wasteconsumption[country] !== "undefined" 
-		? wasteconsumption[country] : [];
+	// 	// make index for country only if not existing yet
+	// 	wasteconsumption[country] = typeof wasteconsumption[country] !== "undefined" 
+	// 	? wasteconsumption[country] : [];
 
-		// push data to array
-		wasteconsumption[country].push({
-			"year" : +d.TIME,
-			"wasteconsumption" : +d.WASTE_CONS
-		})
-	})
+	// 	// push data to array
+	// 	wasteconsumption[country].push({
+	// 		"year" : +d.TIME,
+	// 		"wasteconsumption" : +d.WASTE_CONS
+	// 	})
+	// })
 
 	var prim_prod_energy = d3.nest()
 		.key(function(d) { return d.GEO })
@@ -197,5 +205,5 @@ function prepareData(error, paralleldata, energysavings, economicemissions,
 
 	slider();
 	parallelGraph(parallel_data, 2010);
-	barchart("Netherlands", gas, heat, oil, renewableenergy, solidfuels, nuclearenergy, wasteconsumption);
+	// barchart("Netherlands", gas, heat, oil, renewableenergy, solidfuels, nuclearenergy, wasteconsumption);
 }

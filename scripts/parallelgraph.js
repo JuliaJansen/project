@@ -31,6 +31,19 @@ function parallelGraph(data, year) {
 	    background,
 	    foreground;
 
+	// make tooltip
+	var div = d3.select("#graph").append("div")	
+		.attr("class", "tooltip")		
+		.attr("id", "tipsy")		
+		.style("visibility", "hidden");
+
+	// make tooltip
+	var div = d3.select("#graph").append("div")	
+		.attr("class", "tooltip")		
+		.attr("id", "countrylabel")		
+		.style("visibility", "hidden");
+
+
 	// append svg for graph
 	var svg = d3.select("#graph").append("svg")
 		.attr("width", width + margin.left + margin.right)
@@ -70,7 +83,31 @@ function parallelGraph(data, year) {
 	  .selectAll("path")
 	  	.data(data)
 	  .enter().append("path")
-	  	.attr("d", path);
+	  	.attr("d", path)
+	  	.on("mouseover", function(d) {
+	  		d3.select(this)
+	  			.style("stroke-width", "3.5px")
+	  			.style("stroke", "#ff9900")
+	  			.style("z-index", "40")
+	  			.moveToFront();
+	  		// transition(foreground
+	  		// 	.style("display", "none"));
+	  		d3.select("#tipsy")
+	  			.style("visibility", "visible");
+	  		d3.select("#countrylabel")
+	  			.style("visibility", "visible")
+	  			.html(d.country)
+	  			.style("left", 0 + "px")
+	  			.style("top", d3.event.pageY + "px");
+	  		var active = d3.select(this);
+	  	})
+	  	.on("mouseout", function(d) {
+	  		// transition(foreground
+	  		// 	.style("display", ""));
+	  		d3.select(this)
+	  			.style("stroke-width", "1px")
+	  			.style("stroke", "#004d4d")
+	  	});
 
 	// add a group element for each dimension
 	var g = svg.selectAll(".dimension")
@@ -149,6 +186,7 @@ function parallelGraph(data, year) {
 
 	// handles a brush event, toggling the display of foreground lines.
 	function brush() {
+		mouse
 	  	var actives = dimensions.filter(function(p) { return !y[p].brush.empty(); }),
 	      	extents = actives.map(function(p) { return y[p].brush.extent(); });
 	  	foreground.style("display", function(d) {
@@ -157,5 +195,11 @@ function parallelGraph(data, year) {
 	    	}) ? null : "none";
 	  	});
 	}
+
+	d3.selection.prototype.moveToFront = function() {
+		return this.each(function() {
+			this.parentNode.appendChild(this);
+		});
+	};
 
 };
