@@ -18,7 +18,7 @@ svg {
 .foreground path {
   position: relative;
   fill: none;
-  stroke: #004d4d;
+  stroke: steelblue;
   stroke-width: 1px;
 }
 
@@ -45,15 +45,15 @@ svg {
 }
 
 #parallelgraph_title {
+  text-align: left;
   font-weight: bold;
   font-family: helvetica;
-  font-size: 48px;
+  font-size: 24px;
 }
 
 /* slider */
 #slider {
   width: 500px;
-  margin-left: 50px;
 }
 
 #strikingtext {
@@ -65,8 +65,8 @@ svg {
 }
 
 /* tooltips */
-div.tooltip 
-{ 
+div.graphTooltip
+div.countryLabel { 
     position: absolute;     
     text-align: center;     
     width: 73px;          
@@ -79,7 +79,6 @@ div.tooltip
     border-radius: 1px;     
     pointer-events: none;     
 }
-
 
 /* bargraph */
 body {

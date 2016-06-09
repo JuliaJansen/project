@@ -8,17 +8,22 @@
 
 // calls slider
 function slider() {
-	var slider = d3.slider().min(2004).max(2015).showRange(true).value(2008).tickFormat(d3.format("d"));
+	// var slider = d3.slider().min(2004).max(2015).showRange(true).value(2008).tickFormat(d3.format("d"));
+
+	var slider = d3.slider().axis(true).min(2004).max(2015).step(5)
 	d3.select('#slider').call(slider);
 }
 
 // draws parallel graph
 function parallelGraph(data, year) {
 
-	// set margins
+	// set margins, width and height
 	var margin = {top: 70, right: 5, bottom: 15, left: 5},
-    	width = 700 - margin.left - margin.right,
-    	height = 450 - margin.top - margin.bottom;
+    	width = 480 - margin.left - margin.right,
+    	height = 300 - margin.top - margin.bottom;
+    console.log("width", width);
+    console.log("height", height);
+
 
     // x and y scale and dragging scale prepared
 	var x = d3.scale.ordinal().rangePoints([0, width], 1),
@@ -32,20 +37,22 @@ function parallelGraph(data, year) {
 	    foreground;
 
 	// make tooltip
-	var div = d3.select("#graph").append("div")	
-		.attr("class", "tooltip")		
-		.attr("id", "tipsy")		
-		.style("visibility", "hidden");
+	var tooltip = d3.select("#graph")
+		.append("div")	
+	    .style("position", "absolute")
+	    .style("z-index", "10")
+	    .style("visibility", "hidden")
+	    .text("a simple tooltip")
+	    .attr("class", "graphTooltip");
 
 	// make tooltip
-	var div = d3.select("#graph").append("div")	
-		.attr("class", "tooltip")		
-		.attr("id", "countrylabel")		
+	var countrylabel = d3.select("#graph").append("div")	
+		.attr("class", "countryLabel")		
 		.style("visibility", "hidden");
-
 
 	// append svg for graph
 	var svg = d3.select("#graph").append("svg")
+		.attr("class", "svg")
 		.attr("width", width + margin.left + margin.right)
 		.attr("height", height + margin.top + margin.bottom)
 	  .append("g")
@@ -53,10 +60,10 @@ function parallelGraph(data, year) {
 
 	// create title 
     svg.append("text")
-    	.attr("x", 150)
+    	.attr("x", 120)
     	.attr("y", -20)
     	.attr("id", "parallelgraph_title")
-    	.style("text-anchor", "middle")
+    	.style("text-anchor", "right")
     	.text(function(d) { return year });
 
 	// get data of specific year
@@ -86,27 +93,24 @@ function parallelGraph(data, year) {
 	  	.attr("d", path)
 	  	.on("mouseover", function(d) {
 	  		d3.select(this)
-	  			.style("stroke-width", "3.5px")
+	  			.style("stroke-width", "5.0px")
 	  			.style("stroke", "#ff9900")
-	  			.style("z-index", "40")
 	  			.moveToFront();
-	  		// transition(foreground
-	  		// 	.style("display", "none"));
-	  		d3.select("#tipsy")
-	  			.style("visibility", "visible");
-	  		d3.select("#countrylabel")
-	  			.style("visibility", "visible")
-	  			.html(d.country)
-	  			.style("left", 0 + "px")
-	  			.style("top", d3.event.pageY + "px");
-	  		var active = d3.select(this);
-	  	})
+			// tooltip.text(d.country);
+			// 	return tooltip.style("visibility", "visible");
+			d3.select("#parallelgraph_title")
+				.text(function() {
+					console.log("country", d);
+					if (d.country == "Kosovo (under United Nations Security Council Resolution 1244/99)") {
+						return "Kosovo";
+					} else {
+						return year + "     " + d.country;
+					}});
+	  			})
 	  	.on("mouseout", function(d) {
-	  		// transition(foreground
-	  		// 	.style("display", ""));
-	  		d3.select(this)
-	  			.style("stroke-width", "1px")
-	  			.style("stroke", "#004d4d")
+	  			transition(d3.select(this).transition().duration(50)
+		  			.style("stroke-width", "1px")
+		  			.style("stroke", "#4682b4"));
 	  	});
 
 	// add a group element for each dimension
@@ -140,11 +144,11 @@ function parallelGraph(data, year) {
 	            	.attr("visibility", null);
 	    }));
 
-	// add an axis and title
+	// add an axis 
     g.append("g")
       .attr("class", "axis")
       .each(function(d) { d3.select(this).call(axis.scale(y[d])); })
-    .append("text")
+   	.append("text")
       .style("text-anchor", "middle")
       .attr("y", -9)
       .text(function(d) { return d; });
@@ -186,7 +190,6 @@ function parallelGraph(data, year) {
 
 	// handles a brush event, toggling the display of foreground lines.
 	function brush() {
-		mouse
 	  	var actives = dimensions.filter(function(p) { return !y[p].brush.empty(); }),
 	      	extents = actives.map(function(p) { return y[p].brush.extent(); });
 	  	foreground.style("display", function(d) {
@@ -198,7 +201,8 @@ function parallelGraph(data, year) {
 
 	d3.selection.prototype.moveToFront = function() {
 		return this.each(function() {
-			this.parentNode.appendChild(this);
+			var line = this.parentNode.appendChild(this);
+			line.className = "hover";
 		});
 	};
 

@@ -53,4 +53,14 @@ Voor de emissie en waste moet ik dezelfde databewerkingen ook nog doen. Dat kost
 
 De layout van m'n webpagina heeft helaas opeens padding aan de zijkant waarvan ik niet weet hoe het ontstaan is en waar ik het kan veranderen. De site gebruikt opeens niet meer de hele breedte van de pagina. Dat is jammerrrr, morgen naar kijken. 
 
+#### Day 8
+De parallel coordinates is nu gedeeltelijk interactief. On hover licht een lijn op en verandert van kleur. De tooltip is nog niet echt gelukt. En verschijnt wel in een divje welk land er bij de lijn hoort waar de gebruiker over heen beweegt. TO DO aan deze grafiek:
+- tooltip voor waardes op assen
+- country label werkend krijgen
+- interactie bij onclick naar barchart
+
+De barchart-data voor energy is nu eindelijk in het goede format. Dat zal heel wat tijd schelen  bij het verwerken van de emissie en waste data, maar is nog steeds veel werk. 
+
+Het uitzoeken van in welk formaat de data nou precies moest was niet goed duidelijk aan veel voorbeelden op the interwebz omdat er veel random gegenereerde dummy data werd gebruik ;(.
+
 
