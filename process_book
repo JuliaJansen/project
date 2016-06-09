@@ -63,4 +63,13 @@ De barchart-data voor energy is nu eindelijk in het goede format. Dat zal heel w
 
 Het uitzoeken van in welk formaat de data nou precies moest was niet goed duidelijk aan veel voorbeelden op the interwebz omdat er veel random gegenereerde dummy data werd gebruik ;(.
 
+#### Day 9
+Het gaat stap voor stap verder. 
 
+PROBLEEM:  
+Iceland en Luxembourg lijken outliers die met de jaren absurd veel meer energie per capita gaan gebruiken waardoor de andere lijnen steeds dichter tegen elkaar toekruipen. UITZOEKEN OF HET KOMT OMDAT DEZE LANDEN ZO KLEIN ZIJN!! Even rondzoeken op internet of er iets te vinden is over het energieverbruik en stijging daarvan in deze kleine ***energievreters***. 
+
+Verder:
+- parallel coordinates is interactief, slider werkt en hover ook en click op land geeft land door aan console.log
+- barchart ben ik ongelooflijk mee aan t kloten snap er de ballen van.
+- slider werkt nu ook goed, alleen cijfers worden met comma weergegeven. Krijg ik wel weg, maar dan verdwijnen de jaren tijdens het draggen van de slider. :(
