@@ -33,6 +33,12 @@ function barchart(country, data) {
 	var wasteConsumption = [];
 	var solidFuels = [];
 
+	// n = amount of layers
+	// m = data points per layer
+	n = 7;
+	m = 10;
+
+	// reformat data to layers
 	data.forEach(function(d) {
 		oil.push({ 	"x" : d.year - 2004, 
 					"y0" : d.oil,
@@ -71,27 +77,23 @@ function barchart(country, data) {
 	var layers = [oil, heat, gas, nucEnergy, renEnergy, wasteConsumption, solidFuels];
 	console.log("layers", layers);
 
-	layers.forEach(function(d) {
-		var y0 = 0;	
-		d.values = color.domain().map(function(name) { return {name: name, y0: y0, y1: y0 += +d[name]}; });
-		d.total = d.values[d.values.length - 1].y1;
-	});
+
+	// layers.forEach(function(d) {
+	// 	var y0 = 0;	
+	// 	d.values = color.domain().map(function(name) { return {name: name, y0: y0, y1: y0 += +d[name]}; });
+	// 	d.total = d.values[d.values.length - 1].y1;
+	// });
 
 	yGroupMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y1; }); }),
     yStackMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y0 + d.y1; }); });
-	console.log("groupmax", yGroupMax);
-	console.log("stackmax", yStackMax);
 
 	var x = d3.scale.ordinal()
-	    .domain(d3.range(10))
+	    .domain([0, 10])
 	    .rangeRoundBands([0, width], .08);
 
 	var y = d3.scale.linear()
-	    .domain(d3.extent(data, function(d) { return d.values }))
+	    .domain([0, yStackMax])
 	    .range([height, 0]);
-
-	x.domain(data.map(function(d) { return d.year; }));
-	y.domain([0, d3.max(data, function(d) { return d.total; })]);
 
 	// set margins
 	var margin = {top: 70, right: 5, bottom: 15, left: 5},
