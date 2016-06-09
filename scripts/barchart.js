@@ -10,63 +10,93 @@
 /* 
  * draws a barchart for one country
  */
-function barchart(country, gas, heat, oil, renewableenergy, 
-	solidfuels, nuclearenergy, wasteconsumption) {
+function barchart(country, data) {
 
 	// get data for country
-	data = [gas[country], heat[country], oil[country], renewableenergy[country], 
-	solidfuels[country], nuclearenergy[country], wasteconsumption[country]];
+	data = data[country];
 
 	console.log("data =", data);
 
-	testdata = data;
-
-    // reformat data
-	testdata.forEach(function(d) {
-	    var y = 0;
-	    console.log('values', d.values);
-	    d.values = color.domain().map(function(type) { return {type: type, y: y, y0: y += +d[type]}; });
-	    d.total = d.values[d.values.length - 1].y0;
-	});
-
-	console.log("testdata", testdata);
-
-
-	var n = 7, // number of layers
-	    m = 10, // number of samples per layer
-	    stack = d3.layout.stack(),
-	    layers = stack(d3.range(n).map(function() { bump = bumpLayer(m, .1); console.log(bump); return bump })),
-	    yGroupMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y; }); }),
-	    yStackMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y0 + d.y; }); });
-
-	// console.log("layers", layers);
-	// console.log("yGroupMax", yGroupMax);
-
-	// set margins
-	var margin = {top: 70, right: 5, bottom: 15, left: 5},
-    	width = 700 - margin.left - margin.right,
-    	height = 450 - margin.top - margin.bottom;
-	
-	var x = d3.scale.ordinal()
-	    .domain(d3.range(m))
-	    .rangeRoundBands([0, width], .08);
-
-	var y = d3.scale.linear()
-	    .domain([0, yStackMax])
-	    .range([height, 0]);
-
-	// var x = d3.scale.ordinal()
- //   		.rangeRoundBands([0, width], .1);
-
-	// var y = d3.scale.linear()
- //   		.rangeRound([height, 0]);
+	// console.log("domain of", d3.keys(data[0]).filter(function(key) { return key !== "year"; }));
 
 	// color scale
 	var color = d3.scale.ordinal()
     	.range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
 
-	// x.domain(data.map(function(d) { return d.State; }));
- //  	y.domain([0, d3.max(data, function(d) { return d.total; })]);
+	color.domain(d3.keys(data[0]).filter(function(key) { return key !== "year"; }));
+
+	var oil = [];
+	var heat = [];
+	var gas = [];
+	var nucEnergy = [];
+	var renEnergy = [];
+	var wasteConsumption = [];
+	var solidFuels = [];
+
+	data.forEach(function(d) {
+		oil.push({ 	"x" : d.year - 2004, 
+					"y0" : d.oil,
+					"y1": d.oil
+		});
+		heat.push({	"x" : d.year - 2004, 
+					"y0" : d.heat,
+					"y1": d.oil 
+		});
+		gas.push({	"x" : d.year - 2004, 
+					"y0" : d.gas,
+					"y1": d.oil + d.heat 
+		});
+		nucEnergy.push({	"x" : d.year - 2004, 
+					"x" : d.year - 2004,
+					"y0" : d.nucEnergy,
+					"y1": d.oil + d.heat + d.gas 
+		});
+		renEnergy.push({	"x" : d.year - 2004, 
+					"x" : d.year - 2004,
+					"y0" : d.renEnergy,
+					"y1": d.oil + d.heat + d.gas + d.nucEnergy 
+		});
+		wasteConsumption.push({	"x" : d.year - 2004, 
+					"x" : d.year - 2004,
+					"y0" : d.wasteConsumption,
+					"y1": d.oil + d.heat + d.gas + d.nucEnergy + d.renEnergy 
+		});
+		solidFuels.push({	"x" : d.year - 2004, 
+					"x" : d.year - 2004,
+					"y0" : d.solidFuels,
+					"y1": d.oil + d.heat + d.gas + d.nucEnergy + d.renEnergy + d.wasteConsumption
+		});
+	});
+
+	var layers = [oil, heat, gas, nucEnergy, renEnergy, wasteConsumption, solidFuels];
+	console.log("layers", layers);
+
+	layers.forEach(function(d) {
+		var y0 = 0;	
+		d.values = color.domain().map(function(name) { return {name: name, y0: y0, y1: y0 += +d[name]}; });
+		d.total = d.values[d.values.length - 1].y1;
+	});
+
+	yGroupMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y1; }); }),
+    yStackMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y0 + d.y1; }); });
+	console.log("groupmax", yGroupMax);
+	console.log("stackmax", yStackMax);
+
+	var x = d3.scale.ordinal()
+	    .domain(d3.range(10))
+	    .rangeRoundBands([0, width], .08);
+
+	var y = d3.scale.linear()
+	    .domain(d3.extent(data, function(d) { return d.values }))
+	    .range([height, 0]);
+
+	x.domain(data.map(function(d) { return d.year; }));
+	y.domain([0, d3.max(data, function(d) { return d.total; })]);
+
+	// set margins
+	var margin = {top: 70, right: 5, bottom: 15, left: 5},
+    	width = 700 - margin.left - margin.right,
+    	height = 450 - margin.top - margin.bottom;
 
     // define x axis
 	var xAxis = d3.svg.axis()
@@ -128,11 +158,11 @@ function barchart(country, gas, heat, oil, renewableenergy,
 	  rect.transition()
 	      .duration(500)
 	      .delay(function(d, i) { return i * 10; })
-	      .attr("x", function(d, i, j) { return x(d.x) + x.rangeBand() / n * j; })
+	      .attr("x", function(d, i, j) { console.log("d.x", d.x, x.rangeBand()); return x(d.x) + x.rangeBand() / n * j; })
 	      .attr("width", x.rangeBand() / n)
 	    .transition()
 	      .attr("y", function(d) { return y(d.y); })
-	      .attr("height", function(d) { return height - y(d.y); });
+	      .attr("height", function(d) { console.log("y, dy", d.y, y(d.y)); return height - y(d.y); });
 	}
 
 	function transitionStacked() {

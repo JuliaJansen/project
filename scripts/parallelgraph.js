@@ -7,23 +7,31 @@
  */
 
 // calls slider
-function slider() {
-	// var slider = d3.slider().min(2004).max(2015).showRange(true).value(2008).tickFormat(d3.format("d"));
+function slider(data) {
+	var data = data;
+	var slider = d3.slider()
+      .min(2005)
+      .max(2013)
+      .showRange(true)
+      .value(2005)
+      .callback(function(evt) {
+      	parallelGraph(data, Math.floor(slider.value()));
+      });
 
-	var slider = d3.slider().axis(true).min(2004).max(2015).step(5)
 	d3.select('#slider').call(slider);
+
 }
 
 // draws parallel graph
 function parallelGraph(data, year) {
 
+	d3.select(".graphsvg").remove();
+	d3.select(".graphTooltip").remove();
+
 	// set margins, width and height
-	var margin = {top: 70, right: 5, bottom: 15, left: 5},
+	var margin = {top: 90, right: 5, bottom: 15, left: 5},
     	width = 480 - margin.left - margin.right,
     	height = 300 - margin.top - margin.bottom;
-    console.log("width", width);
-    console.log("height", height);
-
 
     // x and y scale and dragging scale prepared
 	var x = d3.scale.ordinal().rangePoints([0, width], 1),
@@ -45,14 +53,9 @@ function parallelGraph(data, year) {
 	    .text("a simple tooltip")
 	    .attr("class", "graphTooltip");
 
-	// make tooltip
-	var countrylabel = d3.select("#graph").append("div")	
-		.attr("class", "countryLabel")		
-		.style("visibility", "hidden");
-
 	// append svg for graph
 	var svg = d3.select("#graph").append("svg")
-		.attr("class", "svg")
+		.attr("class", "graphsvg")
 		.attr("width", width + margin.left + margin.right)
 		.attr("height", height + margin.top + margin.bottom)
 	  .append("g")
@@ -100,7 +103,6 @@ function parallelGraph(data, year) {
 			// 	return tooltip.style("visibility", "visible");
 			d3.select("#parallelgraph_title")
 				.text(function() {
-					console.log("country", d);
 					if (d.country == "Kosovo (under United Nations Security Council Resolution 1244/99)") {
 						return "Kosovo";
 					} else {
@@ -111,7 +113,10 @@ function parallelGraph(data, year) {
 	  			transition(d3.select(this).transition().duration(50)
 		  			.style("stroke-width", "1px")
 		  			.style("stroke", "#4682b4"));
-	  	});
+	  	})
+	  	.on("click", function(d) {
+	  		console.log("mouse", d.country);
+	  	})
 
 	// add a group element for each dimension
 	var g = svg.selectAll(".dimension")
