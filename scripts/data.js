@@ -110,6 +110,6 @@ function prepareData(error, paralleldata, energysavings, economicemissions,
 	// console.log("waste specified by economic activity: ", economic_waste);
 
 	slider(parallel_data, energy);
-	parallelGraph(parallel_data, 2005);
+	parallelGraph(energy, parallel_data, 2005);
 	barchart("Netherlands", energy);
 }

@@ -12,6 +12,8 @@
  */
 function barchart(country, data) {
 
+	d3.select("#barsvg").remove();
+
 	// get data for country
 	data = data[country];
 
@@ -21,9 +23,8 @@ function barchart(country, data) {
 
 	// color scale
 	var color = d3.scale.ordinal()
-    	.range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
-
-	color.domain(d3.keys(data[0]).filter(function(key) { return key !== "year"; }));
+    	.range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#99ff33", "#d0743c", "#ff8c00"])
+		.domain(d3.keys(data[0]).filter(function(key) { return key !== "year"; }));
 
 	var oil = [];
 	var heat = [];
@@ -77,13 +78,6 @@ function barchart(country, data) {
 	var layers = [oil, heat, gas, nucEnergy, renEnergy, wasteConsumption, solidFuels];
 	console.log("layers", layers);
 
-
-	// layers.forEach(function(d) {
-	// 	var y0 = 0;	
-	// 	d.values = color.domain().map(function(name) { return {name: name, y0: y0, y1: y0 += +d[name]}; });
-	// 	d.total = d.values[d.values.length - 1].y1;
-	// });
-
 	yGroupMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y1; }); }),
     yStackMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y0 + d.y1; }); });
 
@@ -109,12 +103,13 @@ function barchart(country, data) {
 
 	// append svg
 	var svg = d3.select("#barchart").append("svg")
+		.attr("id", "barsvg")
 	    .attr("width", width + margin.left + margin.right)
 	    .attr("height", height + margin.top + margin.bottom)
 	  .append("g")
 	    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-	// 
+	// add a g for each layer
 	var layer = svg.selectAll(".layer")
     	.data(layers)
   	  .enter().append("g")
@@ -127,20 +122,48 @@ function barchart(country, data) {
 	  .enter().append("rect")
 	    .attr("x", function(d) { return x(d.x); })
 	    .attr("y", height)
-	    .attr("width", function(d) { console.log("x.rangeband", x.rangeBand()); return x.rangeBand(); })
+	    .attr("width", x.rangeBand())
 	    .attr("height", 0);
 
 	// transition for rects
 	rect.transition()
 	    .delay(function(d, i) { return i * 10; })
 	    .attr("y", function(d) { return y(d.y1 + d.y0); })
-	    .attr("height", function(d) { return y(d.y1) - y(d.y1 + d.y0); });
+	    .attr("height", function(d) { return (y(d.y1) - y(d.y1 + d.y0)); });
 
 	// append an axis 
 	svg.append("g")
 	    .attr("class", "x axis")
 	    .attr("transform", "translate(0," + height + ")")
 	    .call(xAxis);
+
+	// create title 
+    svg.append("text")
+    	.attr("x", 120)
+    	.attr("y", -20)
+    	.attr("id", "barchart_title")
+    	.style("text-anchor", "right")
+    	.text(function(d) { return "Use of Energy per Capita" });
+
+    var legend = svg.selectAll(".legend")
+        .data(color.domain().reverse())
+      .enter().append("g")
+        .attr("class", "legend")
+        .attr("transform", function(d, i) { console.log("d = ", d); return "translate(0," + i * 20 + ")"; });
+
+	legend.append("rect")
+	    .attr("x", width - 18)
+	    .attr("width", 18)
+	    .attr("height", 18)
+	    .style("fill", color);
+
+	legend.append("text")
+	    .attr("x", width - 24)
+	    .attr("y", 9)
+	    .attr("dy", ".35em")
+	    .style("text-anchor", "end")
+	    .text(function(d) { return d; });
+
 
 	d3.selectAll("input").on("change", change);
 
@@ -160,11 +183,11 @@ function barchart(country, data) {
 	  rect.transition()
 	      .duration(500)
 	      .delay(function(d, i) { return i * 10; })
-	      .attr("x", function(d, i, j) { console.log("d.x", d.x, x.rangeBand()); return x(d.x) + x.rangeBand() / n * j; })
+	      .attr("x", function(d, i, j) { return x(d.x) + x.rangeBand() / n * j; })
 	      .attr("width", x.rangeBand() / n)
 	    .transition()
 	      .attr("y", function(d) { return y(d.y); })
-	      .attr("height", function(d) { console.log("y, dy", d.y0, y(d.y0)); return height - y(d.y0); });
+	      .attr("height", function(d) { return height - y(d.y0); });
 	}
 
 	function transitionStacked() {

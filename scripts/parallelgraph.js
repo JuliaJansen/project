@@ -8,6 +8,8 @@
 
 // calls slider
 function slider(data, energydata) {
+
+
 	var data = data;
 	var energydata = energydata;
 	var slider = d3.slider()
