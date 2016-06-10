@@ -40,35 +40,35 @@ function barchart(country, data) {
 
 	// reformat data to layers
 	data.forEach(function(d) {
-		oil.push({ 	"x" : d.year - 2004, 
+		oil.push({ 	"x" : d.year, // - 2004, 
 					"y0" : d.oil,
 					"y1": d.oil
 		});
-		heat.push({	"x" : d.year - 2004, 
+		heat.push({	"x" : d.year, // - 2004, 
 					"y0" : d.heat,
 					"y1": d.oil 
 		});
-		gas.push({	"x" : d.year - 2004, 
+		gas.push({	"x" : d.year, // - 2004, 
 					"y0" : d.gas,
 					"y1": d.oil + d.heat 
 		});
-		nucEnergy.push({	"x" : d.year - 2004, 
-					"x" : d.year - 2004,
+		nucEnergy.push({	
+					"x" : d.year, // - 2004, 
 					"y0" : d.nucEnergy,
 					"y1": d.oil + d.heat + d.gas 
 		});
-		renEnergy.push({	"x" : d.year - 2004, 
-					"x" : d.year - 2004,
+		renEnergy.push({	
+					"x" : d.year, // - 2004, 
 					"y0" : d.renEnergy,
 					"y1": d.oil + d.heat + d.gas + d.nucEnergy 
 		});
-		wasteConsumption.push({	"x" : d.year - 2004, 
-					"x" : d.year - 2004,
+		wasteConsumption.push({	
+					"x" : d.year, //- 2004, 
 					"y0" : d.wasteConsumption,
 					"y1": d.oil + d.heat + d.gas + d.nucEnergy + d.renEnergy 
 		});
-		solidFuels.push({	"x" : d.year - 2004, 
-					"x" : d.year - 2004,
+		solidFuels.push({	
+					"x" : d.year,//  - 2004, 
 					"y0" : d.solidFuels,
 					"y1": d.oil + d.heat + d.gas + d.nucEnergy + d.renEnergy + d.wasteConsumption
 		});
@@ -87,18 +87,18 @@ function barchart(country, data) {
 	yGroupMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y1; }); }),
     yStackMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y0 + d.y1; }); });
 
+	// set margins
+	var margin = {top: 70, right: 5, bottom: 15, left: 5},
+    	width = 480 - margin.left - margin.right,
+    	height = 300 - margin.top - margin.bottom;
+
 	var x = d3.scale.ordinal()
-	    .domain([0, 10])
+		.domain([2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014])
 	    .rangeRoundBands([0, width], .08);
 
 	var y = d3.scale.linear()
 	    .domain([0, yStackMax])
 	    .range([height, 0]);
-
-	// set margins
-	var margin = {top: 70, right: 5, bottom: 15, left: 5},
-    	width = 700 - margin.left - margin.right,
-    	height = 450 - margin.top - margin.bottom;
 
     // define x axis
 	var xAxis = d3.svg.axis()
@@ -127,14 +127,14 @@ function barchart(country, data) {
 	  .enter().append("rect")
 	    .attr("x", function(d) { return x(d.x); })
 	    .attr("y", height)
-	    .attr("width", x.rangeBand())
+	    .attr("width", function(d) { console.log("x.rangeband", x.rangeBand()); return x.rangeBand(); })
 	    .attr("height", 0);
 
 	// transition for rects
 	rect.transition()
 	    .delay(function(d, i) { return i * 10; })
-	    .attr("y", function(d) { return y(d.y0 + d.y); })
-	    .attr("height", function(d) { return y(d.y0) - y(d.y0 + d.y); });
+	    .attr("y", function(d) { return y(d.y1 + d.y0); })
+	    .attr("height", function(d) { return y(d.y1) - y(d.y1 + d.y0); });
 
 	// append an axis 
 	svg.append("g")
@@ -164,7 +164,7 @@ function barchart(country, data) {
 	      .attr("width", x.rangeBand() / n)
 	    .transition()
 	      .attr("y", function(d) { return y(d.y); })
-	      .attr("height", function(d) { console.log("y, dy", d.y, y(d.y)); return height - y(d.y); });
+	      .attr("height", function(d) { console.log("y, dy", d.y0, y(d.y0)); return height - y(d.y0); });
 	}
 
 	function transitionStacked() {
@@ -173,29 +173,10 @@ function barchart(country, data) {
 	  rect.transition()
 	      .duration(300)
 	      .delay(function(d, i) { return i * 10; })
-	      .attr("y", function(d) { return y(d.y0 + d.y); })
-	      .attr("height", function(d) { return y(d.y0) - y(d.y0 + d.y); })
+	      .attr("y", function(d) { return y(d.y1 + d.y0); })
+	      .attr("height", function(d) { return y(d.y1) - y(d.y1 + d.y0); })
 	    .transition()
 	      .attr("x", function(d) { return x(d.x); })
 	      .attr("width", x.rangeBand());
-	}
-
-	// Inspired by Lee Byron's test data generator.
-	function bumpLayer(n, o) {
-
-	  function bump(a) {
-	    var x = 1 / (.1 + Math.random()),
-	        y = 2 * Math.random() - .5,
-	        z = 10 / (.1 + Math.random());
-	    for (var i = 0; i < n; i++) {
-	      var w = (i / n - y) * z;
-	      a[i] += x * Math.exp(-w * w);
-	    }
-	  }
-
-	  var a = [], i;
-	  for (i = 0; i < n; ++i) a[i] = o + o * Math.random();
-	  for (i = 0; i < 5; ++i) bump(a);
-	  return a.map(function(d, i) { return {x: i, y: Math.max(0, d)}; });
 	}
 }

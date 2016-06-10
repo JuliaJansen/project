@@ -7,15 +7,19 @@
  */
 
 // calls slider
-function slider(data) {
+function slider(data, energydata) {
 	var data = data;
+	var energydata = energydata;
 	var slider = d3.slider()
       .min(2005)
       .max(2013)
       .showRange(true)
       .value(2005)
-      .callback(function(evt) {
-      	parallelGraph(data, Math.floor(slider.value()));
+      .callback(function() {
+
+      	console.log("in slider ", energydata);
+
+      	parallelGraph(energydata, data, Math.floor(slider.value()));
       });
 
 	d3.select('#slider').call(slider);
@@ -23,8 +27,13 @@ function slider(data) {
 }
 
 // draws parallel graph
-function parallelGraph(data, year) {
+function parallelGraph(energydata, data, year) {
 
+	// save energydata in variable
+	var energydata = energydata; 
+	console.log("in parallel ", energydata);
+
+	// remove old graph and tooltip if existing
 	d3.select(".graphsvg").remove();
 	d3.select(".graphTooltip").remove();
 
@@ -115,7 +124,8 @@ function parallelGraph(data, year) {
 		  			.style("stroke", "#4682b4"));
 	  	})
 	  	.on("click", function(d) {
-	  		console.log("mouse", d.country);
+	  		console.log("in click, ", energydata);
+	  		barchart(d.country, energydata);
 	  	})
 
 	// add a group element for each dimension
