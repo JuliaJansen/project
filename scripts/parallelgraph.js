@@ -18,9 +18,7 @@ function slider(data, energydata) {
       .showRange(true)
       .value(2005)
       .callback(function() {
-
-      	console.log("in slider ", energydata);
-
+      	// draw parallelGraph
       	parallelGraph(energydata, data, Math.floor(slider.value()));
       });
 
@@ -33,7 +31,6 @@ function parallelGraph(energydata, data, year) {
 
 	// save energydata in variable
 	var energydata = energydata; 
-	console.log("in parallel ", energydata);
 
 	// remove old graph and tooltip if existing
 	d3.select(".graphsvg").remove();
@@ -126,7 +123,6 @@ function parallelGraph(energydata, data, year) {
 		  			.style("stroke", "#4682b4"));
 	  	})
 	  	.on("click", function(d) {
-	  		console.log("in click, ", energydata);
 	  		barchart(d.country, energydata);
 	  	})
 
@@ -194,7 +190,6 @@ function parallelGraph(energydata, data, year) {
 	// returns the path for a given data point
 	function path(d) {
 		if (isNaN(d.emissions) || isNaN(d.energy) || isNaN(d.waste)) {
-			console.log("d", d);
 		} else {
 			return line(dimensions.map(function(p) { return [position(p), y[p](d[p])]; }));
 		}

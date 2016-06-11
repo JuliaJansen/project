@@ -38,7 +38,7 @@ function prepareData(error, paralleldata, energysavings, economicemissions,
 		parallel_data[year] = typeof parallel_data[year] !== "undefined" ? parallel_data[year] : [];
 
 		// push data to array
-		if (+d.ENERGY > 0 && +d.EMISSIONS > 0 && +d.WASTE > 0) { // && d.GEO != "Iceland" && d.GEO != "Luxembourg"
+		if (+d.ENERGY > 0 && +d.EMISSIONS > 0 && +d.WASTE > 0 && d.GEO != "Iceland" && d.GEO != "Luxembourg") {
 			parallel_data[year].push({
 				"country" : d.GEO,
 				"energy" : +d.ENERGY,
