@@ -19,11 +19,6 @@ function barchart(country, data) {
 
 	// console.log("domain of", d3.keys(data[0]).filter(function(key) { return key !== "year"; }));
 
-	// color scale
-	var color = d3.scale.ordinal()
-    	.range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#99ff33", "#d0743c", "#ff8c00"])
-		.domain(d3.keys(data[0]).filter(function(key) { return key !== "year"; }));
-
 	var oil = [];
 	var heat = [];
 	var gas = [];
@@ -73,7 +68,23 @@ function barchart(country, data) {
 		});
 	});
 
-	var layers = [oil, heat, gas, nucEnergy, renEnergy, wasteConsumption, solidFuels];
+	var layers = {};
+	layers["oil"] = oil;
+	layers["heat"] = heat;
+	layers["gas"] = gas;
+	layers["nucEnergy"] = nucEnergy;
+	layers["renEnergy"] = renEnergy;
+	layers["wasteConsumption"] = wasteConsumption;
+	layers["solidFuels"] = solidFuels;
+
+	// , heat, gas, nucEnergy, renEnergy, wasteConsumption, solidFuels];
+	console.log("layers:", layers);
+
+
+	// color scale
+	var color = d3.scale.ordinal()
+    	.range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#99ff33", "#d0743c", "#ff8c00"])
+		.domain(d3.keys(layers).filter(function(key) { return key !== "year"; }));
 
 	yGroupMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y1; }); }),
     yStackMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y0 + d.y1; }); });

@@ -4,6 +4,10 @@
  * Minor programmeren
  */
 
+body {
+  position: relative;
+}
+
 /* style titles */
 h1 {
 	text-align: center;
