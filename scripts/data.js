@@ -11,7 +11,7 @@ window.onload = function() {
 	d3_queue.queue()
 		.defer(d3.csv, '/data/parallelgraph_capita.csv')
 		.defer(d3.csv, '/data/energysavings.csv')
-		.defer(d3.csv, '/data/emissions_what_industries.csv')
+		.defer(d3.csv, '/data/emissionindustriesdata.csv')
 		.defer(d3.csv, '/data/waste_sector.csv')
 		.defer(d3.csv, '/data/gasdata.csv')
 		.defer(d3.csv, '/data/heatdata.csv')
@@ -48,14 +48,7 @@ function prepareData(error, paralleldata, energysavings, economicemissions,
 		}
 	});
 
-	// nest data for energy savings
-	var energy_savings = d3.nest()
-		.key(function(d) {  if (d.UNIT == "Thousand TOE (tonnes of oil equivalent)") {
-			return "TOE" } else { return d.UNIT } })
-		.key(function(d) { return d.TIME })
-		.entries(energysavings);
-
-	// prepare gas data for energy bargraph
+	// prepare energy use data for energy bargraph
 	var energy = {};
 	gasdata.forEach(function(d, i) {
 		var country = d.GEO;
@@ -75,6 +68,34 @@ function prepareData(error, paralleldata, energysavings, economicemissions,
 			"wasteConsumption" : +wasteconsumption_data[i].WASTE_CONS
 		});
 	});
+
+
+	// prepare emissions data for bargraph
+	var emissions = {};
+	economicemissions.forEach(function(d, i) {
+		var country = d.GEO;
+
+		// make index for country only if not existing yet
+		emissions[country] = typeof emissions[country] !== "undefined" ? emissions[country] : [];
+
+		// emissions[country].push({
+		// 	d.INDUSTRY : })
+
+		console.log("INDUSTRY", d.INDUSTRY);
+
+
+	}); 
+
+
+
+
+
+	// nest data for energy savings
+	var energy_savings = d3.nest()
+		.key(function(d) {  if (d.UNIT == "Thousand TOE (tonnes of oil equivalent)") {
+			return "TOE" } else { return d.UNIT } })
+		.key(function(d) { return d.TIME })
+		.entries(energysavings);
 
 	var prim_prod_energy = d3.nest()
 		.key(function(d) { return d.GEO })

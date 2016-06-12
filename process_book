@@ -88,6 +88,19 @@ Vandaag bij de presentatie vragen: is het boeiend om deze outliers extra aandach
 ###### energie data
 Het is me onduidelijk geworden of ik 'waste consumption' moet weergeven in de barchart over energieverbruik. Ik moet iets verder onderzoeken of de categoriën die ik nu heb aangemaakt kloppen als aanduiders van energieverbruik. 
 
+#### 12 juni
+De belangrijkste broeikasgassen en hun relatieve aardopwarmingsvermogens zijn:
 
+Een uitgebreider overzicht staat onder Aardopwarmingsvermogen
+Naam	Formule	CO2-equivalent
+Koolstofdioxide	CO2	1
+Methaan	CH4	28
+Distikstofoxide (lachgas)	N2O	265
+Waterdamp	H2O	Zie sectie over waterdamp
+Chloorfluorkoolstofverbindingen	CxFyClz	5700 tot 11 900
+Zwavelhexafluoride	SF6	23 500
+Ozon	O3	 ?
+
+Daarom neem ik voor de uitstoot tabel per industrie alleen CO2. Ook nog specificeren voor verschillende broeikasgassen zou te veel informatie voor één grafiek zijn. 
 
 
