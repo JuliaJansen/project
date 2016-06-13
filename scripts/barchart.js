@@ -72,14 +72,13 @@ function barchart(country, data) {
 	layers["oil"] = oil;
 	layers["heat"] = heat;
 	layers["gas"] = gas;
-	layers["nucEnergy"] = nucEnergy;
-	layers["renEnergy"] = renEnergy;
-	layers["wasteConsumption"] = wasteConsumption;
-	layers["solidFuels"] = solidFuels;
+	layers["nuclear"] = nucEnergy;
+	layers["renewable"] = renEnergy;
+	layers["waste consumption"] = wasteConsumption;
+	layers["solid fuels"] = solidFuels;
 
 	// , heat, gas, nucEnergy, renEnergy, wasteConsumption, solidFuels];
 	console.log("layers:", layers);
-
 
 	// color scale
 	var color = d3.scale.ordinal()
@@ -109,6 +108,9 @@ function barchart(country, data) {
 	    .tickPadding(6)
 	    .orient("bottom");
 
+	// data = [oil, heat, gas, nucEnergy, renEnergy, wasteConsumption, solidFuels];
+	// console.log("data", data);
+
 	// append svg
 	var svg = d3.select("#barchart").append("svg")
 		.attr("id", "barsvg")
@@ -126,25 +128,28 @@ function barchart(country, data) {
 
     // append rectangle
 	var rect = layer.selectAll("rect")
-	    .data(function(d) { return d; })
+	    .data(function(d) { console.log("d", d); return d; })
 	  .enter().append("rect")
 	    .attr("x", function(d) { console.log("x, x(x)", d.x, x(d.x)); return x(d.x); })
 	    .attr("y", function(d) { console.log("height", height); return height; })
 	    .attr("width", function(d) { console.log("rangeband", x.rangeBand()); return x.rangeBand(); })
 	    .attr("height", 0);
 
+	// append legend
 	var legend = svg.selectAll(".legend")
         .data(color.domain().reverse())
       .enter().append("g")
         .attr("class", "legend")
-        .attr("transform", function(d, i) { console.log("d = ", d); return "translate(0," + i * 20 + ")"; });
+        .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
 
+    // for every variable a rectangle
 	legend.append("rect")
 	    .attr("x", width - 18)
 	    .attr("width", 18)
 	    .attr("height", 18)
 	    .style("fill", color);
 
+	// for every variable a label
 	legend.append("text")
 	    .attr("x", width - 24)
 	    .attr("y", 9)

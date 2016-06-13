@@ -11,7 +11,7 @@ window.onload = function() {
 	d3_queue.queue()
 		.defer(d3.csv, '/data/parallelgraph_capita.csv')
 		.defer(d3.csv, '/data/energysavings.csv')
-		.defer(d3.csv, '/data/emissionindustriesdata.csv')
+		.defer(d3.csv, '/data/emission_industries_data.csv')
 		.defer(d3.csv, '/data/waste_sector.csv')
 		.defer(d3.csv, '/data/gasdata.csv')
 		.defer(d3.csv, '/data/heatdata.csv')
@@ -78,17 +78,35 @@ function prepareData(error, paralleldata, energysavings, economicemissions,
 		// make index for country only if not existing yet
 		emissions[country] = typeof emissions[country] !== "undefined" ? emissions[country] : [];
 
-		// emissions[country].push({
-		// 	d.INDUSTRY : })
-
-		console.log("INDUSTRY", d.INDUSTRY);
-
-
+		// push data to array
+		emissions[country].push({
+			"year" : +d.TIME,
+			"Agriculture" : +d.Agriculture,
+			"Mining" : +d.Mining, 
+			"Manufacturing" : +d.Manufacturing, 
+			"Electricity_Gas_Steam" : +d.Electricity_Gas_Steam, 
+			"Water_management" : +d.Water_management, 
+			"Transportation_Storage" : +d.Transportation_Storage, 
+			"Accomodation_Food" : +d.Accomodation_Food,
+			"Information_Communication" : +d.Information_Communication, 
+			"Financial_Insurance" : +d.Financial_Insurance, 
+			"RealEstate" : +d.RealEstate, 
+			"Professional_Scientific_Technical" : +d.Professional_Scientific_Technical, 
+			"Administration_Defence_SocialSecurity" : +d.Administration_Defence_SocialSecurity, 
+			"Education" : +d.Education, 
+			"Health_SocialWork" : +d.Health_SocialWork, 
+			"Arts_Entertainment" : +d.Arts_Entertainment, 
+			"OtherService" : +d.OtherService, 
+			"Households_Employers" : +d.Households_Employers,
+		 	"Extraterritorial_Org" : +d.Extraterritorial_Org
+		});
 	}); 
 
+	console.log("emissions", emissions);
 
-
-
+	// prepare waste data for bargraph
+	var waste = {};
+	
 
 	// nest data for energy savings
 	var energy_savings = d3.nest()

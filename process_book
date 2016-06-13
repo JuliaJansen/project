@@ -103,4 +103,53 @@ Ozon	O3	 ?
 
 Daarom neem ik voor de uitstoot tabel per industrie alleen CO2. Ook nog specificeren voor verschillende broeikasgassen zou te veel informatie voor één grafiek zijn. 
 
+#### 13 juni
+Vandaag de data voor emissie en waste per economische activiteit omgeschreven naar hezelfde format als de energy/bron. 
 
+Het is nogal een gedoe omdat er zoveel veschillende economische activiteiten zijn, maar we komen er wel. 
+
+- Emission data: 
+** alle missende waardes van : veranderd in -1, zodat het te lezen is in javascript en ik een if-statement in kan bouwen voor de waarde -1. Bovendien zal het zo niet veel aan de assenschaal veranderen, omdat de waarde 0 al voorkomt.
+
+** 			Names of variables:  
+			"Agriculture_ forestry and fishing"  
+			"Mining and quarrying"  
+			"Manufacturing"  
+			"Electricity_ gas_ steam and air conditioning supply"  
+			"Water supply_ sewerage_ waste management and remediation activities"  
+			"Wholesale and retail trade_ repair of motor vehicles and motorcycles"  
+			"Transportation and storage"  
+			"Accommodation and food service activities"  
+			"Information and communication"  
+			"Financial and insurance activities"  
+			"Real estate activities"  
+			"Professional_ scientific and technical activities"  
+			"Administrative and support service activities"  
+			"Public administration and defence_ compulsory social security"  
+			"Education"  
+			"Human health and social work activities"  
+			"Arts_ entertainment and recreation"  
+			"Other service activities"  
+			"Activities of households as employers_ undifferentiated goods- and services-producing activities of households for own use"  
+			"Activities of extraterritorial organisations and bodies"  
+
+			Labels in barchart:  
+
+			"Agriculture"  
+			"Mining"  
+			"Manufacturing"  
+			"Electricity_Gas_Steam"  
+			"Water_management"  
+			"Transportation_Storage"  
+			"Accomodation_Food"  
+			 "Information_Communication"  
+			 "Financial_Insurance"  
+			 "RealEstate"  
+			 "Professional_Scientific_Technical"  
+			 "Administration_Defence_SocialSecurity"  
+			 "Education"  
+			 "Health_SocialWork"  
+			 "Arts_Entertainment"   
+			 "OtherService"  
+			 "Households_Employers"  
+		 	 "Extraterritorial_Org"  

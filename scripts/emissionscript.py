@@ -13,7 +13,7 @@ with open('../data/emissions_what_industries.csv', 'r') as infile:
 
 	# open outfile
 	with open('../data/emissionindustriesdata.csv', 'wb') as outfile:
-		writer = csv.writer(outfile)
+		writer = csv.writer(outfile, delimiter=';')
 	
 		# read and write
 		for i, row in enumerate(reader):
@@ -21,5 +21,7 @@ with open('../data/emissions_what_industries.csv', 'r') as infile:
 				writer.writerow(['TIME', 'GEO', 'INDUSTRY', 'EMISSION'])
 			else:
 				if row[2] == "Carbon dioxide":
-					writer.writerow([row[0], row[1], row[3], row[5]])
+					value = row[5]
+					value = value.replace(',', '')
+					writer.writerow([row[0], row[1], row[3], value])
 
