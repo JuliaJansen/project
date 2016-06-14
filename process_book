@@ -169,3 +169,9 @@ Bedenken: hoe zorg ik dat ik bij de grafieken bij mijn data kan zonder dat ik de
 
 !! Eenheid renewable energy in scatterplot = tonnes of oil equivalent
 !! Eenheid emission in scatterplot = tonnes of CO2 equivalent
+
+- Scatterplot zichtbaar, ijsland voor nu er uit (omdat het een mega outlier is)
+TO DO: 
+- kleurenpallet scatterplot uitbreiden
+- scatterplot interactief maken: per jaar (reagerend op de parallel coordinates slider) en met tooltipjes
+
