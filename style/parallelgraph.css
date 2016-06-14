@@ -49,19 +49,6 @@ svg {
   font-size: 24px;
 }
 
-/* slider */
-#slider {
-  width: 500px;
-}
-
-#strikingtext {
-  padding-left: 50px;
-}
-
-#toggle {
-  align: right;
-}
-
 /* tooltips */
 div.graphTooltip
 div.countryLabel { 
@@ -76,59 +63,4 @@ div.countryLabel {
     border: 2;    
     border-radius: 1px;     
     pointer-events: none;     
-}
-
-/* bargraph */
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: auto;
-  position: relative;
-  width: 960px;
-}
-
-text {
-  font: 10px sans-serif;
-}
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-
-form {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-}
-
-#barchart {
-  padding-top: 50px;
-}
-
-#barchart_title {
-  text-align: middle;
-  font-weight: bold;
-  font-family: helvetica;
-  font-size: 24px;
-}
-
-/* buttons for bargraph */
-#energybutton {
-
-}
-
-#emissionbutton {
-
-}
-
-#wastebutton {
-
-}
-
-/* scatterplot styles */
-.scatterplotlabel {
-  font-family: helvetica;
-  font-size: 12px;
 }

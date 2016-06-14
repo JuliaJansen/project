@@ -16,7 +16,8 @@
 		<script src="/scripts/data.js"></script>
 		<script src="/scripts/parallelgraph.js"></script>
 		<script src="/scripts/barchart.js"></script>
-		<script src="/scripts/listeners.js"></script>
+		<script src="/scripts/scatterplot.js"></script>
+		<!-- <script src="/scripts/listeners.js"></script> -->
 
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -27,7 +28,10 @@
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="style/d3.slider.css"/>
 		<link rel="stylesheet" type="text/css" href="style/project.css"/>
-		<link rel="stylesheet" type="text/css" href="style/visuals.css"/>
+		<link rel="stylesheet" type="text/css" href="style/parallelgraph.css"/>
+		<link rel="stylesheet" type="text/css" href="style/barchart.css"/>
+		<link rel="stylesheet" type="text/css" href="style/scatterplot.css"/>
+
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -135,11 +139,11 @@
 			<div class="container-fluid">
 				<div class="row">
 				  <div class="col-md-4">
-				  	<h1>Striking facts.</h1>
+				  	<h1>The link between Renewable Energy and Emission</h1>
 				  	<p id="strikingtext">Here some text about a country (or more) for which the data shows interesting outliers. For example: Norway produces all of the energy it uses. How does that connect to the emissions and waste generation of Norway? A Sankey Diagram could be shown on the right, to follow the flow of different energy-sources to pollution. Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info.</p>
 				  </div>
 				  <div class="col-md-8">
-					  <img class="featurette-image img-responsive center-block" data-holder-rendered="true" src="/doc/sankey_example.png"></img>
+				  	<div id="scatterplot"></div>
 				  </div>
 				</div>
 			</div>

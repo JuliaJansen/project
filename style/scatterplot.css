@@ -1,0 +1,8 @@
+/* 
+ * Stylesheet scatterplot styles 
+ */
+ 
+.scatterplotlabel {
+  font-family: helvetica;
+  font-size: 12px;
+}

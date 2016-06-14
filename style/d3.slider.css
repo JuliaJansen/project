@@ -83,3 +83,15 @@
   z-index: 1;
 }
 
+/* slider */
+#slider {
+  width: 500px;
+}
+
+#strikingtext {
+  padding-left: 50px;
+}
+
+#toggle {
+  align: right;
+}

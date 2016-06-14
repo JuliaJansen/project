@@ -162,3 +162,10 @@ Nog doen:
 
 Waste data ook geladen en omgezet! 
 Bedenken: hoe zorg ik dat ik bij de grafieken bij mijn data kan zonder dat ik de data door hoef te geven?
+
+!! Eenheid energy barchart: thousand tonnes of oil equivalent
+!! Eenheid emissie barchart: tonnen
+!! Eenheid waste barchart: thousand tonnes
+
+!! Eenheid renewable energy in scatterplot = tonnes of oil equivalent
+!! Eenheid emission in scatterplot = tonnes of CO2 equivalent

@@ -10,6 +10,7 @@ var parallelData = {};
 var waste = {};
 var emissions = {};
 var energy = {};
+var scatterData = {};
 var country = "Netherlands";
 
 window.onload = function() {
@@ -28,12 +29,13 @@ window.onload = function() {
 		.defer(d3.csv, '/data/solidfuelsdata.csv')
 		.defer(d3.csv, '/data/waste_consumtiondata.csv')
 		.defer(d3.csv, '/data/primary_production_energy.csv')
+		.defer(d3.csv, '/data/renenergy_emission.csv')
 		.await(prepareData);
 }
 
 function prepareData(error, paralleldata, energysavings, economicemissions, 
 	economicwaste, gasdata, heatdata, nucleardata, oildata, renewabledata, 
-	solidfuelsdata, wasteconsumption_data, primproduction) {
+	solidfuelsdata, wasteconsumption_data, primproduction, renenergy_emission) {
 	if (error) { alert(error); }
 
 	// prepare data for parallel coordinates
@@ -126,6 +128,24 @@ function prepareData(error, paralleldata, energysavings, economicemissions,
 		});
 	});
 
+	// prepare energy use data for energy bargraph
+	renenergy_emission.forEach(function(d, i) {
+		year = +d.TIME
+		if (i > 0 && d.GEO != "Iceland") {
+		
+			// make index for country only if not existing yet
+			scatterData[year] = typeof scatterData[year] !== "undefined" ? scatterData[year] : [];
+
+			// push data to array
+			scatterData[year].push({
+				"country" : d.GEO,
+				"renEnergy" : +d.REN_ENERGY,
+				"emission" : +d.EMISSION
+			});
+		}
+	});
+
+
 	// // nest data for energy savings
 	// var energy_savings = d3.nest()
 	// 	.key(function(d) {  if (d.UNIT == "Thousand TOE (tonnes of oil equivalent)") {
@@ -158,5 +178,6 @@ function prepareData(error, paralleldata, energysavings, economicemissions,
 
 	slider(parallelData, energy);
 	parallelGraph(energy, parallelData, 2005);
-	barchart("Netherlands", "energy");
+	// barchart("Netherlands", "energy");
+	scatterplot(2010);
 }
