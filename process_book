@@ -153,3 +153,12 @@ Het is nogal een gedoe omdat er zoveel veschillende economische activiteiten zij
 			 "OtherService"  
 			 "Households_Employers"  
 		 	 "Extraterritorial_Org"  
+
+
+#### 14 juni
+Nog doen:
+- libraries lokaal opslaan
+- Camel case overal toepassen
+
+Waste data ook geladen en omgezet! 
+Bedenken: hoe zorg ik dat ik bij de grafieken bij mijn data kan zonder dat ik de data door hoef te geven?

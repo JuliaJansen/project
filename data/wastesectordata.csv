@@ -1,0 +1,874 @@
+2009,Australia,Manufacturing industries: Total,13116
+2011,Australia,Manufacturing industries: Total,3858.2
+2011,Australia,Energy Production ,14026.5
+2009,Australia,Construction,19693
+2008,Austria,Agriculture forestry and fishing ,459.096
+2010,Austria,Agriculture forestry and fishing ,549.833
+2012,Austria,Agriculture forestry and fishing ,179.044
+2008,Austria,Mining and Quarrying,677.937
+2010,Austria,Mining and Quarrying,269.151
+2012,Austria,Mining and Quarrying,51.339
+2008,Austria,Manufacturing industries: Total,13037.831
+2010,Austria,Manufacturing industries: Total,2951.45
+2012,Austria,Manufacturing industries: Total,3632.679
+2008,Austria,Energy Production ,548.962
+2010,Austria,Energy Production ,441.611
+2012,Austria,Energy Production ,621.68
+2008,Austria,Water supply sewerage waste management ,2049.187
+2010,Austria,Water supply sewerage waste management ,2953.855
+2012,Austria,Water supply sewerage waste management ,1172.356
+2008,Austria,Construction,31389.803
+2010,Austria,Construction,9008.721
+2012,Austria,Construction,19470.934
+2008,Austria,Other,7611.775
+2010,Austria,Other,17313.031
+2012,Austria,Other,7308.855
+2006,Belgium,Agriculture forestry and fishing ,361.386
+2008,Belgium,Agriculture forestry and fishing ,287.656
+2010,Belgium,Agriculture forestry and fishing ,231.033
+2012,Belgium,Agriculture forestry and fishing ,212.369
+2006,Belgium,Mining and Quarrying,159.059
+2008,Belgium,Mining and Quarrying,503.487
+2010,Belgium,Mining and Quarrying,1701.225
+2012,Belgium,Mining and Quarrying,113.012
+2006,Belgium,Manufacturing industries: Total,15293.364
+2008,Belgium,Manufacturing industries: Total,10044.065
+2010,Belgium,Manufacturing industries: Total,14520.776
+2012,Belgium,Manufacturing industries: Total,17543.344
+2006,Belgium,Energy Production ,1285.396
+2008,Belgium,Energy Production ,1086.721
+2010,Belgium,Energy Production ,1210.222
+2012,Belgium,Energy Production ,1314.161
+2006,Belgium,Water supply sewerage waste management ,13568.472
+2008,Belgium,Water supply sewerage waste management ,11082.457
+2010,Belgium,Water supply sewerage waste management ,14133.101
+2012,Belgium,Water supply sewerage waste management ,12100.366
+2006,Belgium,Construction,13055.636
+2008,Belgium,Construction,15318.031
+2010,Belgium,Construction,17827.952
+2012,Belgium,Construction,23936.513
+2006,Belgium,Other,14510.156
+2008,Belgium,Other,9415.29
+2010,Belgium,Other,11375.339
+2012,Belgium,Other,10710.071
+2006,Czech Republic,Agriculture forestry and fishing ,315.489
+2008,Czech Republic,Agriculture forestry and fishing ,254.485
+2010,Czech Republic,Agriculture forestry and fishing ,113.61
+2012,Czech Republic,Agriculture forestry and fishing ,195.94
+2006,Czech Republic,Mining and Quarrying,471.47
+2008,Czech Republic,Mining and Quarrying,166.924
+2010,Czech Republic,Mining and Quarrying,114.572
+2012,Czech Republic,Mining and Quarrying,167.422
+2006,Czech Republic,Manufacturing industries: Total,5830.96
+2008,Czech Republic,Manufacturing industries: Total,5217.918
+2010,Czech Republic,Manufacturing industries: Total,4184.445
+2012,Czech Republic,Manufacturing industries: Total,4344.67
+2006,Czech Republic,Energy Production ,2493.774
+2008,Czech Republic,Energy Production ,1919.392
+2010,Czech Republic,Energy Production ,1540.194
+2012,Czech Republic,Energy Production ,1062.31
+2006,Czech Republic,Water supply sewerage waste management ,2111.503
+2008,Czech Republic,Water supply sewerage waste management ,2420.009
+2010,Czech Republic,Water supply sewerage waste management ,3102.047
+2012,Czech Republic,Water supply sewerage waste management ,3437.278
+2006,Czech Republic,Construction,8242
+2008,Czech Republic,Construction,10622.885
+2010,Czech Republic,Construction,9315.976
+2012,Czech Republic,Construction,8585.23
+2006,Czech Republic,Other,4965.256
+2008,Czech Republic,Other,4590.191
+2010,Czech Republic,Other,5091.281
+2012,Czech Republic,Other,5026.518
+2010,Denmark,Agriculture forestry and fishing ,161.495
+2012,Denmark,Agriculture forestry and fishing ,140.86
+2010,Denmark,Mining and Quarrying,21.13
+2012,Denmark,Mining and Quarrying,17.725
+2010,Denmark,Manufacturing industries: Total,1523.162
+2012,Denmark,Manufacturing industries: Total,1594.788
+2010,Denmark,Energy Production ,940.119
+2012,Denmark,Energy Production ,887.308
+2010,Denmark,Water supply sewerage waste management ,2955.747
+2012,Denmark,Water supply sewerage waste management ,2412.835
+2010,Denmark,Construction,3122.188
+2012,Denmark,Construction,3856.141
+2010,Denmark,Other,7003.766
+2012,Denmark,Other,6912.131
+2006,Finland,Agriculture forestry and fishing ,2038.408
+2008,Finland,Agriculture forestry and fishing ,2738.973
+2010,Finland,Agriculture forestry and fishing ,2772.031
+2012,Finland,Agriculture forestry and fishing ,3157.813
+2006,Finland,Mining and Quarrying,21500.896
+2008,Finland,Mining and Quarrying,31796.383
+2010,Finland,Mining and Quarrying,54851
+2012,Finland,Mining and Quarrying,52880
+2006,Finland,Manufacturing industries: Total,17937.26
+2008,Finland,Manufacturing industries: Total,16947.822
+2010,Finland,Manufacturing industries: Total,15198.831
+2012,Finland,Manufacturing industries: Total,14529.726
+2006,Finland,Energy Production ,1635.834
+2008,Finland,Energy Production ,1531.198
+2010,Finland,Energy Production ,1440.066
+2012,Finland,Energy Production ,1004.779
+2006,Finland,Water supply sewerage waste management ,2055.044
+2008,Finland,Water supply sewerage waste management ,578.255
+2010,Finland,Water supply sewerage waste management ,1630.146
+2012,Finland,Water supply sewerage waste management ,907.103
+2006,Finland,Construction,23145.712
+2008,Finland,Construction,24455.231
+2010,Finland,Construction,24644.547
+2012,Finland,Construction,16033.524
+2006,Finland,Other,3483.654
+2008,Finland,Other,3215.828
+2010,Finland,Other,3116.87
+2012,Finland,Other,3018.191
+2006,France,Agriculture forestry and fishing ,1221.94
+2008,France,Agriculture forestry and fishing ,1312.89
+2010,France,Agriculture forestry and fishing ,1371.625
+2012,France,Agriculture forestry and fishing ,1290.136
+2006,France,Mining and Quarrying,1040.4
+2008,France,Mining and Quarrying,1195.22
+2010,France,Mining and Quarrying,1053.012
+2012,France,Mining and Quarrying,2477.408
+2006,France,Manufacturing industries: Total,22969.726
+2008,France,Manufacturing industries: Total,21634.53
+2010,France,Manufacturing industries: Total,21557.388
+2012,France,Manufacturing industries: Total,21404.505
+2006,France,Energy Production ,1031.33
+2008,France,Energy Production ,1001.86
+2010,France,Energy Production ,992.623
+2012,France,Energy Production ,2100.102
+2006,France,Water supply sewerage waste management ,6116.16
+2008,France,Water supply sewerage waste management ,9158.93
+2010,France,Water supply sewerage waste management ,8773.349
+2012,France,Water supply sewerage waste management ,12792.788
+2006,France,Construction,225310.888
+2008,France,Construction,252979.84
+2010,France,Construction,260699.131
+2012,France,Construction,246702.428
+2006,France,Other,50990.71
+2008,France,Other,53568.27
+2010,France,Other,54441.259
+2012,France,Other,52107.742
+2006,Germany,Agriculture forestry and fishing ,1515.272
+2008,Germany,Agriculture forestry and fishing ,1350.758
+2010,Germany,Agriculture forestry and fishing ,256.272
+2012,Germany,Agriculture forestry and fishing ,647.806
+2006,Germany,Mining and Quarrying,47222.2
+2008,Germany,Mining and Quarrying,28280.661
+2010,Germany,Mining and Quarrying,24493.073
+2012,Germany,Mining and Quarrying,8606.328
+2006,Germany,Manufacturing industries: Total,31198.572
+2008,Germany,Manufacturing industries: Total,51832.142
+2010,Germany,Manufacturing industries: Total,48685.389
+2012,Germany,Manufacturing industries: Total,56074.259
+2006,Germany,Energy Production ,8426.996
+2008,Germany,Energy Production ,11693.104
+2010,Germany,Energy Production ,9070.218
+2012,Germany,Energy Production ,7982.472
+2006,Germany,Water supply sewerage waste management ,17706.741
+2008,Germany,Water supply sewerage waste management ,23685.83
+2010,Germany,Water supply sewerage waste management ,21360.235
+2012,Germany,Water supply sewerage waste management ,28947.67
+2006,Germany,Construction,196536.142
+2008,Germany,Construction,197206.5
+2010,Germany,Construction,190990.217
+2012,Germany,Construction,197442.46
+2006,Germany,Other,49998.364
+2008,Germany,Other,45845.278
+2010,Germany,Other,54717.595
+2012,Germany,Other,51925.535
+2008,Greece,Agriculture forestry and fishing ,0
+2010,Greece,Agriculture forestry and fishing ,5.073
+2012,Greece,Agriculture forestry and fishing ,9.979
+2008,Greece,Mining and Quarrying,38151.604
+2010,Greece,Mining and Quarrying,44793.197
+2012,Greece,Mining and Quarrying,47831.627
+2008,Greece,Manufacturing industries: Total,5681.359
+2010,Greece,Manufacturing industries: Total,4913.165
+2012,Greece,Manufacturing industries: Total,4149.033
+2008,Greece,Energy Production ,11180.698
+2010,Greece,Energy Production ,11028.582
+2012,Greece,Energy Production ,12258.683
+2008,Greece,Water supply sewerage waste management ,1030.308
+2010,Greece,Water supply sewerage waste management ,841.101
+2012,Greece,Water supply sewerage waste management ,642.061
+2008,Greece,Construction,6828.051
+2010,Greece,Construction,2086.08
+2012,Greece,Construction,812.519
+2008,Greece,Other,5750.596
+2010,Greece,Other,6610.812
+2012,Greece,Other,6371.031
+2008,Hungary,Agriculture forestry and fishing ,336.865
+2010,Hungary,Agriculture forestry and fishing ,487.655
+2012,Hungary,Agriculture forestry and fishing ,459.995
+2008,Hungary,Mining and Quarrying,272.49
+2010,Hungary,Mining and Quarrying,86.587
+2012,Hungary,Mining and Quarrying,91.218
+2008,Hungary,Manufacturing industries: Total,3729.789
+2010,Hungary,Manufacturing industries: Total,3130.982
+2012,Hungary,Manufacturing industries: Total,2989.003
+2008,Hungary,Energy Production ,3050.215
+2010,Hungary,Energy Production ,2718.233
+2012,Hungary,Energy Production ,2871.522
+2008,Hungary,Water supply sewerage waste management ,1170.742
+2010,Hungary,Water supply sewerage waste management ,1221.053
+2012,Hungary,Water supply sewerage waste management ,1203.058
+2008,Hungary,Construction,3237.554
+2010,Hungary,Construction,4070.346
+2012,Hungary,Construction,4021.881
+2008,Hungary,Other,4985.087
+2010,Hungary,Other,4872.859
+2012,Hungary,Other,4445.639
+2010,Iceland,Agriculture forestry and fishing ,72.071
+2012,Iceland,Agriculture forestry and fishing ,82.097
+2010,Iceland,Mining and Quarrying,0.065
+2012,Iceland,Mining and Quarrying,0.055
+2010,Iceland,Manufacturing industries: Total,88.199
+2012,Iceland,Manufacturing industries: Total,93.097
+2010,Iceland,Energy Production ,1.625
+2012,Iceland,Energy Production ,1.675
+2010,Iceland,Water supply sewerage waste management ,8.229
+2012,Iceland,Water supply sewerage waste management ,7.902
+2010,Iceland,Construction,12.289
+2012,Iceland,Construction,10.82
+2010,Iceland,Other,324.572
+2012,Iceland,Other,333.705
+2008,Ireland,Agriculture forestry and fishing ,19.376
+2010,Ireland,Agriculture forestry and fishing ,101.143
+2012,Ireland,Agriculture forestry and fishing ,96.251
+2008,Ireland,Mining and Quarrying,2061.231
+2010,Ireland,Mining and Quarrying,2195.671
+2012,Ireland,Mining and Quarrying,2024.984
+2008,Ireland,Manufacturing industries: Total,4017.813
+2010,Ireland,Manufacturing industries: Total,3257.311
+2012,Ireland,Manufacturing industries: Total,4598.353
+2008,Ireland,Energy Production ,291.726
+2010,Ireland,Energy Production ,333.651
+2012,Ireland,Energy Production ,395.95
+2008,Ireland,Water supply sewerage waste management ,172.513
+2010,Ireland,Water supply sewerage waste management ,2904.775
+2012,Ireland,Water supply sewerage waste management ,901.44
+2008,Ireland,Construction,13547.588
+2010,Ireland,Construction,1609.762
+2012,Ireland,Construction,365.615
+2008,Ireland,Other,3154.735
+2010,Ireland,Other,8904.123
+2012,Ireland,Other,4548.087
+2006,Italy,Agriculture forestry and fishing ,554.325
+2008,Italy,Agriculture forestry and fishing ,341.029
+2010,Italy,Agriculture forestry and fishing ,301.742
+2012,Italy,Agriculture forestry and fishing ,317.523
+2006,Italy,Mining and Quarrying,1004.815
+2008,Italy,Mining and Quarrying,1254.807
+2010,Italy,Mining and Quarrying,700.47
+2012,Italy,Mining and Quarrying,718.441
+2006,Italy,Manufacturing industries: Total,39662.105
+2008,Italy,Manufacturing industries: Total,42566.721
+2010,Italy,Manufacturing industries: Total,35753.376
+2012,Italy,Manufacturing industries: Total,34030.547
+2006,Italy,Energy Production ,2950.073
+2008,Italy,Energy Production ,3066.731
+2010,Italy,Energy Production ,2654.693
+2012,Italy,Energy Production ,3575.44
+2006,Italy,Water supply sewerage waste management ,12550.03
+2008,Italy,Water supply sewerage waste management ,12760.736
+2010,Italy,Water supply sewerage waste management ,11655.66
+2012,Italy,Water supply sewerage waste management ,22813.046
+2006,Italy,Construction,52301.79
+2008,Italy,Construction,69705.071
+2010,Italy,Construction,59238.229
+2012,Italy,Construction,52945.338
+2006,Italy,Other,38123.69
+2008,Italy,Other,38731.678
+2010,Italy,Other,38352.927
+2012,Italy,Other,34828.468
+1990,Japan,Agriculture forestry and fishing ,77451
+1995,Japan,Agriculture forestry and fishing ,73404
+2000,Japan,Agriculture forestry and fishing ,90828
+2001,Japan,Agriculture forestry and fishing ,90459
+2002,Japan,Agriculture forestry and fishing ,90161
+2003,Japan,Agriculture forestry and fishing ,90602
+2004,Japan,Agriculture forestry and fishing ,89300.288
+2005,Japan,Agriculture forestry and fishing ,87583.6
+2006,Japan,Agriculture forestry and fishing ,87944.727
+2007,Japan,Agriculture forestry and fishing ,87837.1
+2008,Japan,Agriculture forestry and fishing ,87991.745
+2009,Japan,Agriculture forestry and fishing ,88445.974
+2010,Japan,Agriculture forestry and fishing ,85108.659
+1990,Japan,Mining and Quarrying,34000
+1995,Japan,Mining and Quarrying,27717
+2000,Japan,Mining and Quarrying,16751
+2001,Japan,Mining and Quarrying,13772
+2006,Japan,Mining and Quarrying,13947
+2007,Japan,Mining and Quarrying,12509
+2008,Japan,Mining and Quarrying,12865.634
+2009,Japan,Mining and Quarrying,13865.161
+2010,Japan,Mining and Quarrying,11577.487
+1990,Japan,Manufacturing industries: Total,150388
+1995,Japan,Manufacturing industries: Total,130911
+2000,Japan,Manufacturing industries: Total,123639
+2001,Japan,Manufacturing industries: Total,122881
+2002,Japan,Manufacturing industries: Total,122551
+2003,Japan,Manufacturing industries: Total,135090
+2004,Japan,Manufacturing industries: Total,137422.436
+2005,Japan,Manufacturing industries: Total,141627.9
+2006,Japan,Manufacturing industries: Total,137336.702
+2007,Japan,Manufacturing industries: Total,141614.3
+2008,Japan,Manufacturing industries: Total,124898.569
+1990,Japan,Energy Production ,6972
+1995,Japan,Energy Production ,8101
+2000,Japan,Energy Production ,7451
+2001,Japan,Energy Production ,6970
+2006,Japan,Energy Production ,10359
+2007,Japan,Energy Production ,8949
+2008,Japan,Energy Production ,10572.7
+2009,Japan,Energy Production ,11150.6
+2010,Japan,Energy Production ,10824.9
+1990,Japan,Water supply sewerage waste management ,48010
+1995,Japan,Water supply sewerage waste management ,69535
+2000,Japan,Water supply sewerage waste management ,84053
+2001,Japan,Water supply sewerage waste management ,86175
+2006,Japan,Water supply sewerage waste management ,86721
+2007,Japan,Water supply sewerage waste management ,86861
+1990,Japan,Construction,71139
+1995,Japan,Construction,75201
+2000,Japan,Construction,79011
+2001,Japan,Construction,76151
+2002,Japan,Construction,73510
+2003,Japan,Construction,75006
+2004,Japan,Construction,79055.466
+2005,Japan,Construction,76466
+2006,Japan,Construction,77534
+2007,Japan,Construction,77253
+2008,Japan,Construction,124899.129
+2009,Japan,Construction,113205.095
+2010,Japan,Construction,115812.62
+2010,Korea,Agriculture forestry and fishing ,152
+2011,Korea,Agriculture forestry and fishing ,149
+2012,Korea,Agriculture forestry and fishing ,279
+2008,Korea,Mining and Quarrying,0.6
+2009,Korea,Mining and Quarrying,0.1
+2010,Korea,Mining and Quarrying,44
+2011,Korea,Mining and Quarrying,128
+2012,Korea,Mining and Quarrying,88
+1990,Korea,Manufacturing industries: Total,22780
+1995,Korea,Manufacturing industries: Total,36579
+2000,Korea,Manufacturing industries: Total,39809.455
+2001,Korea,Manufacturing industries: Total,37826
+2002,Korea,Manufacturing industries: Total,39233.85
+2003,Korea,Manufacturing industries: Total,39008.215
+2004,Korea,Manufacturing industries: Total,38331
+2005,Korea,Manufacturing industries: Total,43452
+2006,Korea,Manufacturing industries: Total,39611
+2007,Korea,Manufacturing industries: Total,44125
+2008,Korea,Manufacturing industries: Total,49874
+2009,Korea,Manufacturing industries: Total,46748
+2010,Korea,Manufacturing industries: Total,34502
+2011,Korea,Manufacturing industries: Total,36533
+2012,Korea,Manufacturing industries: Total,39499
+2010,Korea,Energy Production ,8917
+2011,Korea,Energy Production ,8088
+2012,Korea,Energy Production ,7836
+2010,Korea,Water supply sewerage waste management ,5325
+2011,Korea,Water supply sewerage waste management ,6179
+2012,Korea,Water supply sewerage waste management ,7155
+2000,Korea,Construction,28753.605
+2001,Korea,Construction,39609.8
+2002,Korea,Construction,43851
+2003,Korea,Construction,53078.3
+2004,Korea,Construction,54198
+2005,Korea,Construction,49241
+2006,Korea,Construction,61680
+2007,Korea,Construction,62782
+2008,Korea,Construction,64404
+2009,Korea,Construction,66946
+2010,Korea,Construction,65041
+2011,Korea,Construction,68091
+2012,Korea,Construction,68188
+2008,Korea,Other,16763
+2009,Korea,Other,17007
+2010,Korea,Other,19757
+2011,Korea,Other,17832
+2012,Korea,Other,18271
+2006,Luxembourg,Agriculture forestry and fishing ,6.048
+2008,Luxembourg,Agriculture forestry and fishing ,2.486
+2010,Luxembourg,Agriculture forestry and fishing ,2.547
+2012,Luxembourg,Agriculture forestry and fishing ,1.381
+2006,Luxembourg,Mining and Quarrying,55.152
+2008,Luxembourg,Mining and Quarrying,8.935
+2010,Luxembourg,Mining and Quarrying,12.892
+2012,Luxembourg,Mining and Quarrying,129.481
+2006,Luxembourg,Manufacturing industries: Total,599.863
+2008,Luxembourg,Manufacturing industries: Total,672.796
+2010,Luxembourg,Manufacturing industries: Total,867.41
+2012,Luxembourg,Manufacturing industries: Total,509.431
+2006,Luxembourg,Energy Production ,1.403
+2008,Luxembourg,Energy Production ,1.393
+2010,Luxembourg,Energy Production ,2.057
+2012,Luxembourg,Energy Production ,2.335
+2006,Luxembourg,Water supply sewerage waste management ,483.103
+2008,Luxembourg,Water supply sewerage waste management ,152.124
+2010,Luxembourg,Water supply sewerage waste management ,181.044
+2012,Luxembourg,Water supply sewerage waste management ,169.493
+2006,Luxembourg,Construction,6774.547
+2008,Luxembourg,Construction,8282.029
+2010,Luxembourg,Construction,8866.757
+2012,Luxembourg,Construction,7079.473
+2006,Luxembourg,Other,437.308
+2008,Luxembourg,Other,460.469
+2010,Luxembourg,Other,468.116
+2012,Luxembourg,Other,471.861
+2006,Netherlands,Agriculture forestry and fishing ,2659.361
+2008,Netherlands,Agriculture forestry and fishing ,3468.171
+2010,Netherlands,Agriculture forestry and fishing ,4978.026
+2012,Netherlands,Agriculture forestry and fishing ,4946.295
+2006,Netherlands,Mining and Quarrying,216.408
+2008,Netherlands,Mining and Quarrying,269.042
+2010,Netherlands,Mining and Quarrying,184.387
+2012,Netherlands,Mining and Quarrying,179.164
+2006,Netherlands,Manufacturing industries: Total,15527.579
+2008,Netherlands,Manufacturing industries: Total,15682.803
+2010,Netherlands,Manufacturing industries: Total,14059.105
+2012,Netherlands,Manufacturing industries: Total,14090.357
+2006,Netherlands,Energy Production ,1372.24
+2008,Netherlands,Energy Production ,1430.696
+2010,Netherlands,Energy Production ,1274.587
+2012,Netherlands,Energy Production ,1342.081
+2006,Netherlands,Water supply sewerage waste management ,4787.126
+2008,Netherlands,Water supply sewerage waste management ,5103.973
+2010,Netherlands,Water supply sewerage waste management ,4984.137
+2012,Netherlands,Water supply sewerage waste management ,6076.751
+2006,Netherlands,Construction,56161.593
+2008,Netherlands,Construction,58593.652
+2010,Netherlands,Construction,77837.771
+2012,Netherlands,Construction,81128.809
+2006,Netherlands,Other,15238.438
+2008,Netherlands,Other,15312.959
+2010,Netherlands,Other,14730.341
+2012,Netherlands,Other,14437.412
+2006,Norway,Agriculture forestry and fishing ,172.417
+2008,Norway,Agriculture forestry and fishing ,184.332
+2010,Norway,Agriculture forestry and fishing ,195.252
+2012,Norway,Agriculture forestry and fishing ,150.002
+2006,Norway,Mining and Quarrying,125.146
+2008,Norway,Mining and Quarrying,113.389
+2010,Norway,Mining and Quarrying,365.756
+2012,Norway,Mining and Quarrying,470.295
+2006,Norway,Manufacturing industries: Total,3605.398
+2008,Norway,Manufacturing industries: Total,3689.06
+2010,Norway,Manufacturing industries: Total,2687.22
+2012,Norway,Manufacturing industries: Total,2639.16
+2006,Norway,Energy Production ,45.285
+2008,Norway,Energy Production ,46.328
+2010,Norway,Energy Production ,28.265
+2012,Norway,Energy Production ,88.581
+2006,Norway,Water supply sewerage waste management ,777.476
+2008,Norway,Water supply sewerage waste management ,670.759
+2010,Norway,Water supply sewerage waste management ,839.103
+2012,Norway,Water supply sewerage waste management ,386.366
+2006,Norway,Construction,1252.051
+2008,Norway,Construction,1498.376
+2010,Norway,Construction,1542.803
+2012,Norway,Construction,1880.543
+2006,Norway,Other,3913.16
+2008,Norway,Other,4084.399
+2010,Norway,Other,3774.598
+2012,Norway,Other,5105.926
+2006,Poland,Agriculture forestry and fishing ,1521.333
+2008,Poland,Agriculture forestry and fishing ,1350.113
+2010,Poland,Agriculture forestry and fishing ,1543.029
+2012,Poland,Agriculture forestry and fishing ,1952.704
+2006,Poland,Mining and Quarrying,38659.346
+2008,Poland,Mining and Quarrying,33658.883
+2010,Poland,Mining and Quarrying,61540.456
+2012,Poland,Mining and Quarrying,68026.514
+2006,Poland,Manufacturing industries: Total,60859.451
+2008,Poland,Manufacturing industries: Total,56392.6
+2010,Poland,Manufacturing industries: Total,28559.379
+2012,Poland,Manufacturing industries: Total,30997.723
+2006,Poland,Energy Production ,22370.701
+2008,Poland,Energy Production ,19537.107
+2010,Poland,Energy Production ,20250.394
+2012,Poland,Energy Production ,20700.031
+2006,Poland,Water supply sewerage waste management ,3239.107
+2008,Poland,Water supply sewerage waste management ,5493.47
+2010,Poland,Water supply sewerage waste management ,9114.425
+2012,Poland,Water supply sewerage waste management ,6603.287
+2006,Poland,Construction,14130.811
+2008,Poland,Construction,6909.552
+2010,Poland,Construction,20807.156
+2012,Poland,Construction,15360.156
+2006,Poland,Other,11494.058
+2008,Poland,Other,12781.372
+2010,Poland,Other,12979.372
+2012,Poland,Other,14086.349
+2006,Portugal,Agriculture forestry and fishing ,213.722
+2008,Portugal,Agriculture forestry and fishing ,74.76
+2010,Portugal,Agriculture forestry and fishing ,138.264
+2012,Portugal,Agriculture forestry and fishing ,83.353
+2006,Portugal,Mining and Quarrying,3563.41
+2008,Portugal,Mining and Quarrying,182.149
+2010,Portugal,Mining and Quarrying,267.508
+2012,Portugal,Mining and Quarrying,242.572
+2006,Portugal,Manufacturing industries: Total,10872.2
+2008,Portugal,Manufacturing industries: Total,3566.592
+2010,Portugal,Manufacturing industries: Total,3425.057
+2012,Portugal,Manufacturing industries: Total,3155.049
+2006,Portugal,Energy Production ,462.248
+2008,Portugal,Energy Production ,193.39
+2010,Portugal,Energy Production ,326.365
+2012,Portugal,Energy Production ,421.782
+2006,Portugal,Water supply sewerage waste management ,802.031
+2008,Portugal,Water supply sewerage waste management ,2299.072
+2010,Portugal,Water supply sewerage waste management ,2756.66
+2012,Portugal,Water supply sewerage waste management ,2499.376
+2006,Portugal,Construction,3606.727
+2008,Portugal,Construction,1364.28
+2010,Portugal,Construction,1779.854
+2012,Portugal,Construction,927.155
+2006,Portugal,Other,15007.967
+2008,Portugal,Other,9109.04
+2010,Portugal,Other,8453.07
+2012,Portugal,Other,6497.777
+2006,Slovak Republic,Agriculture forestry and fishing ,741.625
+2008,Slovak Republic,Agriculture forestry and fishing ,788.762
+2010,Slovak Republic,Agriculture forestry and fishing ,525.59
+2012,Slovak Republic,Agriculture forestry and fishing ,549.391
+2006,Slovak Republic,Mining and Quarrying,331.829
+2008,Slovak Republic,Mining and Quarrying,150.86
+2010,Slovak Republic,Mining and Quarrying,165.584
+2012,Slovak Republic,Mining and Quarrying,310.465
+2006,Slovak Republic,Manufacturing industries: Total,5408.428
+2008,Slovak Republic,Manufacturing industries: Total,4420.229
+2010,Slovak Republic,Manufacturing industries: Total,2663.08
+2012,Slovak Republic,Manufacturing industries: Total,2509.708
+2006,Slovak Republic,Energy Production ,1572.314
+2008,Slovak Republic,Energy Production ,1148.621
+2010,Slovak Republic,Energy Production ,877.646
+2012,Slovak Republic,Energy Production ,1045.75
+2006,Slovak Republic,Water supply sewerage waste management ,348.38
+2008,Slovak Republic,Water supply sewerage waste management ,689.248
+2010,Slovak Republic,Water supply sewerage waste management ,727.308
+2012,Slovak Republic,Water supply sewerage waste management ,613.891
+2006,Slovak Republic,Construction,915.962
+2008,Slovak Republic,Construction,1301.714
+2010,Slovak Republic,Construction,1786.109
+2012,Slovak Republic,Construction,806.176
+2006,Slovak Republic,Other,5047.355
+2008,Slovak Republic,Other,2806.467
+2010,Slovak Republic,Other,2615.185
+2012,Slovak Republic,Other,2512.35
+2006,Spain,Agriculture forestry and fishing ,15152.386
+2008,Spain,Agriculture forestry and fishing ,11325.634
+2010,Spain,Agriculture forestry and fishing ,5814.784
+2012,Spain,Agriculture forestry and fishing ,5494.798
+2006,Spain,Mining and Quarrying,26014.615
+2008,Spain,Mining and Quarrying,25716.297
+2010,Spain,Mining and Quarrying,31732.303
+2012,Spain,Mining and Quarrying,22509.144
+2006,Spain,Manufacturing industries: Total,21946.741
+2008,Spain,Manufacturing industries: Total,18854.476
+2010,Spain,Manufacturing industries: Total,16360.703
+2012,Spain,Manufacturing industries: Total,14473.359
+2006,Spain,Energy Production ,6989.152
+2008,Spain,Energy Production ,4872.071
+2010,Spain,Energy Production ,2339.018
+2012,Spain,Energy Production ,5768.902
+2006,Spain,Water supply sewerage waste management ,2844.459
+2008,Spain,Water supply sewerage waste management ,5019.255
+2010,Spain,Water supply sewerage waste management ,3729.671
+2012,Spain,Water supply sewerage waste management ,6380.002
+2006,Spain,Construction,47320.176
+2008,Spain,Construction,44923.41
+2010,Spain,Construction,37942.41
+2012,Spain,Construction,26128.797
+2006,Spain,Other,39683.618
+2008,Spain,Other,37442.198
+2010,Spain,Other,33520.069
+2012,Spain,Other,30301.593
+2006,Sweden,Agriculture forestry and fishing ,314.317
+2008,Sweden,Agriculture forestry and fishing ,314.314
+2010,Sweden,Agriculture forestry and fishing ,308.946
+2012,Sweden,Agriculture forestry and fishing ,273.071
+2006,Sweden,Mining and Quarrying,62084.293
+2008,Sweden,Mining and Quarrying,58701.928
+2010,Sweden,Mining and Quarrying,89026.207
+2012,Sweden,Mining and Quarrying,129480.919
+2006,Sweden,Manufacturing industries: Total,12658.218
+2008,Sweden,Manufacturing industries: Total,11835.654
+2010,Sweden,Manufacturing industries: Total,7807.96
+2012,Sweden,Manufacturing industries: Total,6151.726
+2006,Sweden,Energy Production ,1317.821
+2008,Sweden,Energy Production ,1507.404
+2010,Sweden,Energy Production ,1477.887
+2012,Sweden,Energy Production ,1848.83
+2006,Sweden,Water supply sewerage waste management ,2200.081
+2008,Sweden,Water supply sewerage waste management ,2174.43
+2010,Sweden,Water supply sewerage waste management ,1884.401
+2012,Sweden,Water supply sewerage waste management ,2471.569
+2006,Sweden,Construction,8943.363
+2008,Sweden,Construction,3190.326
+2010,Sweden,Construction,9381.226
+2012,Sweden,Construction,7655.935
+2006,Sweden,Other,6177.668
+2008,Sweden,Other,6146.547
+2010,Sweden,Other,6480.977
+2012,Sweden,Other,6768.455
+2010,Switzerland,Manufacturing industries: Total,1570
+2010,Switzerland,Water supply sewerage waste management ,276
+2010,Switzerland,Construction,11900
+2010,Turkey,Mining and Quarrying,723791.108
+2012,Turkey,Mining and Quarrying,950587.029
+2010,Turkey,Manufacturing industries: Total,11402.489
+2012,Turkey,Manufacturing industries: Total,13118.567
+2010,Turkey,Energy Production ,18577.831
+2012,Turkey,Energy Production ,18423.742
+2010,Turkey,Other,29582.017
+2012,Turkey,Other,31070.408
+2006,United Kingdom,Agriculture forestry and fishing ,666.485
+2008,United Kingdom,Agriculture forestry and fishing ,681.31
+2010,United Kingdom,Agriculture forestry and fishing ,495.368
+2012,United Kingdom,Agriculture forestry and fishing ,672.029
+2006,United Kingdom,Mining and Quarrying,31782.794
+2008,United Kingdom,Mining and Quarrying,34057.625
+2010,United Kingdom,Mining and Quarrying,24774.792
+2012,United Kingdom,Mining and Quarrying,24043.964
+2006,United Kingdom,Manufacturing industries: Total,27581.549
+2008,United Kingdom,Manufacturing industries: Total,22354.065
+2010,United Kingdom,Manufacturing industries: Total,12291.674
+2012,United Kingdom,Manufacturing industries: Total,13574.401
+2006,United Kingdom,Energy Production ,6872.788
+2008,United Kingdom,Energy Production ,4863.912
+2010,United Kingdom,Energy Production ,3345.113
+2012,United Kingdom,Energy Production ,4964.784
+2006,United Kingdom,Water supply sewerage waste management ,26303.284
+2008,United Kingdom,Water supply sewerage waste management ,29392.29
+2010,United Kingdom,Water supply sewerage waste management ,16957.889
+2012,United Kingdom,Water supply sewerage waste management ,21181.77
+2006,United Kingdom,Construction,109545.987
+2008,United Kingdom,Construction,99064.315
+2010,United Kingdom,Construction,102118.676
+2012,United Kingdom,Construction,100221.748
+2006,United Kingdom,Other,83612.826
+2008,United Kingdom,Other,84187.332
+2010,United Kingdom,Other,72403.174
+2012,United Kingdom,Other,70497.797
+2000,Chile,Agriculture forestry and fishing ,1128
+2001,Chile,Agriculture forestry and fishing ,1150.485
+2002,Chile,Agriculture forestry and fishing ,1308.168
+2003,Chile,Agriculture forestry and fishing ,1418.4
+2004,Chile,Agriculture forestry and fishing ,1515.326
+2005,Chile,Agriculture forestry and fishing ,1393.32
+2006,Chile,Agriculture forestry and fishing ,1367.133
+2007,Chile,Agriculture forestry and fishing ,1469.657
+2008,Chile,Agriculture forestry and fishing ,1434.942
+2009,Chile,Agriculture forestry and fishing ,1562.458
+2000,Chile,Mining and Quarrying,510
+2001,Chile,Mining and Quarrying,525.458
+2002,Chile,Mining and Quarrying,507.93
+2003,Chile,Mining and Quarrying,543.383
+2004,Chile,Mining and Quarrying,599.838
+2005,Chile,Mining and Quarrying,589.49
+2006,Chile,Mining and Quarrying,594.144
+2007,Chile,Mining and Quarrying,617.103
+2008,Chile,Mining and Quarrying,590.285
+2009,Chile,Mining and Quarrying,630.81
+2000,Chile,Manufacturing industries: Total,1484.588
+2001,Chile,Manufacturing industries: Total,1506
+2002,Chile,Manufacturing industries: Total,1516
+2003,Chile,Manufacturing industries: Total,1595.245
+2004,Chile,Manufacturing industries: Total,1746.176
+2005,Chile,Manufacturing industries: Total,1797.17
+2006,Chile,Manufacturing industries: Total,1823.072
+2007,Chile,Manufacturing industries: Total,2042.017
+2008,Chile,Manufacturing industries: Total,1789.795
+2009,Chile,Manufacturing industries: Total,1816.234
+2000,Chile,Energy Production ,281.176
+2001,Chile,Energy Production ,187.137
+2002,Chile,Energy Production ,205.842
+2003,Chile,Energy Production ,202.297
+2004,Chile,Energy Production ,280.406
+2005,Chile,Energy Production ,263.821
+2006,Chile,Energy Production ,360.974
+2007,Chile,Energy Production ,448.228
+2008,Chile,Energy Production ,466.135
+2009,Chile,Energy Production ,477.023
+2000,Chile,Water supply sewerage waste management ,17.294
+2001,Chile,Water supply sewerage waste management ,32.971
+2002,Chile,Water supply sewerage waste management ,35.793
+2003,Chile,Water supply sewerage waste management ,56.464
+2004,Chile,Water supply sewerage waste management ,61.924
+2005,Chile,Water supply sewerage waste management ,64.079
+2006,Chile,Water supply sewerage waste management ,72.325
+2007,Chile,Water supply sewerage waste management ,73.41
+2008,Chile,Water supply sewerage waste management ,74.412
+2009,Chile,Water supply sewerage waste management ,82.028
+2000,Chile,Construction,2565.66
+2001,Chile,Construction,2627.717
+2002,Chile,Construction,2274.337
+2003,Chile,Construction,2649.353
+2004,Chile,Construction,2932.809
+2005,Chile,Construction,2945.474
+2006,Chile,Construction,3389.464
+2007,Chile,Construction,3513.492
+2008,Chile,Construction,3443.807
+2009,Chile,Construction,3062.395
+2010,Chile,Construction,2558.066
+2000,Chile,Other,4520.3
+2001,Chile,Other,4514.7
+2002,Chile,Other,4647.1
+2003,Chile,Other,4802.3
+2004,Chile,Other,4964.1
+2005,Chile,Other,5113.7
+2006,Chile,Other,5310.9
+2007,Chile,Other,5492.9
+2008,Chile,Other,5608
+2009,Chile,Other,5779.5
+2010,Chile,Other,5935.7
+2011,Chile,Other,6142.4
+2012,Colombia,Agriculture forestry and fishing ,1.9
+2012,Colombia,Mining and Quarrying,140
+2012,Colombia,Manufacturing industries: Total,54.6
+2012,Colombia,Construction,1.1
+2006,Estonia,Agriculture forestry and fishing ,118.829
+2008,Estonia,Agriculture forestry and fishing ,239.843
+2010,Estonia,Agriculture forestry and fishing ,109.867
+2012,Estonia,Agriculture forestry and fishing ,77.295
+2006,Estonia,Mining and Quarrying,5960.972
+2008,Estonia,Mining and Quarrying,7197.787
+2010,Estonia,Mining and Quarrying,6452.793
+2012,Estonia,Mining and Quarrying,9354.964
+2006,Estonia,Manufacturing industries: Total,3979.458
+2008,Estonia,Manufacturing industries: Total,3765.962
+2010,Estonia,Manufacturing industries: Total,3715.5
+2012,Estonia,Manufacturing industries: Total,4120.509
+2006,Estonia,Energy Production ,5706.681
+2008,Estonia,Energy Production ,5423.858
+2010,Estonia,Energy Production ,6534.457
+2012,Estonia,Energy Production ,6257.826
+2006,Estonia,Water supply sewerage waste management ,268.639
+2008,Estonia,Water supply sewerage waste management ,374.272
+2010,Estonia,Water supply sewerage waste management ,251.677
+2012,Estonia,Water supply sewerage waste management ,537.467
+2006,Estonia,Construction,716.96
+2008,Estonia,Construction,1098.924
+2010,Estonia,Construction,436.281
+2012,Estonia,Construction,654.786
+2006,Estonia,Other,2166.779
+2008,Estonia,Other,1444.591
+2010,Estonia,Other,1464.128
+2012,Estonia,Other,845.495
+2010,Israel,Mining and Quarrying,926.682
+2012,Israel,Mining and Quarrying,725.628
+2010,Israel,Manufacturing industries: Total,1319.664
+2012,Israel,Manufacturing industries: Total,1437.948
+2000,Israel,Energy Production ,1195
+2001,Israel,Energy Production ,1320
+2002,Israel,Energy Production ,1182
+2003,Israel,Energy Production ,1369
+2004,Israel,Energy Production ,1332
+2005,Israel,Energy Production ,1170
+2006,Israel,Energy Production ,1161
+2007,Israel,Energy Production ,1205
+2008,Israel,Energy Production ,1208
+2009,Israel,Energy Production ,1250
+2010,Israel,Energy Production ,1235.314
+2012,Israel,Energy Production ,1494.274
+2000,Israel,Water supply sewerage waste management ,99.11
+2001,Israel,Water supply sewerage waste management ,100
+2002,Israel,Water supply sewerage waste management ,99.694
+2003,Israel,Water supply sewerage waste management ,102.2
+2004,Israel,Water supply sewerage waste management ,110.865
+2005,Israel,Water supply sewerage waste management ,99.702
+2006,Israel,Water supply sewerage waste management ,98.022
+2007,Israel,Water supply sewerage waste management ,105.966
+2008,Israel,Water supply sewerage waste management ,109.334
+2005,Israel,Construction,3300
+2006,Israel,Construction,3200
+2007,Israel,Construction,3300
+2008,Israel,Construction,3300
+2009,Israel,Construction,3500
+2011,Israel,Construction,3932
+2006,Latvia,Agriculture forestry and fishing ,96.126
+2008,Latvia,Agriculture forestry and fishing ,74.66
+2010,Latvia,Agriculture forestry and fishing ,68.024
+2012,Latvia,Agriculture forestry and fishing ,2.767
+2008,Latvia,Mining and Quarrying,2.585
+2010,Latvia,Mining and Quarrying,0.786
+2012,Latvia,Mining and Quarrying,1.745
+2006,Latvia,Manufacturing industries: Total,565.017
+2008,Latvia,Manufacturing industries: Total,497.145
+2010,Latvia,Manufacturing industries: Total,372.469
+2012,Latvia,Manufacturing industries: Total,393.873
+2006,Latvia,Energy Production ,25.838
+2008,Latvia,Energy Production ,20.151
+2010,Latvia,Energy Production ,24.654
+2012,Latvia,Energy Production ,132.507
+2006,Latvia,Water supply sewerage waste management ,52.85
+2008,Latvia,Water supply sewerage waste management ,92.94
+2010,Latvia,Water supply sewerage waste management ,119.565
+2012,Latvia,Water supply sewerage waste management ,284.291
+2006,Latvia,Construction,19.339
+2008,Latvia,Construction,12.04
+2010,Latvia,Construction,21.551
+2012,Latvia,Construction,7.509
+2006,Latvia,Other,1094.151
+2008,Latvia,Other,791.005
+2010,Latvia,Other,887.083
+2012,Latvia,Other,1475.997
+2006,Lithuania,Agriculture forestry and fishing ,874.219
+2008,Lithuania,Agriculture forestry and fishing ,786.069
+2010,Lithuania,Agriculture forestry and fishing ,455.856
+2012,Lithuania,Agriculture forestry and fishing ,481.696
+2006,Lithuania,Mining and Quarrying,5.514
+2008,Lithuania,Mining and Quarrying,3.367
+2010,Lithuania,Mining and Quarrying,6.838
+2012,Lithuania,Mining and Quarrying,25.911
+2006,Lithuania,Manufacturing industries: Total,2739.893
+2008,Lithuania,Manufacturing industries: Total,2757.736
+2010,Lithuania,Manufacturing industries: Total,2646.824
+2012,Lithuania,Manufacturing industries: Total,2548.73
+2006,Lithuania,Energy Production ,34.022
+2008,Lithuania,Energy Production ,50.645
+2010,Lithuania,Energy Production ,36.314
+2012,Lithuania,Energy Production ,29.005
+2006,Lithuania,Water supply sewerage waste management ,360.743
+2008,Lithuania,Water supply sewerage waste management ,272.688
+2010,Lithuania,Water supply sewerage waste management ,235.486
+2012,Lithuania,Water supply sewerage waste management ,160.696
+2006,Lithuania,Construction,348.968
+2008,Lithuania,Construction,412.045
+2010,Lithuania,Construction,356.772
+2012,Lithuania,Construction,419.067
+2006,Lithuania,Other,1991.896
+2008,Lithuania,Other,2046.115
+2010,Lithuania,Other,1804.527
+2012,Lithuania,Other,1794.408
+2006,Slovenia,Agriculture forestry and fishing ,214.335
+2008,Slovenia,Agriculture forestry and fishing ,132.159
+2010,Slovenia,Agriculture forestry and fishing ,141.285
+2012,Slovenia,Agriculture forestry and fishing ,164.761
+2006,Slovenia,Mining and Quarrying,376.93
+2008,Slovenia,Mining and Quarrying,54.519
+2010,Slovenia,Mining and Quarrying,11.797
+2012,Slovenia,Mining and Quarrying,14.448
+2006,Slovenia,Manufacturing industries: Total,2357.116
+2008,Slovenia,Manufacturing industries: Total,1701.939
+2010,Slovenia,Manufacturing industries: Total,1511.895
+2012,Slovenia,Manufacturing industries: Total,1341.354
+2006,Slovenia,Energy Production ,496.642
+2008,Slovenia,Energy Production ,353.639
+2010,Slovenia,Energy Production ,1388.08
+2012,Slovenia,Energy Production ,1069.074
+2006,Slovenia,Water supply sewerage waste management ,38.265
+2008,Slovenia,Water supply sewerage waste management ,110.172
+2010,Slovenia,Water supply sewerage waste management ,89.827
+2012,Slovenia,Water supply sewerage waste management ,162.758
+2006,Slovenia,Construction,994.886
+2008,Slovenia,Construction,1376.225
+2010,Slovenia,Construction,1509.466
+2012,Slovenia,Construction,535.093
+2006,Slovenia,Other,1509.008
+2008,Slovenia,Other,1260.609
+2010,Slovenia,Other,1317.231
+2012,Slovenia,Other,1178.208

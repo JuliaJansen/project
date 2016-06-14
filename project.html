@@ -16,6 +16,7 @@
 		<script src="/scripts/data.js"></script>
 		<script src="/scripts/parallelgraph.js"></script>
 		<script src="/scripts/barchart.js"></script>
+		<script src="/scripts/listeners.js"></script>
 
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -110,10 +111,10 @@
 					  	<div class="row">
 					  		<div class="col-md-6">
 							  	<p>
-							  	  <br>
-								  <button id="energybutton" type="button" class="btn btn-default btn-xs">energy</button>
-								  <button id="emissionbutton" type="button" class="btn btn-default btn-xs">emission</button>
-								  <button id="wastebutton" type="button" class="btn btn-default btn-xs">waste</button>
+							  	  <form class="controls">
+								  <label><input type="button" class="btn btn-default btn-xs bargraphbutton" value="energy"></label>
+								  <label><input type="button" class="btn btn-default btn-xs bargraphbutton" value="emission"></label>
+								  <label><input type="button" class="btn btn-default btn-xs bargraphbutton" value="waste"></label>
 								</p>	
 							</div>
 							<div class="col-md-6">

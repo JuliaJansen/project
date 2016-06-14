@@ -10,75 +10,79 @@
 /* 
  * draws a barchart for one country
  */
-function barchart(country, data) {
+function barchart(country, variable) {
+
+	// empty array to hold data for barchart
+	var layers = [];
+
+	// select the right dataset
+	if (variable == "energy") {
+		data = energy[country];
+
+		var oil = [];
+		var heat = [];
+		var gas = [];
+		var nucEnergy = [];
+		var renEnergy = [];
+		var wasteConsumption = [];
+		var solidFuels = [];
+
+		// reformat data to layers
+		data.forEach(function(d) {
+			oil.push({ 	"x" : d.year, // - 2004, 
+						"y0" : d.oil,
+						"y1": d.oil
+			});
+			heat.push({	"x" : d.year, // - 2004, 
+						"y0" : d.heat,
+						"y1": d.oil 
+			});
+			gas.push({	"x" : d.year, // - 2004, 
+						"y0" : d.gas,
+						"y1": d.oil + d.heat 
+			});
+			nucEnergy.push({	
+						"x" : d.year, // - 2004, 
+						"y0" : d.nucEnergy,
+						"y1": d.oil + d.heat + d.gas 
+			});
+			renEnergy.push({	
+						"x" : d.year, // - 2004, 
+						"y0" : d.renEnergy,
+						"y1": d.oil + d.heat + d.gas + d.nucEnergy 
+			});
+			wasteConsumption.push({	
+						"x" : d.year, //- 2004, 
+						"y0" : d.wasteConsumption,
+						"y1": d.oil + d.heat + d.gas + d.nucEnergy + d.renEnergy 
+			});
+			solidFuels.push({	
+						"x" : d.year,//  - 2004, 
+						"y0" : d.solidFuels,
+						"y1": d.oil + d.heat + d.gas + d.nucEnergy + d.renEnergy + d.wasteConsumption
+			});
+		});
+
+		layers = [oil, heat, gas, nucEnergy, renEnergy, wasteConsumption, solidFuels];
+
+		// console.log("energy data", energy, data);
+	} else if (variable == "waste") {
+		data = waste[country];
+
+
+	} else if (variable == "emission") {
+		data = emissions[country];
+	}
 
 	d3.select("#barsvg").remove();
 
 	// get data for country
-	data = data[country];
-
-	// console.log("domain of", d3.keys(data[0]).filter(function(key) { return key !== "year"; }));
-
-	var oil = [];
-	var heat = [];
-	var gas = [];
-	var nucEnergy = [];
-	var renEnergy = [];
-	var wasteConsumption = [];
-	var solidFuels = [];
+	// console.log("data type, dataset", variable, data);
 
 	// n = amount of layers
 	// m = data points per layer
 	n = 7;
 	m = 10;
-
-	// reformat data to layers
-	data.forEach(function(d) {
-		oil.push({ 	"x" : d.year, // - 2004, 
-					"y0" : d.oil,
-					"y1": d.oil
-		});
-		heat.push({	"x" : d.year, // - 2004, 
-					"y0" : d.heat,
-					"y1": d.oil 
-		});
-		gas.push({	"x" : d.year, // - 2004, 
-					"y0" : d.gas,
-					"y1": d.oil + d.heat 
-		});
-		nucEnergy.push({	
-					"x" : d.year, // - 2004, 
-					"y0" : d.nucEnergy,
-					"y1": d.oil + d.heat + d.gas 
-		});
-		renEnergy.push({	
-					"x" : d.year, // - 2004, 
-					"y0" : d.renEnergy,
-					"y1": d.oil + d.heat + d.gas + d.nucEnergy 
-		});
-		wasteConsumption.push({	
-					"x" : d.year, //- 2004, 
-					"y0" : d.wasteConsumption,
-					"y1": d.oil + d.heat + d.gas + d.nucEnergy + d.renEnergy 
-		});
-		solidFuels.push({	
-					"x" : d.year,//  - 2004, 
-					"y0" : d.solidFuels,
-					"y1": d.oil + d.heat + d.gas + d.nucEnergy + d.renEnergy + d.wasteConsumption
-		});
-	});
-
-	var layers = {};
-	layers["oil"] = oil;
-	layers["heat"] = heat;
-	layers["gas"] = gas;
-	layers["nuclear"] = nucEnergy;
-	layers["renewable"] = renEnergy;
-	layers["waste consumption"] = wasteConsumption;
-	layers["solid fuels"] = solidFuels;
-
-	// , heat, gas, nucEnergy, renEnergy, wasteConsumption, solidFuels];
-	console.log("layers:", layers);
 
 	// color scale
 	var color = d3.scale.ordinal()
@@ -108,7 +112,6 @@ function barchart(country, data) {
 	    .tickPadding(6)
 	    .orient("bottom");
 
-	// data = [oil, heat, gas, nucEnergy, renEnergy, wasteConsumption, solidFuels];
 	// console.log("data", data);
 
 	// append svg
@@ -177,7 +180,7 @@ function barchart(country, data) {
     	.style("text-anchor", "right")
     	.text(function(d) { return "Use of Energy per Capita" });
 
-
+    // toggle stacked/grouped
 	d3.selectAll("input").on("change", change);
 
 	var timeout = setTimeout(function() {

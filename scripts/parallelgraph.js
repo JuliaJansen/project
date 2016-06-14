@@ -123,7 +123,8 @@ function parallelGraph(energydata, data, year) {
 		  			.style("stroke", "#4682b4"));
 	  	})
 	  	.on("click", function(d) {
-	  		barchart(d.country, energydata);
+	  		country = d.country;
+	  		barchart(d.country, "energydata");
 	  	})
 
 	// add a group element for each dimension
