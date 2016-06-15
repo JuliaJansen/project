@@ -3,150 +3,152 @@
 <!-- Programmeerproject-->
 
 <html>
-	<head>
-		<meta charset="utf-8"/>
-		<title>Project</title>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Project</title>
 
         <!-- Javascript Sources -->
         <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
-		<script src="https://d3js.org/d3-queue.v2.min.js"></script>
-		<script src="/scripts/d3.slider.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-		<script src="/scripts/countrycodes.js"></script>
-		<script src="/scripts/data.js"></script>
-		<script src="/scripts/parallelgraph.js"></script>
-		<script src="/scripts/barchart.js"></script>
-		<script src="/scripts/scatterplot.js"></script>
-		<!-- <script src="/scripts/listeners.js"></script> -->
+    <script src="https://d3js.org/d3-queue.v2.min.js"></script>
+    <script src="/scripts/d3.slider.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="/scripts/countrycodes.js"></script>
+    <script src="/scripts/helpers.js"></script>
+    <script src="/scripts/data.js"></script>
+    <script src="/scripts/slider.js"></script>
+    <script src="/scripts/parallelgraph.js"></script>
+    <script src="/scripts/barchart.js"></script>
+    <script src="/scripts/scatterplot.js"></script>
+    <script src="/scripts/d3.tip.js"></script>
+    <!-- <script src="/scripts/listeners.js"></script> -->
 
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-		
-		<!-- Stylesheets -->
-		<link rel="stylesheet" type="text/css" href="style/d3.slider.css"/>
-		<link rel="stylesheet" type="text/css" href="style/project.css"/>
-		<link rel="stylesheet" type="text/css" href="style/parallelgraph.css"/>
-		<link rel="stylesheet" type="text/css" href="style/barchart.css"/>
-		<link rel="stylesheet" type="text/css" href="style/scatterplot.css"/>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="style/d3.slider.css"/>
+    <link rel="stylesheet" type="text/css" href="style/project.css"/>
+    <link rel="stylesheet" type="text/css" href="style/parallelgraph.css"/>
+    <link rel="stylesheet" type="text/css" href="style/barchart.css"/>
+    <link rel="stylesheet" type="text/css" href="style/scatterplot.css"/>
 
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  </head>
 
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	</head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Scroll navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Julia Jansen</a>
+        </div>
 
-	<body data-spy="scroll" data-target=".navbar" data-offset="50">
-		<nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
-		    <!-- Brand and toggle get grouped for better mobile display -->
-		    <div class="navbar-header">
-		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-		        <span class="sr-only">Scroll navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		      <a class="navbar-brand" href="#">Julia Jansen</a>
-		    </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#intro">I N T R O<span class="sr-only">(current)</span></a></li>
+            <li><a href="#data">D A T A</a></li>
+            <li><a href="#outliers">O U T L I E R S ?</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#contact">contact</a></li>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div> <!--/.container-fluid -->
+    </nav>
 
-		    <!-- Collect the nav links, forms, and other content for toggling -->
-		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		      <ul class="nav navbar-nav">
-		        <li class="active"><a href="#intro">I N T R O<span class="sr-only">(current)</span></a></li>
-		        <li><a href="#data">D A T A</a></li>
-		        <li><a href="#outliers">O U T L I E R S ?</a></li>
-		      </ul>
-		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="#contact">contact</a></li>
-		        </li>
-		      </ul>
-		    </div><!-- /.navbar-collapse -->
-		  </div> <!--/.container-fluid -->
-		</nav>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div id="intro" class="tab-pane fade in active">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div id="introheader" class="col-md-4">
+              <h1> W e l c o m e </h1>
+              <p id="welcometext">Text about definition and why it is interesting Text about definition and why it is interesting Text about definition and why it is interesting Text about definition and why it is interesting<br><br></p>
+            </div>
+            <div class="col-md-4"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <img class="featurette-image img-responsive center-block" src="/doc/circle_energy.png"></img>
+              <h2> Input. </h2>
+              <p>Text about definition and why it is interesting Text about definition and why it is interesting Text about definition and why it is interesting Text about definition and why it is interesting</p>
+            </div>
+            <div class="col-md-4">
+              <img class="featurette-image img-responsive center-block" src="/doc/circle_emissions.png"></img>
+              <h2> Output. </h2>
+              <p>Text about definition and why it is interesting Text about definition and why it is interesting Text about definition and why it is interesting Text about definition and why it is interesting</p>
+            </div>
+            <div class="col-md-4">
+             <img class="featurette-image img-responsive center-block" src="/doc/circle_waste.png"></img>
+            <h2> Output. </h2>
+            <p>Text about definition and why it is interesting Text about definition and why it is interesting Text about definition and why it is interesting Text about definition and why it is interesting</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		<!-- Tab panes -->
-		<div class="tab-content">
-			<div id="intro" class="tab-pane fade in active">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-md-4"></div>
-						<div id="introheader" class="col-md-4">
-						  <h1> W e l c o m e </h1>
-						  <p id="welcometext">Text about definition and why it is interesting Text about definition and why it is interesting Text about definition and why it is interesting Text about definition and why it is interesting<br><br></p>
-						</div>
-						<div class="col-md-4"></div>
-					</div>
-					<div class="row">
-					  <div class="col-md-4">
-					  	<img class="featurette-image img-responsive center-block" src="/doc/circle_energy.png"></img>
-					  	<h2> Input. </h2>
-					  	<p>Text about definition and why it is interesting Text about definition and why it is interesting Text about definition and why it is interesting Text about definition and why it is interesting</p>
-					  </div>
-					  <div class="col-md-4">
-					  	<img class="featurette-image img-responsive center-block" src="/doc/circle_emissions.png"></img>
-					  	<h2> Output. </h2>
-					  	<p>Text about definition and why it is interesting Text about definition and why it is interesting Text about definition and why it is interesting Text about definition and why it is interesting</p>
-					  </div>
-					  <div class="col-md-4">
-						 <img class="featurette-image img-responsive center-block" src="/doc/circle_waste.png"></img>
-						<h2> Output. </h2>
-						<p>Text about definition and why it is interesting Text about definition and why it is interesting Text about definition and why it is interesting Text about definition and why it is interesting</p>
-					</div>
-				</div>
-			</div>
-		</div>
+    <div id="data">
+      <div class="container-fluid">
+        <div class="row">
+          <div id="parallelgraph" class="col-md-6">
+            <div class="row">
+              <div id="graph"></div>
+            </div>
+            <div class="row">
+                <div id="slider"></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+                <div id="barchart"></div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <p>
+                    <form class="controls">
+                  <label><input type="button" class="btn btn-default btn-xs bargraphbutton" value="energy"></label>
+                  <label><input type="button" class="btn btn-default btn-xs bargraphbutton" value="emission"></label>
+                  <label><input type="button" class="btn btn-default btn-xs bargraphbutton" value="waste"></label>
+                </p>  
+              </div>
+              <div class="col-md-6">
+                <p>
+                  <form id="toggle" class="controls">
+                    <label><input type="radio" name="mode" value="stacked" checked>Stacked</label>
+                    <label><input type="radio" name="mode" value="grouped">Grouped</label>
+                  </form>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		<div id="data">
-			<div class="container-fluid">
-				<div class="row">
-					<div id="parallelgraph" class="col-md-6">
-						<div class="row">
-							<div id="graph"></div>
-						</div>
-						<div class="row">
-						  	<div id="slider"></div>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="row">
-					  		<div id="barchart"></div>
-					  	</div>
-					  	<div class="row">
-					  		<div class="col-md-6">
-							  	<p>
-							  	  <form class="controls">
-								  <label><input type="button" class="btn btn-default btn-xs bargraphbutton" value="energy"></label>
-								  <label><input type="button" class="btn btn-default btn-xs bargraphbutton" value="emission"></label>
-								  <label><input type="button" class="btn btn-default btn-xs bargraphbutton" value="waste"></label>
-								</p>	
-							</div>
-							<div class="col-md-6">
-								<p>
-								  <form id="toggle" class="controls">
-								    <label><input type="radio" name="mode" value="stacked" checked>Stacked</label>
-								    <label><input type="radio" name="mode" value="grouped">Grouped</label>
-								  </form>
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div id="outliers">
-			<div class="container-fluid">
-				<div class="row">
-				  <div class="col-md-4">
-				  	<h1>The link between Renewable Energy and Emission</h1>
-				  	<p id="strikingtext">Here some text about a country (or more) for which the data shows interesting outliers. For example: Norway produces all of the energy it uses. How does that connect to the emissions and waste generation of Norway? A Sankey Diagram could be shown on the right, to follow the flow of different energy-sources to pollution. Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info.</p>
-				  </div>
-				  <div class="col-md-8">
-				  	<div id="scatterplot"></div>
-				  </div>
-				</div>
-			</div>
-		</div>
-	</body>
+    <div id="outliers">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4">
+            <h1>The link between Renewable Energy and Emission</h1>
+            <p id="strikingtext">Here some text about a country (or more) for which the data shows interesting outliers. For example: Norway produces all of the energy it uses. How does that connect to the emissions and waste generation of Norway? A Sankey Diagram could be shown on the right, to follow the flow of different energy-sources to pollution. Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info.</p>
+          </div>
+          <div class="col-md-8">
+            <div id="scatterplot"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

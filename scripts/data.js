@@ -29,7 +29,7 @@ window.onload = function() {
 		.defer(d3.csv, '/data/solidfuelsdata.csv')
 		.defer(d3.csv, '/data/waste_consumtiondata.csv')
 		.defer(d3.csv, '/data/primary_production_energy.csv')
-		.defer(d3.csv, '/data/renenergy_emission.csv')
+		.defer(d3.csv, '/data/renenergy_emission.csv') 
 		.await(prepareData);
 }
 
@@ -130,7 +130,7 @@ function prepareData(error, paralleldata, energysavings, economicemissions,
 
 	// prepare energy use data for energy bargraph
 	renenergy_emission.forEach(function(d, i) {
-		year = +d.TIME
+		year = +d.TIME;
 		if (i > 0 && d.GEO != "Iceland") {
 		
 			// make index for country only if not existing yet

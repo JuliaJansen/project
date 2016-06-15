@@ -175,3 +175,8 @@ TO DO:
 - kleurenpallet scatterplot uitbreiden
 - scatterplot interactief maken: per jaar (reagerend op de parallel coordinates slider) en met tooltipjes
 
+#### 15 juni
+Vandaag gedaan gekregen:
+- scatterplot met tooltip
+- slider roept scatterplot aan per jaar
+- 

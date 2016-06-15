@@ -6,26 +6,6 @@
  * used as reference: https://bl.ocks.org/jasondavies/1341281
  */
 
-// calls slider
-function slider(data, energydata) {
-
-
-	var data = data;
-	var energydata = energydata;
-	var slider = d3.slider()
-      .min(2005)
-      .max(2013)
-      .showRange(true)
-      .value(2005)
-      .callback(function() {
-      	// draw parallelGraph
-      	parallelGraph(energydata, data, Math.floor(slider.value()));
-      });
-
-	d3.select('#slider').call(slider);
-
-}
-
 // draws parallel graph
 function parallelGraph(energydata, data, year) {
 
@@ -121,11 +101,19 @@ function parallelGraph(energydata, data, year) {
 	  			transition(d3.select(this).transition().duration(50)
 		  			.style("stroke-width", "1px")
 		  			.style("stroke", "#4682b4"));
+	  			d3.select("#parallelgraph_title").transition().duration(100)
+					.text(function() {
+						if (d.country == "Kosovo (under United Nations Security Council Resolution 1244/99)") {
+							return "Kosovo";
+						} else {
+							return year;
+						}
+					});
 	  	})
 	  	.on("click", function(d) {
 	  		country = d.country;
 	  		barchart(d.country, "energydata");
-	  	})
+	  	});
 
 	// add a group element for each dimension
 	var g = svg.selectAll(".dimension")
@@ -163,6 +151,7 @@ function parallelGraph(energydata, data, year) {
       .attr("class", "axis")
       .each(function(d) { d3.select(this).call(axis.scale(y[d])); })
    	.append("text")
+   	  .attr("class", "axis-text")
       .style("text-anchor", "middle")
       .attr("y", -9)
       .text(function(d) { return d; });

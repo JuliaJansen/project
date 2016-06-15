@@ -3,6 +3,48 @@
  */
  
 .scatterplotlabel {
-  font-family: helvetica;
-  font-size: 12px;
+ 	font-family: helvetica;
+ 	font-size: 12px;
+}
+
+.scattertip {
+	line-height: 1;
+	height: 48px;
+	padding: 4px;
+	background: rgba(0, 0, 0, 0.8);
+	color: #fff;
+	border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.scattertip:after {
+	box-sizing: border-box;
+	display: inline;
+	width: 100%;
+	line-height: 1;
+	color: rgba(0, 0, 0, 0.8);
+	content: "\25BC";
+	position: absolute;
+	text-align: center;
+}
+
+/* Style northward tooltips differently */
+.scattertip.n:after {
+	margin: -1px 0 0 0;
+	top: 100%;
+	left: 0;
+}
+
+.scattertext {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 10px;
+	text-align: center;
+}
+
+#renenergy-label {
+	color: #cccccc;
+}
+
+#emission-label {
+	color: #cccccc;
 }

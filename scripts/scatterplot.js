@@ -10,19 +10,28 @@ function scatterplot(year) {
 
 	data = scatterData[year];
 
+	d3.select("#scatterplot-svg").remove();
+
 	console.log("countries: ", data.length);
 
 	// set margins, width and height
 	var margin = {top: 90, right: 35, bottom: 35, left: 35},
-	width = 600 - margin.left - margin.right,
+	width = 550 - margin.left - margin.right,
 	height = 380 - margin.top - margin.bottom;
 
+	// define x scale
 	var x = d3.scale.linear()
 	.range([0, width]);
 
+	// define y scale
 	var y = d3.scale.linear()
 	.range([height, 0]);
 
+	// remember xMax and Ymax
+	var xMax = 2.9;
+	var yMax = 28;
+
+	// define color scale
 	var color = d3.scale.category20();
 
 
@@ -45,24 +54,41 @@ function scatterplot(year) {
 // ].map(d3_rgbString);
 
 
-
+	// x axis
 	var xAxis = d3.svg.axis()
 		.scale(x)
 		.orient("bottom");
 
+	// y axis 
 	var yAxis = d3.svg.axis()
 		.scale(y)
 		.orient("left");
 
+	// tooltip
+	var tip = d3.tip()
+		.attr('class', 'scattertip')
+		.offset([-15, -94])
+		.html(function(d) {
+	    	return "<span class=\"scattertext\"><center>" + d.country + "</center><span class=\"scattertext\" id=\"renenergy-label\">Renewable energy: " 
+	    	+ roundToTwo(d.renEnergy) + " TOE</span><span class=\"scattertext\" id=\"emission-label\"><br>Emission: " 
+	    	+ roundToTwo(d.emission) + " T CO2</span>";
+	  	});
+
+	// append svg for scatterplot
 	var svg = d3.select("#scatterplot").append("svg")
+		.attr("id", "scatterplot-svg")
 		.attr("width", width + margin.left + margin.right)
 		.attr("height", height + margin.top + margin.bottom)
 		.append("g")
 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-	x.domain(d3.extent(data, function(d) { return d.renEnergy; })).nice();
-	y.domain(d3.extent(data, function(d) { return d.emission; })).nice();
+	svg.call(tip);
 
+	// define x and y domain
+	x.domain([0, xMax]);
+	y.domain([0, yMax]);
+
+	// add an x axis with label
 	svg.append("g")
 		  .attr("class", "x axis")
 		  .attr("transform", "translate(0," + height + ")")
@@ -74,6 +100,7 @@ function scatterplot(year) {
 		  .style("text-anchor", "end")
 		  .text("Renewable Energy / capita (tonnes of oil equivalent)");
 
+	// add y axis with label
 	svg.append("g")
 		  .attr("class", "y axis")
 		  .call(yAxis)
@@ -85,14 +112,23 @@ function scatterplot(year) {
 		  .style("text-anchor", "end")
 		  .text("Emission / capita (tonnes of CO2 equivalent")
 
+	// add a circle for each data point
 	svg.selectAll(".dot")
-		  .data(data)
+			.data(data)
 		.enter().append("circle")
-		  .attr("class", "dot")
-		  .attr("r", 3.5)
-		  .attr("cx", function(d) { if (d.renEnergy > 10) { console.log("fucked up", d.country) }; return x(d.renEnergy); })
-		  .attr("cy", function(d) { return y(d.emission); })
-		  .style("fill", function(d) { return color(d.country); });
+			.attr("class", "dot")
+			.attr("r", 4.5)
+			.attr("cx", function(d) { return x(d.renEnergy); })
+		 	.attr("cy", function(d) { return y(d.emission); })
+		  	.style("fill", function(d) { return color(d.country); })
+		  	.on("mouseover", function(d) {
+		  		tip.show(d);
+		  		d3.select(this).attr("r", 7.5);
+		  	}) 
+		  	.on("mouseout", function(d) {
+		  		tip.hide(d);
+		  		d3.select(this).attr("r", 4.5);
+		  	});
 
 // 	var legend = svg.selectAll(".legend")
 // 		  .data(color.domain())

@@ -1,3 +1,7 @@
+/* 
+ * https://github.com/sujeetsr/d3.slider
+ */
+
 d3.slider = function module() {
   "use strict";
 
@@ -84,7 +88,7 @@ d3.slider = function module() {
       if (tickFormat) { 
         displayValue = tickFormat(value);
       } else {
-        displayValue = d3.format(",.0f")(value);
+        displayValue = d3.format(".0f")(value);
       }
       
       dragger.append("text")
@@ -175,7 +179,7 @@ d3.slider = function module() {
     if (tickFormat) { 
       displayValue = tickFormat(value);
     } else {
-      displayValue = d3.format(",.0f")(value);
+      displayValue = d3.format(".0f")(value);
     }
     svg.selectAll(".dragger").select("text")
     .text(displayValue);
