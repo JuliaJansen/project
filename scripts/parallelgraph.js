@@ -111,8 +111,7 @@ function parallelGraph(energydata, data, year) {
 					});
 	  	})
 	  	.on("click", function(d) {
-	  		country = d.country;
-	  		barchart(d.country, "energydata");
+	  		barchart(d.country, "energy");
 	  	});
 
 	// add a group element for each dimension

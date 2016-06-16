@@ -17,6 +17,8 @@ function barchart(country, variable) {
 
 	// select the right dataset
 	if (variable == "energy") {
+		console.log("country", country);
+
 		data = energy[country];
 
 		var oil = [];
@@ -29,50 +31,51 @@ function barchart(country, variable) {
 
 		// reformat data to layers
 		data.forEach(function(d) {
-			oil.push({ 	"x" : d.year, // - 2004, 
-						"y0" : d.oil,
-						"y1": d.oil
+			gas.push({	"x" : d.year, // - 2004, 
+						"y0" : d.gas,
+						"y1": d.oil + d.heat 
 			});
 			heat.push({	"x" : d.year, // - 2004, 
 						"y0" : d.heat,
 						"y1": d.oil 
-			});
-			gas.push({	"x" : d.year, // - 2004, 
-						"y0" : d.gas,
-						"y1": d.oil + d.heat 
 			});
 			nucEnergy.push({	
 						"x" : d.year, // - 2004, 
 						"y0" : d.nucEnergy,
 						"y1": d.oil + d.heat + d.gas 
 			});
+			oil.push({ 	"x" : d.year, // - 2004, 
+						"y0" : d.oil,
+						"y1": d.oil
+			});			
 			renEnergy.push({	
 						"x" : d.year, // - 2004, 
 						"y0" : d.renEnergy,
 						"y1": d.oil + d.heat + d.gas + d.nucEnergy 
-			});
-			wasteConsumption.push({	
-						"x" : d.year, //- 2004, 
-						"y0" : d.wasteConsumption,
-						"y1": d.oil + d.heat + d.gas + d.nucEnergy + d.renEnergy 
 			});
 			solidFuels.push({	
 						"x" : d.year,//  - 2004, 
 						"y0" : d.solidFuels,
 						"y1": d.oil + d.heat + d.gas + d.nucEnergy + d.renEnergy + d.wasteConsumption
 			});
+			wasteConsumption.push({	
+						"x" : d.year, //- 2004, 
+						"y0" : d.wasteConsumption,
+						"y1": d.oil + d.heat + d.gas + d.nucEnergy + d.renEnergy 
+			});
 		});
 
 		layers = [oil, heat, gas, nucEnergy, renEnergy, wasteConsumption, solidFuels];
 
-		// console.log("energy data", energy, data);
+	// console.log("energy data", energy, data);
 	} else if (variable == "waste") {
 		data = waste[country];
-
 
 	} else if (variable == "emission") {
 		data = emissions[country];
 	}
+
+	console.log("data in barchart", data);
 
 	d3.select("#barsvg").remove();
 
@@ -86,9 +89,10 @@ function barchart(country, variable) {
 
 	// color scale
 	var color = d3.scale.ordinal()
-    	.range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#99ff33", "#d0743c", "#ff8c00"])
-		.domain(d3.keys(layers).filter(function(key) { return key !== "year"; }));
+		.domain(d3.keys(layers).filter(function(key) { return key !== "year"; }))
+    	.range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#99ff33", "#d0743c", "#ff8c00"]);
 
+    // calculate y max values
 	yGroupMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y1; }); }),
     yStackMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y0 + d.y1; }); });
 
@@ -163,7 +167,7 @@ function barchart(country, variable) {
 	// transition for rects
 	rect.transition()
 	    .delay(function(d, i) { return i * 10; })
-	    .attr("y", function(d) { console.log("key, y0, y1, y(y1 - y0)", d.key, d.y0, d.y1, y(d.y1 - d.y0)); return y(d.y1 + d.y0); })
+	    .attr("y", function(d) { console.log("key, y0, y1, y(y1 + y0)", d.key, d.y0, d.y1, y(d.y1 + d.y0)); return y(d.y1 + d.y0); })
 	    .attr("height", function(d) { return (y(d.y1) - y(d.y1 + d.y0)); });
 
 	// append an axis 
@@ -203,7 +207,7 @@ function barchart(country, variable) {
 	      .attr("width", x.rangeBand() / n)
 	    .transition()
 	      .attr("y", function(d) { return y(d.y0); })
-	      .attr("height", function(d) { return height - y(d.y1); });
+	      .attr("height", function(d) { return height - y(d.y0); });
 	}
 
 	function transitionStacked() {
