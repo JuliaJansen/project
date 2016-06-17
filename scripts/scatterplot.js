@@ -67,7 +67,7 @@ function scatterplot(year) {
 	// tooltip
 	var tip = d3.tip()
 		.attr('class', 'scattertip')
-		.offset([-15, -94])
+		.offset([-15, -151])
 		.html(function(d) {
 	    	return "<span class=\"scattertext\"><center>" + d.country + "</center><span class=\"scattertext\" id=\"renenergy-label\">Renewable energy: " 
 	    	+ roundToTwo(d.renEnergy) + " TOE</span><span class=\"scattertext\" id=\"emission-label\"><br>Emission: " 

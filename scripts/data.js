@@ -178,6 +178,6 @@ function prepareData(error, paralleldata, energysavings, economicemissions,
 
 	slider(parallelData, energy);
 	parallelGraph(energy, parallelData, 2005);
-	barchart("Netherlands", "energy");
+	barchart();
 	scatterplot(2010);
 }
