@@ -46,7 +46,7 @@ function prepareData(error, paralleldata, energysavings, economicemissions,
 		parallelData[year] = typeof parallelData[year] !== "undefined" ? parallelData[year] : [];
 
 		// push data to array
-		if (+d.ENERGY > 0 && +d.EMISSIONS > 0 && +d.WASTE > 0 && d.GEO != "Iceland" && d.GEO != "Luxembourg") {
+		if (+d.ENERGY > 0 && +d.EMISSIONS > 0 && +d.WASTE > 0) { // && d.GEO != "Iceland" && d.GEO != "Luxembourg") {
 			parallelData[year].push({
 				"country" : d.GEO,
 				"energy" : +d.ENERGY,
@@ -178,6 +178,8 @@ function prepareData(error, paralleldata, energysavings, economicemissions,
 
 	slider(parallelData, energy);
 	parallelGraph(energy, parallelData, 2005);
-	barchart();
+	barchart("Netherlands", "energy");
 	scatterplot(2010);
+
+	console.log("nuc energy NL ", energy["Netherlands"]);
 }
