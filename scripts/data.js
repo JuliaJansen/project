@@ -177,9 +177,10 @@ function prepareData(error, paralleldata, energysavings, economicemissions,
 	// 	.entries(economicemissions);
 
 	slider(parallelData, energy);
-	parallelGraph(energy, parallelData, 2005);
+	parallelGraph(parallelData, 2005);
 	barchart("Netherlands", "energy");
 	scatterplot(2010);
+	listeners();
 
 	console.log("nuc energy NL ", energy["Netherlands"]);
 }

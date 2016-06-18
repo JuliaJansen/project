@@ -20,7 +20,7 @@
     <script src="/scripts/barchart.js"></script>
     <script src="/scripts/scatterplot.js"></script>
     <script src="/scripts/d3.tip.js"></script>
-    <!-- <script src="/scripts/listeners.js"></script> -->
+    <script src="/scripts/listeners.js"></script>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -117,10 +117,11 @@
               <div class="row">
                 <div class="col-md-6">
                   <p>
-                    <form class="controls">
-                  <label><input type="button" class="btn btn-default btn-xs bargraphbutton" value="energy" id="energy"></label>
-                  <label><input type="button" class="btn btn-default btn-xs bargraphbutton" value="emission" id="emission"></label>
-                  <label><input type="button" class="btn btn-default btn-xs bargraphbutton" value="waste" id="waste"></label>
+                    <div class="chartbuttons btn-group">
+                  <button class="btn btn-default btn-xs bargraphbutton" id="energy">energy</button>
+                  <button class="btn btn-default btn-xs bargraphbutton" id="emission">emission</button>
+                  <button class="btn btn-default btn-xs bargraphbutton" id="waste">waste</button>
+                   </div>
                 </p>  
               </div>
               <div class="col-md-6">

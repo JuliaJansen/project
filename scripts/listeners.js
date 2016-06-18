@@ -5,6 +5,15 @@
  * Listeners defined
  */
 
-// listeners for bargraph buttonclicks 
-var loggen = d3.selectAll(".bargraphbutton").on("click", console.log("value", value));
-console.log("value ", loggen);
+function listeners() {
+	$("#energy").on('click', function(e) {
+		barchart(country, "energy");
+	});
+	$("#emission").on('click', function(e) {
+		barchart(country, "emission");
+	});
+	$("#waste").on('click', function(e) {
+		barchart(country, "waste");
+	});
+}
+	

@@ -7,10 +7,7 @@
  */
 
 // draws parallel graph
-function parallelGraph(energydata, data, year) {
-
-	// save energydata in variable
-	var energydata = energydata; 
+function parallelGraph(data, year) {
 
 	// remove old graph and tooltip if existing
 	d3.select(".graphsvg").remove();
@@ -111,6 +108,8 @@ function parallelGraph(energydata, data, year) {
 					});
 	  	})
 	  	.on("click", function(d) {
+	  		// remember country that is clicked
+	  		country = d.country;
 	  		barchart(d.country, "energy");
 	  	});
 

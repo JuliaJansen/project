@@ -186,3 +186,9 @@ Vandaag gedaan gekregen:
 Weer een halve dag besteed aan de grouped-stacked barchart. Ik ga overstappen op een grouped barchart en die eerst werkend krijgen. Het aanroepen van de barchart en het updaten van de bars is nogal wat gedoe. 
 :(
 
+#### 18 juni
+De grouped barchart tekenen lukt, en alles is interactief, maar ik vewijder nu nog steeds alle grafieken en teken een nieuwe ipv updaten. Dit moet nog gefikst!! 
+
+De legenda tekenen klopt nog niet helemaal... bij waste zijn twee verschillende variabelen groen.
+
+
