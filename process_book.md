@@ -180,7 +180,6 @@ Vandaag gedaan gekregen:
 - scatterplot met tooltip
 - slider roept scatterplot aan per jaar
 - comma's zijn eindelijk weg bij de jaartallen van de slider
-- 
 
 #### 17 juni
 Weer een halve dag besteed aan de grouped-stacked barchart. Ik ga overstappen op een grouped barchart en die eerst werkend krijgen. Het aanroepen van de barchart en het updaten van de bars is nogal wat gedoe. 
