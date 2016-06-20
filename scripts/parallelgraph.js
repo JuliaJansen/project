@@ -33,31 +33,40 @@ function parallelGraph(data, year) {
 	// energy tooltip
 	var energytip = d3.tip()
 		.attr('class', 'paralleltip')
-		.offset([-50, 100])
+		.offset(function(d) { 
+			return [0, y[d.Energy]]; })
 		.html(function(d) {
-			console.log("in tippieee");
-	    	return "<span class=\"paralleltiptext\">Energy: " 
-	    	+ roundToTwo(d.Energy) + " TOE<br>Emission: " 
-	    	+ roundToTwo(d.Emissions) + " T CO2<br>Waste: "
-	    	+ roundToTwo(d.Waste) + " Tonnes";
+	    	return "<span id=\"paralleltiptext\">Energy: " 
+	    	+ roundToTwo(d.Energy) + " T Oil Eq.<br>Emission: "
+	    	+ roundToTwo(d.Emissions) + " T CO2 eq.<br>Municipal Waste: "
+	    	+ roundToTwo(d.Waste) + " T</span>"
 	  	});
 
-	// emission tooltip
-	var emissiontip = d3.tip()
-		.attr('class', 'paralleltip')
-		.offset([0, 100])
-		.html(function(d) {
-			console.log("in tippieee");
-	    	return "<span class=\"paralleltiptext\">Energy: " 
-	    	+ roundToTwo(d.Energy) + " TOE<br>Emission: " 
-	    	+ roundToTwo(d.Emissions) + " T CO2<br>Waste: "
-	    	+ roundToTwo(d.Waste) + " Tonnes";
-	  	});
+	// // emission tooltip
+	// var emissiontip = d3.tip()
+	// 	.attr('class', 'paralleltip')
+	// 	.offset(function(d) {
+	// 		return [273, y[d.Emissions]]; 
+	// 	})
+	// 	.html(function(d) {
+	//     	return "<span class=\"paralleltiptext\">Emission: " 
+	//     	+ roundToTwo(d.Emissions) + " T CO2<br>";
+	//   	});
 
-
+	// // emission tooltip
+	// var wastetip = d3.tip()
+	// 	.attr('class', 'paralleltip')
+	// 	.offset(function(d) {
+	// 		return [395, y[d.Waste]]; 
+	// 	})
+	// 	.html(function(d) {
+	//     	return "<span class=\"paralleltiptext\">Waste: " 
+	//     	+ roundToTwo(d.Waste) + " Tonnes<br>";
+	//   	});
 
 	// append svg for graph
 	var svg = d3.select("#graph").append("svg")
+		.attr("id", "graph-svg")
 		.attr("class", "graphsvg")
 		.attr("width", width + margin.left + margin.right)
 		.attr("height", height + margin.top + margin.bottom)
@@ -65,7 +74,7 @@ function parallelGraph(data, year) {
 	  	.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 	svg.call(energytip);
-	svg.call(emissiontip);
+	// svg.call(emissiontip);
 	// svg.call(wastetip);
 
 	// create title 
@@ -94,18 +103,21 @@ function parallelGraph(data, year) {
 	  .enter().append("path")
 	  	.attr("d", path);
 
+	// select circles in scatterplot for interactivity			
+	var scatterdots = d3.select("#scatterplot-svg").selectAll(".dot");
+
 	// add foreground lines
 	foreground = svg.append("g")
 		.attr("class", "foreground")
 	  .selectAll("path")
 	  	.data(data)
 	  .enter().append("path")
+	  	.attr("id", function(d) { return "line." + d.country })
 	  	.attr("d", path)
 	  	.on("mouseover", function(d) {
 	  		d3.select(this)
 	  			.style("stroke-width", "5.0px")
-	  			.style("stroke", "#ff9900")
-	  			.moveToFront();
+	  			// .moveToFront();
 	  		energytip.show(d);
 			d3.select("#parallelgraph_title")
 				.text(function() {
@@ -114,16 +126,16 @@ function parallelGraph(data, year) {
 					} else {
 						return year + "     " + d.country;
 					}});
-			var circleId = "#circle." + d.country;
-			console.log("circleId", circleId);
-			d3.select(circleId)
-				.attr("r", 7.5);
+			var circle = scatterdots.filter(function(e) { return e.country === d.country; });
+			circle.transition().duration(50)
+				.attr("r", 7.5)
+				.style("stroke", "#000");
 	  	})
 	  	.on("mouseout", function(d) {
-	  			transition(d3.select(this).transition().duration(50)
+	  			transition(d3.select(this).transition().duration(100)
 		  			.style("stroke-width", "1px")
 		  			.style("stroke", "#4682b4"));
-	  			d3.select("#parallelgraph_title").transition().duration(100)
+	  			d3.select("#parallelgraph_title").transition().duration(150)
 					.text(function() {
 						if (d.country == "Kosovo (under United Nations Security Council Resolution 1244/99)") {
 							return "Kosovo";
@@ -132,11 +144,16 @@ function parallelGraph(data, year) {
 						}
 					});
 				energytip.hide(d);
+				var circle = scatterdots.filter(function(e) { return e.country === d.country; });
+				circle.transition().duration(150)
+					.attr("r", 4.0)
+					.style("stroke", "none");
 	  	})
 	  	.on("click", function(d) {
 	  		// remember country that is clicked
 	  		country = d.country;
 	  		barchart(d.country, "energy");
+			$('.navbar-nav a[href="#country_tab"]').tab('show');	  		
 	  	});
 
 	// add a group element for each dimension
@@ -225,11 +242,11 @@ function parallelGraph(data, year) {
 	  	});
 	}
 
-	d3.selection.prototype.moveToFront = function() {
-		return this.each(function() {
-			var line = this.parentNode.appendChild(this);
-			line.className = "hover";
-		});
-	};
+	// d3.selection.prototype.moveToFront = function() {
+	// 	return this.each(function() {
+	// 		var line = this.parentNode.appendChild(this);
+	// 		line.className = "hover";
+	// 	});
+	// };
 
 };

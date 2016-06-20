@@ -190,4 +190,21 @@ De grouped barchart tekenen lukt, en alles is interactief, maar ik vewijder nu n
 
 De legenda tekenen klopt nog niet helemaal... bij waste zijn twee verschillende variabelen groen.
 
+#### 20 juni
+Done today:  
+- parallel coordinates en scatterplot reageren op elkaar: wanneer een element in de ene grafiek moused over is, krijgt het element van dat land in de andere grafiek ook nadruk. Helaas moet in in één van beide functies telkens wanneer er gehoverd wordt weer opnieuw het dom-element selecteren omdat de grafieken ietsje na elkaar worden getekend en de elementen dus voor één van de twee grafieken niet direct al in de functie van de andere geselecteerd kunnen worden.  
+- de kleuren bij on hover gewijzigd: lijn wordt alleen dikker in parallel coordinates en stippen groter in scatterplot. Nu nog fixen dat de andere lijnen/stippen wat doorzichtig worden. 
+
+TO DO:
+- verslag schrijven
+- legenda barchart bug fixen
+- parallel coordinates opsplitsen in draw en update
+- navragen of update ook met barchart met totaal verschillende datasets kan
+- naar beneden scrollen met on click in parallel coordinates en scatterplot... ELKE KEER
+- verhaaltjes over de data + bronvermelding
+- eenheid bij assen parallel coordinates
+
+OPTIONAL
+- color scale scatterplot uitbreiden
+- "tooltips" om de gebruiker te laten zien hoe het moet werken
 

@@ -93,18 +93,18 @@ function prepareData(error, paralleldata, energysavings, economicemissions,
 			"Electricity_Gas_Steam" : +d.Electricity_Gas_Steam, 
 			"Water_management" : +d.Water_management, 
 			"Transportation_Storage" : +d.Transportation_Storage, 
-			"Accomodation_Food" : +d.Accomodation_Food,
-			"Information_Communication" : +d.Information_Communication, 
-			"Financial_Insurance" : +d.Financial_Insurance, 
-			"RealEstate" : +d.RealEstate, 
-			"Professional_Scientific_Technical" : +d.Professional_Scientific_Technical, 
-			"Administration_Defence_SocialSecurity" : +d.Administration_Defence_SocialSecurity, 
-			"Education" : +d.Education, 
-			"Health_SocialWork" : +d.Health_SocialWork, 
-			"Arts_Entertainment" : +d.Arts_Entertainment, 
-			"OtherService" : +d.OtherService, 
-			"Households_Employers" : +d.Households_Employers,
-		 	"Extraterritorial_Org" : +d.Extraterritorial_Org
+			"Accomodation_Food" : +d.Accomodation_Food
+			// "Information_Communication" : +d.Information_Communication, 
+			// "Financial_Insurance" : +d.Financial_Insurance, 
+			// "RealEstate" : +d.RealEstate, 
+			// "Professional_Scientific_Technical" : +d.Professional_Scientific_Technical, 
+			// "Administration_Defence_SocialSecurity" : +d.Administration_Defence_SocialSecurity, 
+			// "Education" : +d.Education, 
+			// "Health_SocialWork" : +d.Health_SocialWork, 
+			// "Arts_Entertainment" : +d.Arts_Entertainment, 
+			// "OtherService" : +d.OtherService, 
+			// "Households_Employers" : +d.Households_Employers,
+		 // 	"Extraterritorial_Org" : +d.Extraterritorial_Org
 		});
 	}); 
 
@@ -122,7 +122,7 @@ function prepareData(error, paralleldata, energysavings, economicemissions,
 			"Mining" : +d. Mining,
 			"Manufacturing" : +d.Manufacturing,
 			"Energyproduction" : +d.Energyprod,
-			"Water_management" : +d.Water,
+			"Water Management" : +d.Water,
 			"Construction" : +d.Construction,
 			"Other" : +d.Other		
 		});
@@ -160,9 +160,10 @@ function prepareData(error, paralleldata, energysavings, economicemissions,
 	// 	.entries(primproduction);
 
 	slider(parallelData, energy);
+	scatterplot(2005);
 	parallelGraph(parallelData, 2005);
 	barchart("Netherlands", "energy");
-	scatterplot(2010);
+	// scatterplot(2010);
 	listeners();
 
 	console.log("nuc energy NL ", energy["Netherlands"]);

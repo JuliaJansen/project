@@ -91,6 +91,10 @@ h2 {
   text-align: center;
 }
 
+.newtab {
+  padding-top: 100px;
+}
+
 #contact_name { 
   padding-top: 100px;
   font-size: 24px;

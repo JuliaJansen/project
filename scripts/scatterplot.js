@@ -12,8 +12,6 @@ function scatterplot(year) {
 
 	d3.select("#scatterplot-svg").remove();
 
-	console.log("countries: ", data.length);
-
 	// set margins, width and height
 	var margin = {top: 120, right: 95, bottom: 35, left: 35},
 	width = 500 - margin.left - margin.right,
@@ -115,20 +113,46 @@ function scatterplot(year) {
 	svg.selectAll(".dot")
 			.data(data)
 		.enter().append("circle")
-			.attr("id", function(d) { return "circle." + d.country })
 			.attr("class", "dot")
-			.attr("r", 4.5)
+			.attr("id", function(d) { return "circle." + d.country })
+			.attr("r", 4.0)
 			.attr("cx", function(d) { return x(d.renEnergy); })
 		 	.attr("cy", function(d) { return y(d.emission); })
 		  	.style("fill", function(d) { return color(d.country); })
 		  	.on("mouseover", function(d) {
 		  		tip.show(d);
-		  		d3.select(this).attr("r", 7.5);
+		  		d3.select(this)
+		  			.attr("r", 7.5)
+		  			.style("stroke", "#000");
+
+		  		// select coresponding line in parallel coordinates
+				var parallellines = d3.select("#graph-svg").select(".foreground").selectAll("path");
+				var selectedline = parallellines.filter(function(e) { return e.country === d.country; });
+
+				// change stroke width of line in parallelcoordinates
+				selectedline.transition().duration(50)
+					.style("stroke-width", "5.0px");
 		  	}) 
 		  	.on("mouseout", function(d) {
 		  		tip.hide(d);
-		  		d3.select(this).attr("r", 4.5);
-		  	});
+		  		d3.select(this)
+		  			.attr("r", 4.0)
+		  			.style("stroke", "none");
+
+		  		// select coresponding line in parallel coordinates
+				var parallellines = d3.select("#graph-svg").select(".foreground").selectAll("path");
+				var selectedline = parallellines.filter(function(e) { return e.country === d.country; });
+
+				// change stroke width of line in parallelcoordinates
+				selectedline.transition().duration(150)
+					.style("stroke-width", "1.0px");
+		  	})
+		  	.on("click", function(d) {
+	  			// remember country that is clicked
+	  			country = d.country;
+	  			barchart(d.country, "energy");
+				$('.navbar-nav a[href="#country_tab"]').tab('show');	  		
+			});
 
 	// create title 
     svg.append("text")

@@ -6,36 +6,35 @@
  * used as reference: https://bl.ocks.org/mbostock/3887051
  */
 
+// set margins
+var margin = {top: 70, right: 55, bottom: 20, left: 40},
+	width = 550 - margin.left - margin.right,
+	height = 300 - margin.top - margin.bottom;
 
-	// set margins
-	var margin = {top: 70, right: 55, bottom: 20, left: 40},
-		width = 550 - margin.left - margin.right,
-		height = 300 - margin.top - margin.bottom;
+// color scale
+var color = d3.scale.ordinal()
+	.range(["#98abc5", "#8a89a6", "#7b6888", "#FFFF00", "#99ff33", "#d0743c", "#ff8c00"]);
 
-	// color scale
-	var color = d3.scale.ordinal()
-		.range(["#98abc5", "#8a89a6", "#7b6888", "#FFFF00", "#99ff33", "#d0743c", "#ff8c00"]);
+// x scale and domain
+var x0 = d3.scale.ordinal()
+    .rangeRoundBands([0, width], .08);
 
-	// x scale and domain
-	var x0 = d3.scale.ordinal()
-	    .rangeRoundBands([0, width], .08);
+var x1 = d3.scale.ordinal();
 
-	var x1 = d3.scale.ordinal();
+// y scale and domain
+var y = d3.scale.linear()
+    .range([height, 0]);
 
-	// y scale and domain
-	var y = d3.scale.linear()
-	    .range([height, 0]);
+// define x axis
+var xAxis = d3.svg.axis()
+    .scale(x0)
+    .orient("bottom");
 
-	// define x axis
-	var xAxis = d3.svg.axis()
-	    .scale(x0)
-	    .orient("bottom");
-
-	// define y axis
-	var yAxis = d3.svg.axis()
-	    .scale(y)
-	    .orient("left")
-	    .tickFormat(d3.format(".2s"));
+// define y axis
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left")
+    .tickFormat(d3.format(".2s"));
 
 /* 
  * draws barchart
@@ -115,7 +114,7 @@ function barchart(country, variable) {
 	    .attr("height", function(d) { return height - y(d.value); })
 	    .style("fill", function(d) { return color(d.name); })
 	    .on("mouseover", function(d) {
-	    	d3.select(this).style("fill", "#e60000");
+	    	d3.select(this).style("fill", "#b30000");
 	    	tip.show(d);
 		})
 	    .on("mouseout", function(d) {

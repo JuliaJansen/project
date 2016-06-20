@@ -17,10 +17,10 @@ function slider(data, energydata) {
       .showRange(true)
       .value(2005)
       .callback(function() {
+            // draw scatterplot
+            scatterplot(Math.floor(slider.value()));
       	// draw parallelGraph
       	parallelGraph(data, Math.floor(slider.value()));
-      	// draw scatterplot
-      	scatterplot(Math.floor(slider.value()));
       });
 
 	d3.select('#slider').call(slider);
