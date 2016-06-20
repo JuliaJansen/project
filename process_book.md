@@ -74,7 +74,7 @@ Verder:
 - barchart ben ik ongelooflijk mee aan t kloten snap er de ballen van.
 - slider werkt nu ook goed, alleen cijfers worden met comma weergegeven. Krijg ik wel weg, maar dan verdwijnen de jaren tijdens het draggen van de slider. :(
 
-#### 10
+#### Day 10
 **Iceland** gebruikt per capita de meeste energy TER WERELD. Luxembourg staat op nr. 5. Geen wonder dat deze twee landen de data scheef trekken. Link naar uitleg over energy use op Iceland:  
 http://www.planetforward.org/idea/why-do-icelanders-consume-so-much-energy-brynj%C3%B3lfur-v-%C3%B3lafsson  
 Dit is wellicht interessant om dieper op in te gaan in de FACTS sectie. Die kan dan gaan over het verband tussen het gebruik van renewable energy en uitstoot/afval productie. 
@@ -91,15 +91,15 @@ Het is me onduidelijk geworden of ik 'waste consumption' moet weergeven in de ba
 #### 12 juni
 De belangrijkste broeikasgassen en hun relatieve aardopwarmingsvermogens zijn:
 
-Een uitgebreider overzicht staat onder Aardopwarmingsvermogen
-Naam	Formule	CO2-equivalent
-Koolstofdioxide	CO2	1
-Methaan	CH4	28
-Distikstofoxide (lachgas)	N2O	265
-Waterdamp	H2O	Zie sectie over waterdamp
-Chloorfluorkoolstofverbindingen	CxFyClz	5700 tot 11 900
-Zwavelhexafluoride	SF6	23 500
-Ozon	O3	 ?
+Een uitgebreider overzicht staat onder Aardopwarmingsvermogen  
+Naam	Formule	CO2-equivalent  
+Koolstofdioxide	CO2	1  
+Methaan	CH4	28  
+Distikstofoxide (lachgas)	N2O	265  
+Waterdamp	H2O	Zie sectie over waterdamp  
+Chloorfluorkoolstofverbindingen	CxFyClz	5700 tot 11 900  
+Zwavelhexafluoride	SF6	23 500  
+Ozon	O3	 ?  
 
 Daarom neem ik voor de uitstoot tabel per industrie alleen CO2. Ook nog specificeren voor verschillende broeikasgassen zou te veel informatie voor één grafiek zijn. 
 
@@ -163,11 +163,11 @@ Nog doen:
 Waste data ook geladen en omgezet! 
 Bedenken: hoe zorg ik dat ik bij de grafieken bij mijn data kan zonder dat ik de data door hoef te geven?
 
-!! Eenheid energy barchart: thousand tonnes of oil equivalent
-!! Eenheid emissie barchart: tonnen
-!! Eenheid waste barchart: thousand tonnes
+!! Eenheid energy barchart: thousand tonnes of oil equivalent  
+!! Eenheid emissie barchart: tonnen  
+!! Eenheid waste barchart: thousand tonnes  
 
-!! Eenheid renewable energy in scatterplot = tonnes of oil equivalent
+!! Eenheid renewable energy in scatterplot = tonnes of oil equivalent  
 !! Eenheid emission in scatterplot = tonnes of CO2 equivalent
 
 - Scatterplot zichtbaar, ijsland voor nu er uit (omdat het een mega outlier is)
