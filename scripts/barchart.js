@@ -9,7 +9,7 @@
 
 	// set margins
 	var margin = {top: 70, right: 55, bottom: 20, left: 40},
-		width = 500 - margin.left - margin.right,
+		width = 550 - margin.left - margin.right,
 		height = 300 - margin.top - margin.bottom;
 
 	// color scale
@@ -44,6 +44,7 @@ function barchart(country, variable) {
 
 	d3.select("#barsvg").remove();
 	d3.select(".year").remove();
+	d3.select(".bartip").remove();
 
 	// append svg
 	var svg = d3.select("#barchart").append("svg")

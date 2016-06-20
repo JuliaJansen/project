@@ -15,8 +15,8 @@ function scatterplot(year) {
 	console.log("countries: ", data.length);
 
 	// set margins, width and height
-	var margin = {top: 90, right: 35, bottom: 35, left: 35},
-	width = 550 - margin.left - margin.right,
+	var margin = {top: 120, right: 35, bottom: 35, left: 35},
+	width = 500 - margin.left - margin.right,
 	height = 380 - margin.top - margin.bottom;
 
 	// define x scale
@@ -116,6 +116,7 @@ function scatterplot(year) {
 	svg.selectAll(".dot")
 			.data(data)
 		.enter().append("circle")
+			.attr("id", function(d) { return "circle." + d.country })
 			.attr("class", "dot")
 			.attr("r", 4.5)
 			.attr("cx", function(d) { return x(d.renEnergy); })
@@ -129,6 +130,14 @@ function scatterplot(year) {
 		  		tip.hide(d);
 		  		d3.select(this).attr("r", 4.5);
 		  	});
+
+	// create title 
+    svg.append("text")
+    	.attr("x", 120)
+    	.attr("y", -20)
+    	.attr("id", "scatterplot_title")
+    	.style("text-anchor", "right")
+    	.text(function(d) { return "Renewable energy and emission" });
 
 // 	var legend = svg.selectAll(".legend")
 // 		  .data(color.domain())

@@ -93,7 +93,11 @@ function parallelGraph(data, year) {
 					} else {
 						return year + "     " + d.country;
 					}});
-	  			})
+			var circleId = "#circle." + d.country;
+			console.log("circleId", circleId);
+			d3.select(circleId)
+				.attr("r", 7.5);
+	  	})
 	  	.on("mouseout", function(d) {
 	  			transition(d3.select(this).transition().duration(50)
 		  			.style("stroke-width", "1px")
