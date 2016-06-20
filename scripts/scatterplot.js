@@ -15,7 +15,7 @@ function scatterplot(year) {
 	console.log("countries: ", data.length);
 
 	// set margins, width and height
-	var margin = {top: 120, right: 35, bottom: 35, left: 35},
+	var margin = {top: 120, right: 95, bottom: 35, left: 35},
 	width = 500 - margin.left - margin.right,
 	height = 380 - margin.top - margin.bottom;
 
@@ -29,7 +29,7 @@ function scatterplot(year) {
 
 	// remember xMax and Ymax
 	var xMax = 2.9;
-	var yMax = 28;
+	var yMax = 29;
 
 	// define color scale
 	var color = d3.scale.category20();
@@ -52,7 +52,6 @@ function scatterplot(year) {
 //   0x003300, 
 
 // ].map(d3_rgbString);
-
 
 	// x axis
 	var xAxis = d3.svg.axis()
@@ -133,28 +132,9 @@ function scatterplot(year) {
 
 	// create title 
     svg.append("text")
-    	.attr("x", 120)
+    	.attr("x", 70)
     	.attr("y", -20)
     	.attr("id", "scatterplot_title")
     	.style("text-anchor", "right")
     	.text(function(d) { return "Renewable energy and emission" });
-
-// 	var legend = svg.selectAll(".legend")
-// 		  .data(color.domain())
-// 		.enter().append("g")
-// 		  .attr("class", "legend")
-// 		  .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
-
-// 	legend.append("rect")
-// 		  .attr("x", width - 18)
-// 		  .attr("width", 18)
-// 		  .attr("height", 18)
-// 		  .style("fill", color);
-
-// 	legend.append("text")
-// 		  .attr("x", width - 24)
-// 		  .attr("y", 9)
-// 		  .attr("dy", ".35em")
-// 		  .style("text-anchor", "end")
-// 		  .text(function(d) { return d; });
 }

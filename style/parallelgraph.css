@@ -38,6 +38,42 @@ svg {
   cursor: move;
 }
 
+/* bargraph tooltip */
+.paralleltip {
+  line-height: 1;
+  height: 40px;
+  padding: 4px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.paralleltip:after {
+  box-sizing: border-box;
+  display: inline;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.paralleltip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+.paralleltiptext {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  text-align: center;
+  color: #cccccc;
+}
+
 #graph {
   padding-top: 50px;
 }
@@ -46,7 +82,7 @@ svg {
   text-align: left;
   font-weight: bold;
   font-family: helvetica;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 /* tooltips */

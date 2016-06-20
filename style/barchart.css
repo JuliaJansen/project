@@ -24,7 +24,7 @@ form {
 /* bargraph tooltip */
 .bartip {
 	line-height: 1;
-	height: 40px;
+	height: 33px;
 	padding: 4px;
 	background: rgba(0, 0, 0, 0.8);
 	color: #fff;
@@ -88,9 +88,12 @@ form {
   text-align: center;
 }
 
-#bartext {
+.bartiptext {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 10px;
 	text-align: center;
+} 
+
+#tipvalue {
   color: #cccccc;
 }

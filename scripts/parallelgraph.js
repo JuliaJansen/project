@@ -12,11 +12,12 @@ function parallelGraph(data, year) {
 	// remove old graph and tooltip if existing
 	d3.select(".graphsvg").remove();
 	d3.select(".graphTooltip").remove();
+	d3.select(".paralleltip").remove();
 
 	// set margins, width and height
-	var margin = {top: 90, right: 5, bottom: 15, left: 5},
+	var margin = {top: 70, right: 0, bottom: 15, left: 5},
     	width = 480 - margin.left - margin.right,
-    	height = 300 - margin.top - margin.bottom;
+    	height = 320 - margin.top - margin.bottom;
 
     // x and y scale and dragging scale prepared
 	var x = d3.scale.ordinal().rangePoints([0, width], 1),
@@ -29,14 +30,31 @@ function parallelGraph(data, year) {
 	    background,
 	    foreground;
 
-	// make tooltip
-	var tooltip = d3.select("#graph")
-		.append("div")	
-	    .style("position", "absolute")
-	    .style("z-index", "10")
-	    .style("visibility", "hidden")
-	    .text("a simple tooltip")
-	    .attr("class", "graphTooltip");
+	// energy tooltip
+	var energytip = d3.tip()
+		.attr('class', 'paralleltip')
+		.offset([-50, 100])
+		.html(function(d) {
+			console.log("in tippieee");
+	    	return "<span class=\"paralleltiptext\">Energy: " 
+	    	+ roundToTwo(d.Energy) + " TOE<br>Emission: " 
+	    	+ roundToTwo(d.Emissions) + " T CO2<br>Waste: "
+	    	+ roundToTwo(d.Waste) + " Tonnes";
+	  	});
+
+	// emission tooltip
+	var emissiontip = d3.tip()
+		.attr('class', 'paralleltip')
+		.offset([0, 100])
+		.html(function(d) {
+			console.log("in tippieee");
+	    	return "<span class=\"paralleltiptext\">Energy: " 
+	    	+ roundToTwo(d.Energy) + " TOE<br>Emission: " 
+	    	+ roundToTwo(d.Emissions) + " T CO2<br>Waste: "
+	    	+ roundToTwo(d.Waste) + " Tonnes";
+	  	});
+
+
 
 	// append svg for graph
 	var svg = d3.select("#graph").append("svg")
@@ -45,6 +63,10 @@ function parallelGraph(data, year) {
 		.attr("height", height + margin.top + margin.bottom)
 	  .append("g")
 	  	.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+	svg.call(energytip);
+	svg.call(emissiontip);
+	// svg.call(wastetip);
 
 	// create title 
     svg.append("text")
@@ -84,8 +106,7 @@ function parallelGraph(data, year) {
 	  			.style("stroke-width", "5.0px")
 	  			.style("stroke", "#ff9900")
 	  			.moveToFront();
-			// tooltip.text(d.country);
-			// 	return tooltip.style("visibility", "visible");
+	  		energytip.show(d);
 			d3.select("#parallelgraph_title")
 				.text(function() {
 					if (d.country == "Kosovo (under United Nations Security Council Resolution 1244/99)") {
@@ -110,6 +131,7 @@ function parallelGraph(data, year) {
 							return year;
 						}
 					});
+				energytip.hide(d);
 	  	})
 	  	.on("click", function(d) {
 	  		// remember country that is clicked
@@ -181,7 +203,7 @@ function parallelGraph(data, year) {
 
 	// returns the path for a given data point
 	function path(d) {
-		if (isNaN(d.emissions) || isNaN(d.energy) || isNaN(d.waste)) {
+		if (isNaN(d.Emissions) || isNaN(d.Energy) || isNaN(d.Waste)) {
 		} else {
 			return line(dimensions.map(function(p) { return [position(p), y[p](d[p])]; }));
 		}

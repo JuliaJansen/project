@@ -59,9 +59,8 @@ function barchart(country, variable) {
 		.attr('class', 'bartip')
 		.offset([-21, -151])
 		.html(function(d) {
-			console.log("in tip?");
-	    	return "<span class=\"bartext\"><center>" + country + "</center><span class=\"bartext\">"+ d.name + ": " 
-	    	+ roundToTwo(d.value) + " TOE</span></span>";
+	    	return "<span class=\"bartiptext\"><center>" + d.name + "</center></span><span class=\"bartiptext\" id=\"tipvalue\">" 
+	    	+ roundToTwo(d.value) + " TOE</span>";
 	  	});
 
 	svg.call(tip);

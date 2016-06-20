@@ -49,9 +49,9 @@ function prepareData(error, paralleldata, energysavings, economicemissions,
 		if (+d.ENERGY > 0 && +d.EMISSIONS > 0 && +d.WASTE > 0) { // && d.GEO != "Iceland" && d.GEO != "Luxembourg") {
 			parallelData[year].push({
 				"country" : d.GEO,
-				"energy" : +d.ENERGY,
-				"emissions" : +d.EMISSIONS,
-				"waste" : +d.WASTE
+				"Energy" : +d.ENERGY,
+				"Emissions" : +d.EMISSIONS,
+				"Waste" : +d.WASTE
 			})
 		}
 	});
@@ -66,13 +66,13 @@ function prepareData(error, paralleldata, energysavings, economicemissions,
 		// push data to array
 		energy[country].push({
 			"year" : +d.TIME,
-			"gas" : +d.GAS,
-			"heat" : +heatdata[i].HEAT,
-			"oil" : +oildata[i].OIL,
-			"nuclEnergy" : +nucleardata[i].NUC_ENERGY,
-			"renewEnergy" : +renewabledata[i].REN_ENERGY,
-			"solidFuels" : +solidfuelsdata[i].SOLID_FUELS,
-			"wasteConsumption" : +wasteconsumption_data[i].WASTE_CONS
+			"Gas" : +d.GAS,
+			"Heat" : +heatdata[i].HEAT,
+			"Oil" : +oildata[i].OIL,
+			"Nuclear Energy" : +nucleardata[i].NUC_ENERGY,
+			"Renewable Energy" : +renewabledata[i].REN_ENERGY,
+			"Solid Fuels" : +solidfuelsdata[i].SOLID_FUELS,
+			"Waste Consumption" : +wasteconsumption_data[i].WASTE_CONS
 		});
 	});
 
@@ -158,23 +158,6 @@ function prepareData(error, paralleldata, energysavings, economicemissions,
 	// 	.key(function(d) { return d.TIME })
 	// 	.key(function(d) { return d.UNIT })
 	// 	.entries(primproduction);
-
-	// // nest data for emission bargraph
-	// // nested by industry
-	// var economic_emissions = d3.nest() 
-	// 	.key(function(d) { return d.GEO })
-	// 	.key(function(d) { return d.TIME })
-	// 	.key(function(d) { return d.NACE_R2 })
-	// 	.entries(economicemissions);
-
-	// // console.log("emission per economic activity: ", economic_emissions);
-
-	// // nested by sort of pollution
-	// var pol_emissions = d3.nest() 
-	// 	.key(function(d) { return d.GEO })
-	// 	.key(function(d) { return d.TIME })
-	// 	.key(function(d) { return d.AIRPOL })
-	// 	.entries(economicemissions);
 
 	slider(parallelData, energy);
 	parallelGraph(parallelData, 2005);

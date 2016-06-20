@@ -9,6 +9,7 @@
 
     <!-- Javascript Sources -->
     <script src="/libs/D3.library.js" charset="utf-8"></script>
+    <!-- <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
     <script src="/scripts/d3.queue.js"></script>
     <script src="/scripts/d3.slider.js"></script>
     <script src="/libs/jQuery.js"></script>
@@ -36,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="style/scatterplot.css"/>
 
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
   </head>
 
   <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -56,12 +57,12 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#intro">I N T R O<span class="sr-only">(current)</span></a></li>
-            <li><a href="#data">D A T A</a></li>
-            <li><a href="#outliers">O U T L I E R S ?</a></li>
+            <li><a href="#data">E U R O P E</a></li>
+            <li><a href="#country_tab">C O U N T R Y </a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#contact">contact</a></li>
-            </li>
+            <li><a href="#contact_tab">contact</a></li>
+            <li><a href="#contact_tab">&#x24B8; julia jansen</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div> <!--/.container-fluid -->
@@ -112,50 +113,47 @@
           </div>
           <div class="col-md-6">
             <div id="scatterplot"></div>
-
-
-            <!-- <div class="row">
-                <div id="barchart"></div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <p>
-                    <div class="chartbuttons btn-group">
-                  <button class="btn btn-default btn-xs bargraphbutton" id="energy">energy</button>
-                  <button class="btn btn-default btn-xs bargraphbutton" id="emission">emission</button>
-                  <button class="btn btn-default btn-xs bargraphbutton" id="waste">waste</button>
-                   </div>
-                </p>  
-              </div>
-            </div> -->
           </div>
         </div>
       </div>
     </div>
 
-    <div id="outliers">
+    <div id="country_tab">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-4">
             <h1>The link between Renewable Energy and Emission</h1>
-            <p id="strikingtext">Here some text about a country (or more) for which the data shows interesting outliers. For example: Norway produces all of the energy it uses. How does that connect to the emissions and waste generation of Norway? A Sankey Diagram could be shown on the right, to follow the flow of different energy-sources to pollution. Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info.</p>
+            <p id="strikingtext">Here some text about a country (or more) for which the data shows interesting country. For example: Norway produces all of the energy it uses. How does that connect to the emissions and waste generation of Norway? A Sankey Diagram could be shown on the right, to follow the flow of different energy-sources to pollution. Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info.</p>
           </div>
           <div class="col-md-8">
             <div class="row">
                 <div id="barchart"></div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <p>
-                    <div class="chartbuttons btn-group">
-                  <button class="btn btn-default btn-xs bargraphbutton" id="energy">energy</button>
-                  <button class="btn btn-default btn-xs bargraphbutton" id="emission">emission</button>
-                  <button class="btn btn-default btn-xs bargraphbutton" id="waste">waste</button>
-                   </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <p>
+                  <div class="chartbuttons btn-group">
+                    <button class="btn btn-default btn-xs bargraphbutton" id="energy">energy</button>
+                    <button class="btn btn-default btn-xs bargraphbutton" id="emission">emission</button>
+                    <button class="btn btn-default btn-xs bargraphbutton" id="waste">waste</button>
+                  </div>
                 </p>  
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact_tab">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+          <p class="contact" id="contact_name">Julia Jansen</p>
+          <p class="contact" id="contact_email">Contact me by email: </br>juliartjansen@gmail.com</p>
+          </div>
+          <div class="col-md-4"></div>
         </div>
       </div>
     </div>
