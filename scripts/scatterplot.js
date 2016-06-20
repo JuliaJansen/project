@@ -13,7 +13,7 @@ function scatterplot(year) {
 	d3.select("#scatterplot-svg").remove();
 
 	// set margins, width and height
-	var margin = {top: 120, right: 95, bottom: 35, left: 35},
+	var margin = {top: 95, right: 95, bottom: 35, left: 35},
 	width = 500 - margin.left - margin.right,
 	height = 380 - margin.top - margin.bottom;
 
@@ -122,7 +122,7 @@ function scatterplot(year) {
 		  	.on("mouseover", function(d) {
 		  		tip.show(d);
 		  		d3.select(this)
-		  			.attr("r", 7.5)
+		  			.attr("r", 7.5).transition().duration(50)
 		  			.style("stroke", "#000");
 
 		  		// select coresponding line in parallel coordinates
@@ -135,7 +135,7 @@ function scatterplot(year) {
 		  	}) 
 		  	.on("mouseout", function(d) {
 		  		tip.hide(d);
-		  		d3.select(this)
+		  		d3.select(this).transition().duration(150)
 		  			.attr("r", 4.0)
 		  			.style("stroke", "none");
 
@@ -156,9 +156,10 @@ function scatterplot(year) {
 
 	// create title 
     svg.append("text")
-    	.attr("x", 70)
+    	.attr("x", -35)
     	.attr("y", -20)
     	.attr("id", "scatterplot_title")
     	.style("text-anchor", "right")
-    	.text(function(d) { return "Renewable energy and emission" });
+    	.style("color", "#999999")
+    	.text(function(d) { return "Renewable Energy & Emission" });
 }

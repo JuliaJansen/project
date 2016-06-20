@@ -15,7 +15,7 @@ function parallelGraph(data, year) {
 	d3.select(".paralleltip").remove();
 
 	// set margins, width and height
-	var margin = {top: 70, right: 0, bottom: 15, left: 5},
+	var margin = {top: 45, right: 0, bottom: 15, left: 5},
     	width = 480 - margin.left - margin.right,
     	height = 320 - margin.top - margin.bottom;
 
@@ -34,35 +34,13 @@ function parallelGraph(data, year) {
 	var energytip = d3.tip()
 		.attr('class', 'paralleltip')
 		.offset(function(d) { 
-			return [0, y[d.Energy]]; })
+			return [0, y[d.EnergyUse]]; })
 		.html(function(d) {
-	    	return "<span id=\"paralleltiptext\">Energy: " 
-	    	+ roundToTwo(d.Energy) + " T Oil Eq.<br>Emission: "
+	    	return "<span id=\"paralleltiptext\">Energy use: " 
+	    	+ roundToTwo(d.EnergyUse) + " T Oil Eq.<br>Emission: "
 	    	+ roundToTwo(d.Emissions) + " T CO2 eq.<br>Municipal Waste: "
 	    	+ roundToTwo(d.Waste) + " T</span>"
 	  	});
-
-	// // emission tooltip
-	// var emissiontip = d3.tip()
-	// 	.attr('class', 'paralleltip')
-	// 	.offset(function(d) {
-	// 		return [273, y[d.Emissions]]; 
-	// 	})
-	// 	.html(function(d) {
-	//     	return "<span class=\"paralleltiptext\">Emission: " 
-	//     	+ roundToTwo(d.Emissions) + " T CO2<br>";
-	//   	});
-
-	// // emission tooltip
-	// var wastetip = d3.tip()
-	// 	.attr('class', 'paralleltip')
-	// 	.offset(function(d) {
-	// 		return [395, y[d.Waste]]; 
-	// 	})
-	// 	.html(function(d) {
-	//     	return "<span class=\"paralleltiptext\">Waste: " 
-	//     	+ roundToTwo(d.Waste) + " Tonnes<br>";
-	//   	});
 
 	// append svg for graph
 	var svg = d3.select("#graph").append("svg")
@@ -95,12 +73,18 @@ function parallelGraph(data, year) {
 	 		.range([height, 0]));
 	}));
 
+	
+
 	// add background lines
 	background = svg.append("g")
 		.attr("class", "background")
 	  .selectAll("path")
 	  	.data(data)
-	  .enter().append("path")
+	  .enter().append(function(d) { 
+		  if(d.country != "Iceland" || d.country != "Luxembourg") {
+		  		return "path"
+		  	}
+		  })
 	  	.attr("d", path);
 
 	// select circles in scatterplot for interactivity			
@@ -153,6 +137,8 @@ function parallelGraph(data, year) {
 	  		// remember country that is clicked
 	  		country = d.country;
 	  		barchart(d.country, "energy");
+
+	  		// navigate to other tab
 			$('.navbar-nav a[href="#country_tab"]').tab('show');	  		
 	  	});
 
@@ -220,7 +206,7 @@ function parallelGraph(data, year) {
 
 	// returns the path for a given data point
 	function path(d) {
-		if (isNaN(d.Emissions) || isNaN(d.Energy) || isNaN(d.Waste)) {
+		if (isNaN(d.EnergyProduction) || isNaN(d.Emissions) || isNaN(d.EnergyUse) || isNaN(d.Waste)) {
 		} else {
 			return line(dimensions.map(function(p) { return [position(p), y[p](d[p])]; }));
 		}

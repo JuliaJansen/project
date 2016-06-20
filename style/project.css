@@ -11,6 +11,7 @@ body {
 /* style titles */
 h1 {
 	text-align: center;
+  letter-spacing: 6px;
 }
 
 h2 {
@@ -87,7 +88,7 @@ h2 {
 
 /* contact page */
 .contact {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica;
   text-align: center;
 }
 
@@ -103,3 +104,17 @@ h2 {
 #contact_email {
   font-size: 12px;
 }
+
+#slidertext {
+  color: #000;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+#strikingtext {
+  font-family: "Helvetica Neue", Helvetica;
+  color: #737373;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+

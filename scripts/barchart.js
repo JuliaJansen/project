@@ -7,8 +7,8 @@
  */
 
 // set margins
-var margin = {top: 70, right: 55, bottom: 20, left: 40},
-	width = 550 - margin.left - margin.right,
+var margin = {top: 70, right: 140, bottom: 20, left: 40},
+	width = 620 - margin.left - margin.right,
 	height = 300 - margin.top - margin.bottom;
 
 // color scale
@@ -58,7 +58,8 @@ function barchart(country, variable) {
 		.attr('class', 'bartip')
 		.offset([-21, -151])
 		.html(function(d) {
-	    	return "<span class=\"bartiptext\"><center>" + d.name + "</center></span><span class=\"bartiptext\" id=\"tipvalue\">" 
+	    	return "<span class=\"bartiptext\"><center>" + d.name 
+	    	+ "</center></span><span class=\"bartiptext\" id=\"tipvalue\">" 
 	    	+ roundToTwo(d.value) + " TOE</span>";
 	  	});
 
@@ -118,7 +119,8 @@ function barchart(country, variable) {
 	    	tip.show(d);
 		})
 	    .on("mouseout", function(d) {
-	    	d3.select(this).style("fill", color(d.name));
+	    	d3.select(this).transition().duration(100)
+	    		.style("fill", color(d.name));
 	    	tip.hide(d);
 	    }); 
 
@@ -131,22 +133,22 @@ function barchart(country, variable) {
 
 	// for every variable a rectangle
 	legend.append("rect")
-	    .attr("x", width + 35)
+	    .attr("x", width + 5)
 	    .attr("width", 18)
 	    .attr("height", 18)
 	    .style("fill", color);
 
 	// for every variable a label
 	legend.append("text")
-	    .attr("x", width + 29)
+	    .attr("x", width + 26)
 	    .attr("y", 9)
 	    .attr("dy", ".35em")
-	    .style("text-anchor", "end")
+	    .style("text-anchor", "begin")
 	    .text(function(d) { return d; });
 
-	// create title 
+	// create graph title 
 	svg.append("text")
-		.attr("x", 20)
+		.attr("x", 10)
 		.attr("y", -20)
 		.attr("id", "barchart_title")
 		.style("text-anchor", "right")

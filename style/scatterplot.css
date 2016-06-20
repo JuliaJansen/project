@@ -53,5 +53,7 @@
 	text-align: left;
 	font-weight: bold;
 	font-family: helvetica;
-	font-size: 18px;
+	color: #999999;
+	font-size: 24px;
+	letter-spacing: 3px;
 }

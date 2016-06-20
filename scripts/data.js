@@ -17,6 +17,7 @@ window.onload = function() {
 
 	// load two datasets asynchronously
 	d3_queue.queue()
+		.defer(d3.csv, '/data/parallelgraph_4_capita.csv')
 		.defer(d3.csv, '/data/parallelgraph_capita.csv')
 		.defer(d3.csv, '/data/energysavings.csv')
 		.defer(d3.csv, '/data/emission_industries_data.csv')
@@ -33,26 +34,30 @@ window.onload = function() {
 		.await(prepareData);
 }
 
-function prepareData(error, paralleldata, energysavings, economicemissions, 
+function prepareData(error, paralleldata2, paralleldata, energysavings, economicemissions, 
 	economicwaste, gasdata, heatdata, nucleardata, oildata, renewabledata, 
 	solidfuelsdata, wasteconsumption_data, primproduction, renenergy_emission) {
 	if (error) { alert(error); }
 
 	// prepare data for parallel coordinates
-	paralleldata.forEach(function(d) {
+	paralleldata2.forEach(function(d) {
 		var year = +d.TIME;
 
 		// make index for year only if not existing yet
 		parallelData[year] = typeof parallelData[year] !== "undefined" ? parallelData[year] : [];
 
 		// push data to array
-		if (+d.ENERGY > 0 && +d.EMISSIONS > 0 && +d.WASTE > 0) { // && d.GEO != "Iceland" && d.GEO != "Luxembourg") {
-			parallelData[year].push({
-				"country" : d.GEO,
-				"Energy" : +d.ENERGY,
-				"Emissions" : +d.EMISSIONS,
-				"Waste" : +d.WASTE
-			})
+		if (+d.PRODUCTION > 0 && +d.ENERGY > 0) {
+			if (+d.EMISSIONS > 0 && +d.WASTE > 0) {
+			 // && d.GEO != "Iceland" && d.GEO != "Luxembourg") {
+				parallelData[year].push({
+					"country" : d.GEO,
+					"EnergyProduction" : +d.PRODUCTION,
+					"EnergyUse" : +d.ENERGY,
+					"Emissions" : +d.EMISSIONS,
+					"Waste" : +d.WASTE
+				})
+			}
 		}
 	});
 
@@ -90,21 +95,10 @@ function prepareData(error, paralleldata, energysavings, economicemissions,
 			"Agriculture" : +d.Agriculture,
 			"Mining" : +d.Mining, 
 			"Manufacturing" : +d.Manufacturing, 
-			"Electricity_Gas_Steam" : +d.Electricity_Gas_Steam, 
-			"Water_management" : +d.Water_management, 
-			"Transportation_Storage" : +d.Transportation_Storage, 
-			"Accomodation_Food" : +d.Accomodation_Food
-			// "Information_Communication" : +d.Information_Communication, 
-			// "Financial_Insurance" : +d.Financial_Insurance, 
-			// "RealEstate" : +d.RealEstate, 
-			// "Professional_Scientific_Technical" : +d.Professional_Scientific_Technical, 
-			// "Administration_Defence_SocialSecurity" : +d.Administration_Defence_SocialSecurity, 
-			// "Education" : +d.Education, 
-			// "Health_SocialWork" : +d.Health_SocialWork, 
-			// "Arts_Entertainment" : +d.Arts_Entertainment, 
-			// "OtherService" : +d.OtherService, 
-			// "Households_Employers" : +d.Households_Employers,
-		 // 	"Extraterritorial_Org" : +d.Extraterritorial_Org
+			"Electricity, Gas & Steam" : +d.Electricity_Gas_Steam, 
+			"Water management" : +d.Water_management, 
+			"Transportation & Storage" : +d.Transportation_Storage, 
+			"Accomodation & Food" : +d.Accomodation_Food
 		});
 	}); 
 
@@ -163,8 +157,5 @@ function prepareData(error, paralleldata, energysavings, economicemissions,
 	scatterplot(2005);
 	parallelGraph(parallelData, 2005);
 	barchart("Netherlands", "energy");
-	// scatterplot(2010);
 	listeners();
-
-	console.log("nuc energy NL ", energy["Netherlands"]);
 }

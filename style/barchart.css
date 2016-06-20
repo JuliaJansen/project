@@ -57,6 +57,7 @@ form {
 
 #barchart {
   padding-top: 50px;
+  padding-left: 30px;
 }
 
 #barchart_title {
@@ -64,6 +65,7 @@ form {
   font-weight: bold;
   font-family: helvetica;
   font-size: 24px;
+  letter-spacing: 2px;
 }
 
 .d3-tip {
