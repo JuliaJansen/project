@@ -4,13 +4,6 @@
 
  
 /* bargraph */
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: auto;
-  position: relative;
-  width: 960px;
-}
-
 text {
   font: 10px sans-serif;
 }
@@ -87,11 +80,10 @@ form {
   color: rgba(0, 0, 0, 0.8);
   content: "\25BC";
   position: absolute;
-  text-align: center;
 }
 
 .bartiptext {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: helvetica;
 	font-size: 10px;
 	text-align: center;
 } 

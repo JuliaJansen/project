@@ -30,8 +30,9 @@ De data voor de parallel graph staat nu in het juiste format. De pagina's zijn a
 #### Day 6
 Databronnen: 
 municipal waste: oecd stats
-energy: eurostat
-emissions eurostats
+energy use: eurostat
+energy production: eurostat
+emissions: eurostats
 population: eurostat
 
 Alle data voor de parallel graph nu omgezet in data/capita.
@@ -208,3 +209,5 @@ OPTIONAL
 - color scale scatterplot uitbreiden
 - "tooltips" om de gebruiker te laten zien hoe het moet werken
 
+..... IS HET MOGELIJK OM TE WISSELEN TUSSEN 2 DATASETS MET EN ZONDER OUTLIERS VOOR PARALLEL COORDINATES??? 
+..... TITELS BARCHART!!! 

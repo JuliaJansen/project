@@ -154,9 +154,12 @@ function barchart(country, variable) {
 		.style("text-anchor", "right")
 		.text(function(d) { if (variable == "energy") { 
 				return "Use of energy - " + country;
-			} else {
-				return "Generation of "+ variable + " - " + country;
-			}});
+			} else if (variable == "waste") {
+				return "Generation of hazardous "+ variable + " - " + country;
+			} else if (variable == "emission") {
+				return "Generation of " + variable + " - " + country;
+			}
+		});
 }
 
 /* 

@@ -6,6 +6,9 @@
 
 body {
   position: relative;
+  font-family: "Helvetica Neue", Helvetica;
+  margin: auto;
+  width: 960px;
 }
 
 /* style titles */
@@ -88,7 +91,6 @@ h2 {
 
 /* contact page */
 .contact {
-  font-family: "Helvetica Neue", Helvetica;
   text-align: center;
 }
 
@@ -112,7 +114,6 @@ h2 {
 }
 
 #strikingtext {
-  font-family: "Helvetica Neue", Helvetica;
   color: #737373;
   font-size: 12px;
   letter-spacing: 2px;

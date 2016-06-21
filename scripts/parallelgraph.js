@@ -33,11 +33,13 @@ function parallelGraph(data, year) {
 	// energy tooltip
 	var energytip = d3.tip()
 		.attr('class', 'paralleltip')
-		.offset(function(d) { 
-			return [0, y[d.EnergyUse]]; })
+		.style('position', 'absolute')
+		// .offset(function(d) { 
+		// 	return [0, y[d.EnergyUse]]; })
 		.html(function(d) {
-	    	return "<span id=\"paralleltiptext\">Energy use: " 
-	    	+ roundToTwo(d.EnergyUse) + " T Oil Eq.<br>Emission: "
+	    	return "<span id=\"paralleltiptext\">Energy Production: " 
+	    	+ roundToTwo(d.EnergyProduction) + "T Oil eq.<br>Energy use: " 
+	    	+ roundToTwo(d.EnergyUse) + " T Oil eq.<br>Emission: "
 	    	+ roundToTwo(d.Emissions) + " T CO2 eq.<br>Municipal Waste: "
 	    	+ roundToTwo(d.Waste) + " T</span>"
 	  	});
@@ -73,18 +75,12 @@ function parallelGraph(data, year) {
 	 		.range([height, 0]));
 	}));
 
-	
-
 	// add background lines
 	background = svg.append("g")
 		.attr("class", "background")
 	  .selectAll("path")
 	  	.data(data)
-	  .enter().append(function(d) { 
-		  if(d.country != "Iceland" || d.country != "Luxembourg") {
-		  		return "path"
-		  	}
-		  })
+	  .enter().append("path")
 	  	.attr("d", path);
 
 	// select circles in scatterplot for interactivity			

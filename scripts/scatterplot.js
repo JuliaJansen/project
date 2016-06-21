@@ -125,6 +125,12 @@ function scatterplot(year) {
 		  			.attr("r", 7.5).transition().duration(50)
 		  			.style("stroke", "#000");
 
+				// change title of parallel coordinates graph
+		  		d3.select("#parallelgraph_title")
+					.text(function() {
+							return year + "     " + d.country;
+						});
+
 		  		// select coresponding line in parallel coordinates
 				var parallellines = d3.select("#graph-svg").select(".foreground").selectAll("path");
 				var selectedline = parallellines.filter(function(e) { return e.country === d.country; });
@@ -138,6 +144,12 @@ function scatterplot(year) {
 		  		d3.select(this).transition().duration(150)
 		  			.attr("r", 4.0)
 		  			.style("stroke", "none");
+
+		  		// change title parallel coordinates graph
+		  		d3.select("#parallelgraph_title").transition().duration(150)
+					.text(function() {
+						return year
+					});
 
 		  		// select coresponding line in parallel coordinates
 				var parallellines = d3.select("#graph-svg").select(".foreground").selectAll("path");

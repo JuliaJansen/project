@@ -3,7 +3,6 @@
  */
  
 .scatterplotlabel {
- 	font-family: helvetica;
  	font-size: 12px;
 }
 
@@ -26,6 +25,7 @@
 	content: "\25BC";
 	position: absolute;
 	text-align: center;
+    font-family: helvetica;
 }
 
 /* Style northward tooltips differently */
@@ -36,7 +36,6 @@
 }
 
 .scattertext {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 10px;
 	text-align: center;
 }
@@ -52,7 +51,6 @@
 #scatterplot_title {
 	text-align: left;
 	font-weight: bold;
-	font-family: helvetica;
 	color: #999999;
 	font-size: 24px;
 	letter-spacing: 3px;
