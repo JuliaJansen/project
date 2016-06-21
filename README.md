@@ -1,14 +1,13 @@
 ## All connected: energy, emission and waste in Europe
 
-This project visualizes the energy production and use on the one hand and on the other hand emission and generation of waste for EU countries. For the visualisation I used the D3 library and several examples on github.  
+This project visualizes the energy production and use on the one hand and on the other hand emission and generation of waste for European countries. For the visualisation I used the D3 library and several examples on github.  
 
 *****screenshots*****
 
 ### Acknowledgements
-These can be find in the directory 'external' inside the directory 'scripts'
 - Slider by https://github.com/sujeetsr/d3.slider
 - Tooltip by Justin Palmer (c) 2013: http://bl.ocks.org/Caged/6476579  
-
+These can be find in the directory 'external' inside the directory 'scripts'.
 Further these examples were of a great help to me:
 - https://bl.ocks.org/jasondavies/1341281
 - https://bl.ocks.org/mbostock/3887051
@@ -51,4 +50,4 @@ Anyone is free to copy, modify, publish, use, compile, or
 distribute this software, either in source code form or as a compiled
 binary, preferably for non-commercial purposes.
 
-Only the copyrighted items (in the directory external) and the libraries can't be used without notice. 
+Only the copyrighted items (in the directory *external*) and the libraries can't be used without notice. 
