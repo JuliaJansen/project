@@ -96,7 +96,7 @@ function parallelGraph(data, year) {
 	  	.attr("d", path)
 	  	.on("mouseover", function(d) {
 	  		d3.select(this)
-	  			.style("stroke-width", "5.0px")
+	  			.style("stroke-width", "4.0px")
 	  			// .moveToFront();
 	  		energytip.show(d);
 			d3.select("#parallelgraph_title")
@@ -108,13 +108,13 @@ function parallelGraph(data, year) {
 					}});
 			var circle = scatterdots.filter(function(e) { return e.country === d.country; });
 			circle.transition().duration(50)
-				.attr("r", 6.5)
+				.attr("r", 7.5)
 				.style("stroke", "#000");
 	  	})
 	  	.on("mouseout", function(d) {
-	  			transition(d3.select(this).transition().duration(100)
-		  			.style("stroke-width", "1px")
-		  			.style("stroke", "#4682b4"));
+	  			d3.select(this).transition().duration(100)
+		  			.style("stroke-width", "1px");
+
 	  			d3.select("#parallelgraph_title").transition().duration(150)
 					.text(function() {
 						if (d.country == "Kosovo (under United Nations Security Council Resolution 1244/99)") {

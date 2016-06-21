@@ -1,5 +1,6 @@
 /* 
- * https://github.com/sujeetsr/d3.slider
+ * D3 Slider
+ * source: https://github.com/sujeetsr/d3.slider
  */
 
 d3.slider = function module() {

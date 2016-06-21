@@ -122,7 +122,7 @@ function scatterplot(year) {
 		  	.on("mouseover", function(d) {
 		  		tip.show(d);
 		  		d3.select(this)
-		  			.attr("r", 6.5).transition().duration(50)
+		  			.attr("r", 7.5).transition().duration(50)
 		  			.style("stroke", "#000");
 
 				// change title of parallel coordinates graph
@@ -137,7 +137,7 @@ function scatterplot(year) {
 
 				// change stroke width of line in parallelcoordinates
 				selectedline.transition().duration(50)
-					.style("stroke-width", "5.0px");
+					.style("stroke-width", "4.0px");
 		  	}) 
 		  	.on("mouseout", function(d) {
 		  		tip.hide(d);

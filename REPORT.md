@@ -16,14 +16,15 @@ SCREENSHOT pagina 1
 Map 'project'
 - map 'style': bevat alle stylesheets. Voor de pagina in zijn geheel is er project.css. Voor de aparte visuele onderdelen zijn er verder allemaal aparte stylesheets. 
 - map 'scripts': 
-** bevat een map 'python' met daarin alle python scripts die gebruikt zijn om de data om te zetten naar bruikbare csv bestanden. 
-** bevat voor elk visueel element een javascipt bestand. Tevens staan hier de javacsript bestanden voor de slider, d3.queue en een d3 tooltip die gebruikt zijn, maar niet door mij gemaakt. 
+** bevat een map 'python' met daarin alle python scripts die gebruikt zijn om de data om te zetten naar bruikbare csv bestanden.  
+** bevat een map 'external' met javascript bestanden die ik heb gebruikt, maar niet zelf geschreven zoals de slider, een tooltip en d3.queue.  
+** bevat voor elk visueel element een javascipt bestand.   
 - map 'libs': hier staan bibliotheken die ik gebruikt heb zoals D3 en jQuery.
 - map 'doc': hier zijn de afbeeldingen te vinden die in de markdown bestanden zijn gebruikt.
 - map 'data': alle data die gebruikt wordt voor de visualisaties zijn hierin te vinden. De originele databestanden zijn allemaal te vinden in het mapje "archive".
 
 #### Functies en *Handlers*
-Elk visueel onderdeel wordt gedefinieerd in een functie. De globale variabelen zoals x-assen en margins die nodig zijn voor een visualisatie zijn soms boven de functie, maar in hetzelfde bestand gedefinieerd. Als allereerst wordt de data ingeladen met een queue, vervolgens wordt de functie prepareData() aangeroepen waarin de data naar Javascript objecten wordt omgezet. Vanuit 'prepareData()' worden de functies voor alle visuele elementen aangeroepen. Die functies worden ook aangeroepen wanneer de slider wordt bewogen, wanneer er op de knopjes bij de barchart wordt geklikt of wanneer er op een lijn uit de parallelcoordinates of dot uit de scatterplot wordt geklikt. 
+Elk visueel onderdeel wordt gedefinieerd in een functie. De globale variabelen zoals x-assen en margins die nodig zijn voor een visualisatie zijn soms boven de functie, maar in hetzelfde bestand gedefinieerd. Als allereerst wordt de data ingeladen met een queue, vervolgens wordt de functie prepareData() aangeroepen waarin de data naar Javascript objecten wordt omgezet. Vanuit 'prepareData()' worden de functies voor alle visuele elementen aangeroepen: barchart(), parallelGraph(), slider() en scatterplot(). De scatterplot en parallel coordinates grafiek worden ook aangeroepen wanneer de slider wordt bewogen. De barchart wordt aangeroepen wanneer er op de knopjes bij de barchart wordt geklikt en wanneer er op een lijn uit de parallelcoordinates of dot uit de scatterplot wordt geklikt. De scatterplot en de parallel coordinates graph geven data voor alle landen weer, met de slider kan een jaar geselecteerd worden. De barchart geeft juist voor één land data weer, maar dan over het verloop van de tijd. 
 
 ## Werkproces - de belangrijkste veranderingen
 ###### Steden vs. landen

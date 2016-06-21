@@ -199,7 +199,6 @@ Done today:
 TO DO:
 - verslag schrijven
 - legenda barchart bug fixen
-- parallel coordinates opsplitsen in draw en update
 - navragen of update ook met barchart met totaal verschillende datasets kan
 - naar beneden scrollen met on click in parallel coordinates en scatterplot... ELKE KEER
 - verhaaltjes over de data + bronvermelding
@@ -208,6 +207,21 @@ TO DO:
 OPTIONAL
 - color scale scatterplot uitbreiden
 - "tooltips" om de gebruiker te laten zien hoe het moet werken
+- parallel coordinates opsplitsen in draw en update
 
 ..... IS HET MOGELIJK OM TE WISSELEN TUSSEN 2 DATASETS MET EN ZONDER OUTLIERS VOOR PARALLEL COORDINATES??? 
-..... TITELS BARCHART!!! 
+
+#### 21 juni
+Het verslag is zo goed als af. Nog wel de veranderingen die ik vandaag morgen en overmorgen doe daarin aanpassen. 
+Verder besloten om de barchart niet te update, omdat het bij toggelen tussen de variabelen toch om totaal verschillende datasets gaat. Dan zou met het updaten alles in de exit selectie komen en de nieuwe data in de append. Dan geven de effecten zoals transition ook niet veel info, omdat het om totaal nieuwe variabelen gaat ipv variabelen die ge-updatet worden. 
+
+Na vandaag nog to do:
+- legenda barchart bug fixen
+- naar beneden scrollen met on click in parallel coordinates en scatterplot... ELKE KEER
+- verhaaltjes over de data + bronvermelding
+- eenheid bij assen parallel coordinates
+
+optioneel: zie gisteren. 
+
+
+
