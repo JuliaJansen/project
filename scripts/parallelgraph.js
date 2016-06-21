@@ -108,7 +108,7 @@ function parallelGraph(data, year) {
 					}});
 			var circle = scatterdots.filter(function(e) { return e.country === d.country; });
 			circle.transition().duration(50)
-				.attr("r", 7.5)
+				.attr("r", 6.5)
 				.style("stroke", "#000");
 	  	})
 	  	.on("mouseout", function(d) {

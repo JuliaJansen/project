@@ -12,6 +12,7 @@
 	padding: 4px;
 	background: rgba(0, 0, 0, 0.8);
 	color: #fff;
+	text-align: center;
 	border-radius: 2px;
 }
 
@@ -36,8 +37,8 @@
 }
 
 .scattertext {
-	font-size: 10px;
 	text-align: center;
+	font-size: 12px;
 }
 
 #renenergy-label {
@@ -50,7 +51,6 @@
 
 #scatterplot_title {
 	text-align: left;
-	font-weight: bold;
 	color: #999999;
 	font-size: 24px;
 	letter-spacing: 3px;

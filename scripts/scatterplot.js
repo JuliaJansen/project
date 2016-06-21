@@ -122,7 +122,7 @@ function scatterplot(year) {
 		  	.on("mouseover", function(d) {
 		  		tip.show(d);
 		  		d3.select(this)
-		  			.attr("r", 7.5).transition().duration(50)
+		  			.attr("r", 6.5).transition().duration(50)
 		  			.style("stroke", "#000");
 
 				// change title of parallel coordinates graph
