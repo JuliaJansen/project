@@ -22,7 +22,7 @@ Map 'project'
 - map 'doc': hier zijn de afbeeldingen te vinden die in de markdown bestanden zijn gebruikt.
 - map 'data': alle data die gebruikt wordt voor de visualisaties zijn hierin te vinden. De originele databestanden zijn allemaal te vinden in het mapje "archive".
 
-#### Functions and Handlers
+#### Functies en *Handlers*
 Elk visueel onderdeel wordt gedefinieerd in een functie. De globale variabelen zoals x-assen en margins die nodig zijn voor een visualisatie zijn soms boven de functie, maar in hetzelfde bestand gedefinieerd. Als allereerst wordt de data ingeladen met een queue, vervolgens wordt de functie prepareData() aangeroepen waarin de data naar Javascript objecten wordt omgezet. Vanuit 'prepareData()' worden de functies voor alle visuele elementen aangeroepen. Die functies worden ook aangeroepen wanneer de slider wordt bewogen, wanneer er op de knopjes bij de barchart wordt geklikt of wanneer er op een lijn uit de parallelcoordinates of dot uit de scatterplot wordt geklikt. 
 
 ## Werkproces - de belangrijkste veranderingen
