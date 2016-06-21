@@ -18,7 +18,10 @@ function slider(data, energydata) {
       .value(2005)
       .callback(function() {
             // draw scatterplot
-            scatterplot(Math.floor(slider.value()));
+            year = Math.floor(slider.value());
+            console.log("slider value", slider.value());
+            scatterplot();
+            // scatterplot(Math.floor(slider.value()));
       	// draw parallelGraph
       	parallelGraph(data, Math.floor(slider.value()));
       });

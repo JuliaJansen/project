@@ -6,7 +6,7 @@
  * used as a reference: http://bl.ocks.org/mbostock/3887118
  */
 
-function scatterplot(year) {
+function scatterplot() {
 
 	data = scatterData[year];
 
@@ -137,7 +137,7 @@ function scatterplot(year) {
 
 				// change stroke width of line in parallelcoordinates
 				selectedline.transition().duration(50)
-					.style("stroke-width", "4.0px");
+					.style("stroke-width", "5.0px");
 		  	}) 
 		  	.on("mouseout", function(d) {
 		  		tip.hide(d);
@@ -157,7 +157,7 @@ function scatterplot(year) {
 
 				// change stroke width of line in parallelcoordinates
 				selectedline.transition().duration(150)
-					.style("stroke-width", "1.0px");
+					.style("stroke-width", "1.3px");
 		  	})
 		  	.on("click", function(d) {
 	  			// remember country that is clicked

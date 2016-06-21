@@ -204,7 +204,6 @@ TO DO:
 - eenheid bij assen parallel coordinates
 
 OPTIONAL
-- color scale scatterplot uitbreiden
 - "tooltips" om de gebruiker te laten zien hoe het moet werken
 - parallel coordinates opsplitsen in draw en update
 
@@ -214,13 +213,22 @@ OPTIONAL
 Het verslag is zo goed als af. Nog wel de veranderingen die ik vandaag morgen en overmorgen doe daarin aanpassen. 
 Verder besloten om de barchart niet te update, omdat het bij toggelen tussen de variabelen toch om totaal verschillende datasets gaat. Dan zou met het updaten alles in de exit selectie komen en de nieuwe data in de append. Dan geven de effecten zoals transition ook niet veel info, omdat het om totaal nieuwe variabelen gaat ipv variabelen die ge-updatet worden. 
 
+Met een wrap functie van Mike Bostock (<3) is het gelukt om de variabele EN eenheid bij de y-assen van de parallel coordinates er mooi op te krijgen.  
+
 Na vandaag nog to do:
-- legenda barchart bug fixen
 - naar beneden scrollen met on click in parallel coordinates en scatterplot... ELKE KEER
+- color scale scatterplot uitbreiden
 - verhaaltjes over de data + bronvermelding
-- eenheid bij assen parallel coordinates
+- legenda barchart bug fixen
+- on hover line grap: andere lines opacity groter.
+- zelfde voor scatterplot
 
 optioneel: zie gisteren. 
 
+
+BEZIG MET DE SLIDER EN YEAR GLOBAAL MAKEN ZODAT HET OPNIEUW AANROEPEN VAN DE PARALLELCO FUNCTION MET OF ZONDER OUTLIERS NIKS VERANDERT AAN HET YEAR!!! 
+--> eerst slider goede value krijgen. 
+--> dan handler voor buttons outliers
+--> checken of alles nog werkt. 
 
 

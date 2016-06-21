@@ -6,16 +6,8 @@
  * used as reference: https://bl.ocks.org/jasondavies/1341281
  */
 
-// draws parallel graph
-function parallelGraph(data, year) {
-
-	// remove old graph and tooltip if existing
-	d3.select(".graphsvg").remove();
-	d3.select(".graphTooltip").remove();
-	d3.select(".paralleltip").remove();
-
 	// set margins, width and height
-	var margin = {top: 45, right: 0, bottom: 15, left: 5},
+	var margin = {top: 75, right: 50, bottom: 15, left: 5},
     	width = 480 - margin.left - margin.right,
     	height = 320 - margin.top - margin.bottom;
 
@@ -29,6 +21,13 @@ function parallelGraph(data, year) {
 	    axis = d3.svg.axis().orient("left"),
 	    background,
 	    foreground;
+
+// draws parallel graph
+function parallelGraph(data, year) {
+
+	// remove old graph and tooltips if existing
+	d3.select(".graphsvg").remove();
+	d3.select(".paralleltip").remove();
 
 	// energy tooltip
 	var energytip = d3.tip()
@@ -54,13 +53,11 @@ function parallelGraph(data, year) {
 	  	.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 	svg.call(energytip);
-	// svg.call(emissiontip);
-	// svg.call(wastetip);
 
 	// create title 
     svg.append("text")
     	.attr("x", 120)
-    	.attr("y", -20)
+    	.attr("y", -50)
     	.attr("id", "parallelgraph_title")
     	.style("text-anchor", "right")
     	.text(function(d) { return year });
@@ -71,7 +68,7 @@ function parallelGraph(data, year) {
 	// get dimensions and y domain per dimension
 	x.domain(dimensions = d3.keys(data[0]).filter(function(d) {
 	 	return d != "country" && (y[d] = d3.scale.linear()
-	 		.domain(d3.extent(data, function(p) { return +p[d]; }))
+	 		.domain(d3.extent(data, function(p) { return +p[d]; })) //console.log("p, p[d]", p, p[d]); 
 	 		.range([height, 0]));
 	}));
 
@@ -94,10 +91,10 @@ function parallelGraph(data, year) {
 	  .enter().append("path")
 	  	.attr("id", function(d) { return "line." + d.country })
 	  	.attr("d", path)
+	  	.style("stroke-width", "1.3px")
 	  	.on("mouseover", function(d) {
 	  		d3.select(this)
-	  			.style("stroke-width", "4.0px")
-	  			// .moveToFront();
+	  			.style("stroke-width", "5.0px");
 	  		energytip.show(d);
 			d3.select("#parallelgraph_title")
 				.text(function() {
@@ -113,7 +110,7 @@ function parallelGraph(data, year) {
 	  	})
 	  	.on("mouseout", function(d) {
 	  			d3.select(this).transition().duration(100)
-		  			.style("stroke-width", "1px");
+		  			.style("stroke-width", "1.3px");
 
 	  			d3.select("#parallelgraph_title").transition().duration(150)
 					.text(function() {
@@ -171,13 +168,24 @@ function parallelGraph(data, year) {
 
 	// add an axis 
     g.append("g")
-      .attr("class", "axis")
-      .each(function(d) { d3.select(this).call(axis.scale(y[d])); })
-   	.append("text")
-   	  .attr("class", "axis-text")
-      .style("text-anchor", "middle")
-      .attr("y", -9)
-      .text(function(d) { return d; });
+	      .attr("class", "axis")
+	      .each(function(d) { d3.select(this).call(axis.scale(y[d])); })
+	   	.append("text")
+	   	  .attr("class", "axis-text")
+	      .style("text-anchor", "middle")
+	      .attr("y", -9)
+	      .attr("dy", -2)
+	      .text(function(d) { 
+	      	if (d == "EnergyUse") {
+	      		return "Energy Use  Tonnes of Oil equiv.";
+	      	} else if (d == "EnergyProduction") {
+	      		return "Energy Production  Tonnes of Oil equiv."; //<br>Tonnes of Oil equiv
+	      	} else if (d == "Emissions") {
+	      		return "Carbon Emission CO2 equivalent"; 
+	      	} else if (d == "Waste") {
+	      		return "Municipal Waste  Tonnes";
+	      	}})
+	      .call(wrap, 85);
 
 	// add and store a brush for each axis
 	g.append("g")
@@ -208,7 +216,6 @@ function parallelGraph(data, year) {
 		}
 	}
 
-	// 
 	function brushstart() {
   		d3.event.sourceEvent.stopPropagation();
 	}
@@ -224,6 +231,31 @@ function parallelGraph(data, year) {
 	  	});
 	}
 
+	// wraps title text 
+	// reference: http://bl.ocks.org/mbostock/7555321
+	function wrap(text, width) {
+	    text.each(function() {
+	    	var text = d3.select(this),
+		        words = text.text().split(/\s+/).reverse(),
+		        word,
+		        line = [],
+		        lineNumber = 0,
+		        lineHeight = 1.1, // ems
+		        y = text.attr("y"),
+		        dy = parseFloat(text.attr("dy")),
+		        tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+	    	while (word = words.pop()) {
+			    line.push(word);
+			    tspan.text(line.join(" "));
+			    if (tspan.node().getComputedTextLength() > width) {
+			        line.pop();
+			        tspan.text(line.join(" "));
+			        line = [word];
+			        tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+		      	}
+	    	}
+		});
+	}
 	// d3.selection.prototype.moveToFront = function() {
 	// 	return this.each(function() {
 	// 		var line = this.parentNode.appendChild(this);
