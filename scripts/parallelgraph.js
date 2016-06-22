@@ -99,7 +99,8 @@ function parallelGraph() {
 	  	.style("stroke-width", "1.3px")
 	  	.on("mouseover", function(d) {
 	  		d3.select(this)
-	  			.style("stroke-width", "5.0px");
+	  			.style("stroke-width", "5.0px")
+	  			.moveToFront();
 	  		energytip.show(d);
 			d3.select("#parallelgraph_title")
 				.text(function() {
@@ -180,16 +181,7 @@ function parallelGraph() {
 	      .style("text-anchor", "middle")
 	      .attr("y", -9)
 	      .attr("dy", -2)
-	      .text(function(d) { 
-	      	if (d == "EnergyUse") {
-	      		return "Energy Use  Tonnes of Oil equiv.";
-	      	} else if (d == "EnergyProduction") {
-	      		return "Energy Production  Tonnes of Oil equiv."; //<br>Tonnes of Oil equiv
-	      	} else if (d == "Emissions") {
-	      		return "Carbon Emission CO2 equivalent"; 
-	      	} else if (d == "Waste") {
-	      		return "Municipal Waste  Tonnes";
-	      	}})
+	      .text(function(d) { return parallelAxisText(d); })
 	      .call(wrap, 85);
 
 	// add and store a brush for each axis
@@ -261,11 +253,25 @@ function parallelGraph() {
 	    	}
 		});
 	}
-	// d3.selection.prototype.moveToFront = function() {
-	// 	return this.each(function() {
-	// 		var line = this.parentNode.appendChild(this);
-	// 		line.className = "hover";
-	// 	});
-	// };
 
+	// add property to d3 selection
+	d3.selection.prototype.moveToFront = function() {
+		return this.each(function() {
+			var line = this.parentNode.appendChild(this);
+			line.className = "hover";
+		});
+	};
+
+};
+
+function parallelAxisText(d) {
+	if (d == "EnergyUse") {
+	    return "Energy Use  Tonnes of Oil equiv.";
+  	} else if (d == "EnergyProduction") {
+  		return "Energy Production  Tonnes of Oil equiv."; //<br>Tonnes of Oil equiv
+  	} else if (d == "Emissions") {
+  		return "Carbon Emission CO2 equivalent"; 
+  	} else if (d == "Waste") {
+  		return "Municipal Waste  Tonnes";
+  	}
 };

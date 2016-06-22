@@ -27,19 +27,31 @@ Map 'project'
 Elk visueel onderdeel wordt gedefinieerd in een functie. De globale variabelen zoals x-assen en margins die nodig zijn voor een visualisatie zijn soms boven de functie, maar in hetzelfde bestand gedefinieerd. Als allereerst wordt de data ingeladen met een queue, vervolgens wordt de functie prepareData() aangeroepen waarin de data naar Javascript objecten wordt omgezet. Vanuit 'prepareData()' worden de functies voor alle visuele elementen aangeroepen: barchart(), parallelGraph(), slider() en scatterplot(). De scatterplot en parallel coordinates grafiek worden ook aangeroepen wanneer de slider wordt bewogen. De barchart wordt aangeroepen wanneer er op de knopjes bij de barchart wordt geklikt en wanneer er op een lijn uit de parallelcoordinates of dot uit de scatterplot wordt geklikt. De scatterplot en de parallel coordinates graph geven data voor alle landen weer, met de slider kan een jaar geselecteerd worden. De barchart geeft juist voor één land data weer, maar dan over het verloop van de tijd. 
 
 ## Visueel eindproduct
-##### Interactie
+##### Navigatie/Interactie op pagina
+Het eerste beeld data een lezer ziet is een korte introductie over het thema van de visualisatie en een uitnodigende boodschap om verder naar beneden te scrollen. De tabbladen zijn te bereiken door te klikken in het menu of door naar beneden te scrollen voor een snelle navigatie. Op het tweede tabblad staan twee visualisaties die data over (bijna) alle landen in Europa weergeven en verder reageren op een slider. De twee grafieken laten data per jaar zien en met de slider is het jaar te veranderen. Tijdens het sliden kan de gebruiker dus veranderingen over de tijd zien. Wanneer één land wordt aangeklikt (een lijn of stip in één van de grafieken) scrollt de pagina automatisch naar beneden waar een barchart met data over het geselecteerde land verschijnt.
 
 ##### Parallel coordinates
+De parallel coordinates grafiek laat per land een waarde voor vier verschillende variabelen zien door een lijn door vier y-assen te trekken. Elke as is geschaald op de data voor die variabele, wat betekent dat een land goed relatief te vergelijken is met de andere landen. Om de gebruiker de mogelijkheid te geven een specifieke interesse te onderzoeken kan op elke as een gebied tussen twee waardes geselecteerd worden en blijven alleen de lijnen van de landen die binnen het criterium vallen duidelijk zichtbaar. De rest van de lijnen vervaagd. Het is zo goed te onderzoeken of landen die hoog of laag op 1 variabele scoren (ten opzichte van andere landen) ook overeenkomende scores hebben op de andere variabelen. 
+
+Wanneer de gebruiker over een lijn *hovert* krijgt die lijn extra nadruk, wordt in de titel van de grafiek zichtbaar om welk land het gaat, verschijnt een infovensterje met de exacte waardes voor de vier variabelen en krijgt de stip voor hetzelfde land in de scatterplot ook nadruk. Door deze link met de scatterplot ontstaat een extra mogelijkheid om al meteen ook de samenhang tussen CO2 uitstoot en het gebruik van duurzame energie te onderzoeken. 
+
+De interactie-elementen die het mogelijk maken om andere data in de grafieken te laten zien zijn onderaan de grafiek te vinden: de knopjes om de outlier (IJsland) uit de data te filteren en tevens een slider om een ander jaar te selecteren. Er is gekozen voor neutrale grijs- en blauwtinten voor deze elementen zodat ze niet te veel om aandacht vragen. 
+
+Ideeën voor de toekomst: met nog meer tijd om aan het project te werken zou ik implementeren dat de *brush* die iemand aangeeft op een y-as bewaard blijft bij het updaten van de dataset door te sliden of door te klikken of de outlier te zien moet zijn of niet. Het is dan gemakkelijker om te zien of landen sterk van waarde veranderen over de jaren heen. Vanwege dezelfde reden zou het interessant zijn een lijn dik te maken bij aanklikken en die dik te laten bij het sliden over de jaren heen. 
 
 ##### Scatterplot
+De scatterplot laat net als de parallel coordinates data voor alle landen in één jaar zien. Omdat het gebruik van duurzame energie onder andere gestimuleerd wordt om CO2 uitstoot te verminderen is het interessant om deze data direct naast de parallel coordinates graph te zetten. Het geeft de lezer wat meer richting in het zoeken naar verbanden tussen de variabelen in de parallel coordinates graph. 
+
+Wanneer de gebruiker over een punt *hovert* wordt het bolletje groter en zwartomlijnt voor extra nadruk. Ook verschijnt een tooltip met de exacte waarde voor beide variabelen. Elk land heeft een eigen kleur, zodat het voor een lezer gemakkelijk is om één land te volgen wanneer met de slider over de jaren heen wordt bewogen. Omdat het om 36 landen gaat was het lastig om echt een mooi kleurenpallet bij elkaar te zoeken. De ingebouwde kleurenfuncties van d3 gaan niet verder dan 20 kleuren. 
+
+Ideeën voor de toekomst: ik heb er nu voor nu gekozen om alle data in de parallel coordinates graph en scatterplot per hoofd van de bevolking weer te geven. Het zou interessant zijn om de mogelijkheid te hebben om het ook in totaal per land te laten zien. Dan wordt namelijk zichtbaar dat IJsland met zijn enorme energieverbruik en uistoot per hoofd van de bevolking, in totaal wat betreft deze variabelen wel meevalt vanwege de kleine populatie. 
 
 ##### Barchart
+De barchart geeft voor één land weer hoe de waardes voor een bepaalde variabele (drie vd thema's uit de parallel coorinates grafiek) zijn veranderd over de jaren. Deze grafiek geeft bovendien inzicht in de opbouw van de waardes door per jaar te laten zien uit welke verschillende waardes het totaal voor dat jaar is opgemaakt. Afval en uitstoot worden weergegeven per economische sector, energiegebruik wordt weergegeven per energiebron. Als kleur voor duurzame energie is voor lichtgroen gekozen, om de aandacht van de lezer hiernaartoe te trekken. Het groen staat in contrast met de andere kleuren en is bovendien semantisch inmiddels gelinkt aan duurzame "groene" energie.
 
-##### Navigatie op pagina
+Idee voor de toekomst: met nog iets meer tijd zou ik bovenaan de barchart ook een zoekmenu'tje willen toevoegen waar de gebruiker kan zoeken naar een land uit de dataset. 
 
-#####
-
-## Uitdagingen
+## Uitdagingen in het proces
 ##### Steden vs. landen
 Het allereerste idee voor de visualisatie was het vergelijken van energiegebruik en CO2 uitstoot van grote steden met de landelijke waardes. Ik was benieuwd of steden juist vooruitstrevender zijn op gebied van duurzaam energiegebruik en uitstoot dat de landen als geheel of niet. Helaas bleek al snel dat er geen openbare data op één of enkele plekken over energiegebruik van alle grote steden in Europa te vinden was. Het uitzoeken van deze data per stad behoorde in de tijdspanne van vier weken voor het hele project helaas niet tot de mogelijkheden. Ook zou ik dan tegen problemen aanlopen van betrouwbaarheid omdat de data waarschijnlijk per land en per onderzoeksorganisatie anders worden gemeten. Op basis van die data steden met elkaar vergelijken zou dan moeilijk zijn. Kortom, ik heb de overstap gemaakt naar het vergelijken van landen in Europa. Deze data heb ik met name via eurostat en een van OECD stats verkregen. Ik hoop dat er in de toekomst meer open source data over stedelijk energieverbruik en uitstoot van broeikasgassen beschikbaar zal zijn. 
 

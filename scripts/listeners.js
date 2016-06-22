@@ -19,13 +19,11 @@ function listeners() {
 
 	// listen to buttons under parallel coordinates graph
 	$("#noOutliers").on('click', function(e) {
-		console.log("no outliers");
 		choosedata = "noOutliers";
 		scatterplot();
 		parallelGraph();
 	});
 	$("#outliers").on('click', function(e) {
-		console.log("outliers");
 		choosedata = "outliers";
 		scatterplot();
 		parallelGraph();

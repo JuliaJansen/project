@@ -13,7 +13,7 @@ var barchartmargin = {top: 70, right: 140, bottom: 20, left: 40},
 
 // color scale
 var barchartcolor = d3.scale.ordinal()
-	.range(["#98abc5", "#8a89a6", "#7b6888", "#FFFF00", "#99ff33", "#d0743c", "#ff8c00"]);
+	.range(["#98abc5", "#8a89a6", "#7b6888", "#ffcc00", "#99ff33", "#d0743c", "#ff8c00"]);
 
 // x scale and domain
 var x0 = d3.scale.ordinal()

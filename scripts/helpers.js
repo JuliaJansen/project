@@ -7,3 +7,5 @@
 function roundToTwo(number) {
 	return number.toFixed(2);
 }
+
+

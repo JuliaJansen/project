@@ -201,4 +201,5 @@ function scatterplot() {
     	.style("text-anchor", "right")
     	.style("color", "#999999")
     	.text(function(d) { return "Renewable Energy & Emission" });
-}
+
+};

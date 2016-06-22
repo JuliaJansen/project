@@ -238,6 +238,7 @@ BEZIG MET DE SLIDER EN YEAR GLOBAAL MAKEN ZODAT HET OPNIEUW AANROEPEN VAN DE PAR
 #### 22 juni
 Color scale scatterplot opgelost met een dictionary.
 Global variable year werkt. Slider year updaten gaat goed. 
+Bezig geweest met de pagina opmaak.
 
 Nog to do nu: 
 - verslag afschrijven
@@ -245,6 +246,7 @@ Nog to do nu:
 - legenda barchart bug fixen
 - slider mooi maken
 - line en dot linken naar interactie vanuit text
+- lijnen parallel kleuren naar emissie. 
 - on hover line grap: andere lines opacity groter.
 - zelfde voor scatterplot
 

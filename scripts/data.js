@@ -74,7 +74,7 @@ function prepareData(error, paralleldata, energysavings, economicemissions,
 
 		// push data to array
 		if (+d.PRODUCTION > 0 && +d.ENERGY > 0 && +d.EMISSIONS > 0 
-			&& +d.WASTE > 0 && d.GEO != "Iceland" && d.GEO != "Luxembourg") {
+			&& +d.WASTE > 0 && d.GEO != "Iceland") {
 				parallelDataNoOutliers[year].push({
 					"country" : d.GEO,
 					"EnergyProduction" : +d.PRODUCTION,
