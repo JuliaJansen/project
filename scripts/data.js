@@ -13,7 +13,7 @@ var emissions = {};
 var energy = {};
 var scatterData = {};
 var country = "Netherlands";
-var year = 2005
+var year;
 
 window.onload = function() {
 
@@ -158,23 +158,13 @@ function prepareData(error, paralleldata, energysavings, economicemissions,
 		}
 	});
 
+	// set year to 2005 
+	year = 2005;
 
-	// // nest data for energy savings
-	// var energy_savings = d3.nest()
-	// 	.key(function(d) {  if (d.UNIT == "Thousand TOE (tonnes of oil equivalent)") {
-	// 		return "TOE" } else { return d.UNIT } })
-	// 	.key(function(d) { return d.TIME })
-	// 	.entries(energysavings);
-
-	// var prim_prod_energy = d3.nest()
-	// 	.key(function(d) { return d.GEO })
-	// 	.key(function(d) { return d.TIME })
-	// 	.key(function(d) { return d.UNIT })
-	// 	.entries(primproduction);
-
+	// draw graphs 
 	slider(parallelData, energy);
-	scatterplot(year);
-	parallelGraph(parallelData, year);
+	scatterplot();
+	parallelGraph(parallelData);
 	barchart("Netherlands", "energy");
 	listeners();
 }

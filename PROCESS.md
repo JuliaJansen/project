@@ -218,10 +218,13 @@ Met een wrap functie van Mike Bostock (<3) is het gelukt om de variabele EN eenh
 Na vandaag nog to do:
 - naar beneden scrollen met on click in parallel coordinates en scatterplot... ELKE KEER
 - color scale scatterplot uitbreiden
+- margins definitie naamgeving per grafiek
 - verhaaltjes over de data + bronvermelding
 - legenda barchart bug fixen
+- slider mooi maken
 - on hover line grap: andere lines opacity groter.
 - zelfde voor scatterplot
+
 
 optioneel: zie gisteren. 
 
@@ -231,4 +234,6 @@ BEZIG MET DE SLIDER EN YEAR GLOBAAL MAKEN ZODAT HET OPNIEUW AANROEPEN VAN DE PAR
 --> dan handler voor buttons outliers
 --> checken of alles nog werkt. 
 
-
+#### 22 juni
+Color scale scatterplot opgelost met een dictionary.
+Global variable year werkt. Slider year updaten gaat goed. 

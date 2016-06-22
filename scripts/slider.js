@@ -18,8 +18,8 @@ function slider(data, energydata) {
       .value(2005)
       .callback(function() {
             // draw scatterplot
-            year = Math.floor(slider.value());
-            console.log("slider value", slider.value());
+            year =  d3.format(".0f")(slider.value());
+            console.log("year in slider", year);
             scatterplot();
             // scatterplot(Math.floor(slider.value()));
       	// draw parallelGraph

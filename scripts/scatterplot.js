@@ -6,10 +6,52 @@
  * used as a reference: http://bl.ocks.org/mbostock/3887118
  */
 
-function scatterplot() {
+scattercolor = {
+	"Euro area (19 countries)" : "#339966",
+	"Belgium" : "#ff751a",
+	"Bulgaria" : "#006666",
+	"Czech Republic" : "#ffd11a",
+	"Denmark" : "#8533ff",
+	"Germany" : "#99cc00", 
+	"Estonia" : "#999966",
+	"Ireland" : "#e60000", 
+	"Greece" : "#70dbdb",
+	"Spain" : "#3973ac",
+	"France" : "#ccff33",
+	"Croatia" : "#00e6ac",
+	"Italy" : "#ffcc00",
+	"Cyprus" : "#ff9933",
+	"Latvia" : "#ff6666",
+	"Lithuania" : "#9999ff",
+	"Luxembourg" : "#66ccff",
+	"Hungary" : "#cc6666",
+	"Malta" : "#66ffcc",
+	"Netherlands" : "#66ff99",
+	"Austria" : "#ff80aa",
+	"Poland" : "#ccff66",
+	"Portugal" : "#ffcc99",
+	"Romania" : "#77773c",
+	"Slovenia" : "#ff99cc",
+	"Slovakia" : "#ff9999",
+	"Finland" : "#cc99ff",
+	"Sweden" : "#ccccff",
+	"United Kingdom" : "#ccffff",
+	"Iceland" : "#ccffcc", 
+	"Norway" : "#ccff99", 
+	"Montenegro" : "#e69900", 
+	"Albania" : "#ffcccc", 
+	"Serbia" : "#e6e6e6", 
+	"Turkey" : "#804000", 
+	"Kosovo (under United Nations Security Council Resolution 1244/99)" : "#aec7e8",
+	"Moldova" : "#737373", 
+	"Ukraine" : "#004d4d"
+};
 
+function scatterplot() {
+	// select the dataset 
 	data = scatterData[year];
 
+	// remove old svg
 	d3.select("#scatterplot-svg").remove();
 
 	// set margins, width and height
@@ -30,26 +72,7 @@ function scatterplot() {
 	var yMax = 29;
 
 	// define color scale
-	var color = d3.scale.category20();
-
-
-// 	d3.scale.category20 = function() {
-//     return d3.scale.ordinal().range(d3_category20);
-// };
-// var d3_category20 = [
-//   0x1f77b4, 0xaec7e8,
-//   0xff7f0e, 0xffbb78,
-//   0x2ca02c, 0x98df8a,
-//   0xd62728, 0xff9896,
-//   0x9467bd, 0xc5b0d5,
-//   0x8c564b, 0xc49c94,
-//   0xe377c2, 0xf7b6d2,
-//   0x7f7f7f, 0xc7c7c7,
-//   0xbcbd22, 0xdbdb8d,
-//   0x17becf, 0x9edae5,
-//   0x003300, 
-
-// ].map(d3_rgbString);
+	// var color = d3.scale.category20();
 
 	// x axis
 	var xAxis = d3.svg.axis()
@@ -118,7 +141,7 @@ function scatterplot() {
 			.attr("r", 4.0)
 			.attr("cx", function(d) { return x(d.renEnergy); })
 		 	.attr("cy", function(d) { return y(d.emission); })
-		  	.style("fill", function(d) { return color(d.country); })
+		  	.style("fill", function(d) { return scattercolor[d.country]; })
 		  	.on("mouseover", function(d) {
 		  		tip.show(d);
 		  		d3.select(this)

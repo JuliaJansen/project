@@ -23,7 +23,7 @@
 	    foreground;
 
 // draws parallel graph
-function parallelGraph(data, year) {
+function parallelGraph(data) {
 
 	// remove old graph and tooltips if existing
 	d3.select(".graphsvg").remove();
