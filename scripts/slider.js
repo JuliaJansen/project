@@ -7,8 +7,6 @@
 
 // calls slider
 function slider(data, energydata) {
-
-
 	var data = data;
 	var energydata = energydata;
 	var slider = d3.slider()
@@ -17,15 +15,12 @@ function slider(data, energydata) {
       .showRange(true)
       .value(2005)
       .callback(function() {
-            // draw scatterplot
+            // set global value year to the right value
             year =  d3.format(".0f")(slider.value());
-            console.log("year in slider", year);
+
+      	// draw parallelGraph and scatterplot
             scatterplot();
-            // scatterplot(Math.floor(slider.value()));
-      	// draw parallelGraph
-      	parallelGraph(data, Math.floor(slider.value()));
+      	parallelGraph();
       });
-
 	d3.select('#slider').call(slider);
-
 }

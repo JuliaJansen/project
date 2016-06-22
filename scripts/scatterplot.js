@@ -8,19 +8,19 @@
 
 scattercolor = {
 	"Euro area (19 countries)" : "#339966",
-	"Belgium" : "#ff751a",
+	"Belgium" : "#ff9933",
 	"Bulgaria" : "#006666",
 	"Czech Republic" : "#ffd11a",
 	"Denmark" : "#8533ff",
 	"Germany" : "#99cc00", 
 	"Estonia" : "#999966",
-	"Ireland" : "#e60000", 
-	"Greece" : "#70dbdb",
+	"Ireland" : "#ff3333", 
+	"Greece" : "#ff5c33",
 	"Spain" : "#3973ac",
 	"France" : "#ccff33",
 	"Croatia" : "#00e6ac",
 	"Italy" : "#ffcc00",
-	"Cyprus" : "#ff9933",
+	"Cyprus" : "#00aaff",
 	"Latvia" : "#ff6666",
 	"Lithuania" : "#9999ff",
 	"Luxembourg" : "#66ccff",
@@ -36,11 +36,11 @@ scattercolor = {
 	"Finland" : "#cc99ff",
 	"Sweden" : "#ccccff",
 	"United Kingdom" : "#ccffff",
-	"Iceland" : "#ccffcc", 
-	"Norway" : "#ccff99", 
+	"Iceland" : "#80ffbf", 
+	"Norway" : "#b3ff66", 
 	"Montenegro" : "#e69900", 
 	"Albania" : "#ffcccc", 
-	"Serbia" : "#e6e6e6", 
+	"Serbia" : "#00b300", 
 	"Turkey" : "#804000", 
 	"Kosovo (under United Nations Security Council Resolution 1244/99)" : "#aec7e8",
 	"Moldova" : "#737373", 
@@ -50,6 +50,15 @@ scattercolor = {
 function scatterplot() {
 	// select the dataset 
 	data = scatterData[year];
+
+	// select the maximum x and y values
+	if (choosedata == "noOutliers") {
+		var xMax = 2.9;
+		var yMax = 29;;
+	} else {
+		var xMax = 17
+		var yMax = 52;
+	}
 
 	// remove old svg
 	d3.select("#scatterplot-svg").remove();
@@ -66,13 +75,6 @@ function scatterplot() {
 	// define y scale
 	var y = d3.scale.linear()
 	.range([height, 0]);
-
-	// remember xMax and Ymax
-	var xMax = 2.9;
-	var yMax = 29;
-
-	// define color scale
-	// var color = d3.scale.category20();
 
 	// x axis
 	var xAxis = d3.svg.axis()
@@ -138,7 +140,7 @@ function scatterplot() {
 		.enter().append("circle")
 			.attr("class", "dot")
 			.attr("id", function(d) { return "circle." + d.country })
-			.attr("r", 4.0)
+			.attr("r", function(d) { if (d.emission > 0) { return 4.0} else { return 0 }})
 			.attr("cx", function(d) { return x(d.renEnergy); })
 		 	.attr("cy", function(d) { return y(d.emission); })
 		  	.style("fill", function(d) { return scattercolor[d.country]; })
@@ -186,8 +188,10 @@ function scatterplot() {
 	  			// remember country that is clicked
 	  			country = d.country;
 	  			barchart(d.country, "energy");
-				$('.navbar-nav a[href="#country_tab"]').tab('show');	  		
-			});
+				
+				// navigate to tab with barchart
+	  			$( "html, body").animate({scrollTop: $("#country_tab").offset().top }, 500);			
+	  		});
 
 	// create title 
     svg.append("text")

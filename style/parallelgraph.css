@@ -54,6 +54,10 @@ svg {
   padding-top: 50px;
 }
 
+.graphbuttons {
+  padding-left: 273px;
+}
+
 #parallelgraph_title {
   text-align: left;
   color: #737373;

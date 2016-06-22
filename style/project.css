@@ -14,16 +14,36 @@ body {
 /* style titles */
 h1 {
 	text-align: center;
-  letter-spacing: 6px;
+  letter-spacing: 2px;
+  margin-top: 10px;
 }
 
 h2 {
 	text-align: center;
 }
 
+h3 {
+  font-size: 14px;
+}
+
+footer {
+  font: helvetica;
+  font-weight: normal;
+  background: #003300;
+  color: #d9d9d9;
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  padding-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
 /* style navigation bar */
 .navbar-default {
-  background: #006600;
+  background: #003300;
   border: #004d00;
 }
 .navbar-default .navbar-brand {
@@ -80,22 +100,43 @@ h2 {
   padding-right: 30px;
 }
 
-#introheader {
-  padding-top: 50px;
-}
-
-/* welcome text */
-#welcometext {
-	text-align: center;
+.listtitle {
+  padding-top: 15px;
 }
 
 /* contact page */
 .contact {
+  padding-bottom: 150px;
+  padding-top: 100px;
   text-align: center;
 }
 
+/* define space between different tabs */
 .newtab {
-  padding-top: 100px;
+  padding-top: 12px;
+}
+
+.endtab {
+  padding-bottom: 70px;
+}
+
+/* sources in footer */
+.sources a {
+  color: #33bbff;
+  list-style: none;
+}
+
+/* data sources list in footer */
+#data {
+  text-align: left;
+}
+
+/* welcome text */
+#welcometext {
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 1.2px;
+  color: #999999;
 }
 
 #contact_name { 
@@ -107,12 +148,19 @@ h2 {
   font-size: 12px;
 }
 
+/* plugin list in footer */
+#plugins {
+  text-align: right;
+}
+
+/* text next to slider */
 #slidertext {
   color: #000;
   font-size: 10px;
   letter-spacing: 2px;
 }
 
+/* text on web page */
 #strikingtext {
   color: #737373;
   font-size: 12px;

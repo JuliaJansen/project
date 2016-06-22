@@ -222,6 +222,7 @@ Na vandaag nog to do:
 - verhaaltjes over de data + bronvermelding
 - legenda barchart bug fixen
 - slider mooi maken
+- line en dot linken naar interactie vanuit text
 - on hover line grap: andere lines opacity groter.
 - zelfde voor scatterplot
 
@@ -237,3 +238,15 @@ BEZIG MET DE SLIDER EN YEAR GLOBAAL MAKEN ZODAT HET OPNIEUW AANROEPEN VAN DE PAR
 #### 22 juni
 Color scale scatterplot opgelost met een dictionary.
 Global variable year werkt. Slider year updaten gaat goed. 
+
+Nog to do nu: 
+- verslag afschrijven
+- verhaaltjes over de data + bronvermelding
+- legenda barchart bug fixen
+- slider mooi maken
+- line en dot linken naar interactie vanuit text
+- on hover line grap: andere lines opacity groter.
+- zelfde voor scatterplot
+
+OPTIONAL
+- "tooltips" om de gebruiker te laten zien hoe het moet werken

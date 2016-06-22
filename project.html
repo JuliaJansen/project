@@ -41,7 +41,7 @@
   </head>
 
   <body data-spy="scroll" data-target=".navbar" data-offset="50">
-    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-inverse">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -50,7 +50,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Julia Jansen</a>
+          <a class="navbar-brand" href="#intro"><span class="glyphicons glyphicons-globe-af"></span></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -61,7 +61,7 @@
             <li><a href="#country_tab">C O U N T R Y </a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#contact_tab">contact</a></li>
+            <li><a href="#contact_tab">contact &amp resources</a></li>
             <li><a href="#contact_tab">&#x24B8; julia jansen</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
@@ -72,15 +72,13 @@
     <div class="tab-content" id="mytabs">
       <div id="intro" class="tab-pane fade in active">
         <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-4"></div>
-            <div id="introheader" class="col-md-4">
-              <h1>Welcome</h1>
-              <p id="welcometext">Text about definition and why it is interesting Text about definition and why it is interesting Text about definition and why it is interesting Text about definition and why it is interesting<br><br></p>
+          <div class="row newtab">
+            <div id="introheader">
+              <h1>All connected: energy, emission and waste in Europe</h1>
+              <p id="welcometext">This project visualizes te connection between energy production, energy use, carbon emissions and generation of waste for European countries. <br><br></p>
             </div>
-            <div class="col-md-4"></div>
           </div>
-          <div class="row">
+          <div class="row endtab">
             <div class="col-md-4">
               <img class="featurette-image img-responsive center-block" src="/doc/circle_energy.png"></img>
               <h2> Input. </h2>
@@ -113,7 +111,7 @@
             </p> 
           </div>
         </div>
-        <div class="row">
+        <div class="row endtab">
           <div id="parallelgraph" class="col-md-6">
             <div class="row">
               <div id="graph"></div>
@@ -121,7 +119,7 @@
             <div class="row">
                 <div class="graphbuttons btn-group">
                     <button class="btn btn-default btn-xs bargraphbutton" id="noOutliers">no outliers</button>
-                    <button class="btn btn-default btn-xs bargraphbutton" id="Outliers">with outliers</button>
+                    <button class="btn btn-default btn-xs bargraphbutton" id="outliers">with outliers</button>
                 </div>
                 <div id="slider"></div>
             </div>
@@ -136,9 +134,9 @@
 
     <div id="country_tab">
       <div class="container-fluid">
-        <div class="row newtab">
+        <div class="row newtab endtab">
           <div class="col-md-4">
-            <h1>The link between Renewable Energy and Emission</h1>
+            <h2>The link between Renewable Energy and Emission</h3>
             <p id="strikingtext">Here some text about a country (or more) for which the data shows interesting country. For example: Norway produces all of the energy it uses. How does that connect to the emissions and waste generation of Norway? A Sankey Diagram could be shown on the right, to follow the flow of different energy-sources to pollution. Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info.</p>
           </div>
           <div class="col-md-8">
@@ -149,7 +147,7 @@
               <div class="col-md-6">
                 <p>
                   <div class="chartbuttons btn-group">
-                    <button class="btn btn-default btn-xs bargraphbutton" id="energy">energy</button>
+                    <button class="btn btn-default btn-xs bargraphbutton" id="energy">energy use</button>
                     <button class="btn btn-default btn-xs bargraphbutton" id="emission">emission</button>
                     <button class="btn btn-default btn-xs bargraphbutton" id="waste">waste</button>
                   </div>
@@ -163,15 +161,34 @@
 
     <div id="contact_tab">
       <div class="container-fluid">
-        <div class="row">
+        <div class="row endtab">
           <div class="col-md-4"></div>
-          <div class="col-md-4">
-          <p class="contact" id="contact_name">Julia Jansen</p>
-          <p class="contact" id="contact_email">Contact me by email: </br>juliartjansen@gmail.com</p>
+          <div class="col-md-4 contact">
+          <p id="contact_name">Julia Jansen</p>
+          <p id="contact_email">Contact me by email: </br>juliartjansen@gmail.com</p>
           </div>
           <div class="col-md-4"></div>
         </div>
       </div>
     </div>
   </body>
+
+  <footer class="container-fluid">
+    <div class="row">
+      <div class="col-md-6" class="data">
+        <p class="listtitle">DATA SOURCES</p>
+        <ul class="sources">
+          <li><a href="http://stats.oecd.org/">OECD Stats</a></li>
+          <li><a href="http://ec.europa.eu/eurostat">Eurostats</a></li>
+          <li>World Development Indicators, <a href="http://data.worldbank.org/indicator">The World Bank</a></li>
+        </ul>
+      </div>
+      <div class="col-md-6" id="plugins">
+        <p class="listtitle">PLUGINS</p>
+        <ul class="sources">
+          <li><a href="https://d3js.org/">d3.js</a></li>
+          <li><a href="http://getbootstrap.com/">Bootstrap</a></li>
+        </ul>
+      </div>
+  </footer>
 </html>

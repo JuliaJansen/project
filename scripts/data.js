@@ -14,6 +14,11 @@ var energy = {};
 var scatterData = {};
 var country = "Netherlands";
 var year;
+var choosedata = "outliers";
+var xMaxNoOutliers;
+var yMaxNoOutliers;
+var xMax;
+var yMax;
 
 window.onload = function() {
 
@@ -144,7 +149,7 @@ function prepareData(error, paralleldata, energysavings, economicemissions,
 	// prepare energy use data for energy bargraph
 	renenergy_emission.forEach(function(d, i) {
 		year = +d.TIME;
-		if (i > 0 && d.GEO != "Iceland") {
+		if (i > 0) { //&& d.GEO != "Iceland"
 		
 			// make index for country only if not existing yet
 			scatterData[year] = typeof scatterData[year] !== "undefined" ? scatterData[year] : [];
@@ -164,7 +169,7 @@ function prepareData(error, paralleldata, energysavings, economicemissions,
 	// draw graphs 
 	slider(parallelData, energy);
 	scatterplot();
-	parallelGraph(parallelData);
+	parallelGraph();
 	barchart("Netherlands", "energy");
 	listeners();
 }

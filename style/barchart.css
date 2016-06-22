@@ -43,19 +43,25 @@ form {
 	left: 0;
 }
 
+.no_data {
+  font-size: 60px;
+  text-align: center;
+  color: #000;
+  letter-spacing: 2px;
+}
+
 #axis-text {
 	font: helvetica 10px;
 	stroke: #999;
 }
 
 #barchart {
-  padding-top: 50px;
+  padding-top: 1px;
   padding-left: 30px;
 }
 
 #barchart_title {
   text-align: middle;
-  font-weight: bold;
   font-family: helvetica;
   font-size: 24px;
   letter-spacing: 2px;

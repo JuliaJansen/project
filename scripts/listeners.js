@@ -19,10 +19,16 @@ function listeners() {
 
 	// listen to buttons under parallel coordinates graph
 	$("#noOutliers").on('click', function(e) {
-		parallelGraph(parallelDataNoOutliers, year);
+		console.log("no outliers");
+		choosedata = "noOutliers";
+		scatterplot();
+		parallelGraph();
 	});
-	$("#noOutliers").on('click', function(e) {
-		parallelGraph(parallelDataNoOutliers, year);
+	$("#outliers").on('click', function(e) {
+		console.log("outliers");
+		choosedata = "outliers";
+		scatterplot();
+		parallelGraph();
 	});
 }
 	

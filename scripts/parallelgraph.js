@@ -6,24 +6,25 @@
  * used as reference: https://bl.ocks.org/jasondavies/1341281
  */
 
-	// set margins, width and height
-	var margin = {top: 75, right: 50, bottom: 15, left: 5},
-    	width = 480 - margin.left - margin.right,
-    	height = 320 - margin.top - margin.bottom;
+// set parallelmargins, width and height
+var parallelmargin = {top: 75, right: 20, bottom: 15, left: 20},
+	width = 480 - parallelmargin.left - parallelmargin.right,
+	height = 320 - parallelmargin.top - parallelmargin.bottom;
 
-    // x and y scale and dragging scale prepared
-	var x = d3.scale.ordinal().rangePoints([0, width], 1),
-	    y = {},
-	    dragging = {};
-
-	// lines axis, foreground and background
-	var line = d3.svg.line(),
-	    axis = d3.svg.axis().orient("left"),
-	    background,
-	    foreground;
+// lines axis, foreground and background
+var line = d3.svg.line(),
+    axis = d3.svg.axis().orient("left"),
+    background,
+    foreground;
 
 // draws parallel graph
-function parallelGraph(data) {
+function parallelGraph() {
+	// select the right dataset
+	if (choosedata == "noOutliers") {
+		data = parallelDataNoOutliers;
+	} else {
+		data = parallelData;
+	}
 
 	// remove old graph and tooltips if existing
 	d3.select(".graphsvg").remove();
@@ -33,8 +34,7 @@ function parallelGraph(data) {
 	var energytip = d3.tip()
 		.attr('class', 'paralleltip')
 		.style('position', 'absolute')
-		// .offset(function(d) { 
-		// 	return [0, y[d.EnergyUse]]; })
+		.style('z-index', 10)
 		.html(function(d) {
 	    	return "<span id=\"paralleltiptext\">Energy Production: " 
 	    	+ roundToTwo(d.EnergyProduction) + "T Oil eq.<br>Energy use: " 
@@ -47,16 +47,16 @@ function parallelGraph(data) {
 	var svg = d3.select("#graph").append("svg")
 		.attr("id", "graph-svg")
 		.attr("class", "graphsvg")
-		.attr("width", width + margin.left + margin.right)
-		.attr("height", height + margin.top + margin.bottom)
+		.attr("width", width + parallelmargin.left + parallelmargin.right)
+		.attr("height", height + parallelmargin.top + parallelmargin.bottom)
 	  .append("g")
-	  	.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+	  	.attr("transform", "translate(" + parallelmargin.left + "," + parallelmargin.top + ")");
 
 	svg.call(energytip);
 
 	// create title 
     svg.append("text")
-    	.attr("x", 120)
+    	.attr("x", 90)
     	.attr("y", -50)
     	.attr("id", "parallelgraph_title")
     	.style("text-anchor", "right")
@@ -64,6 +64,11 @@ function parallelGraph(data) {
 
 	// get data of specific year
 	data = data[year];
+
+	// x and y scale and dragging scale prepared
+	var x = d3.scale.ordinal().rangePoints([0, width], 1),
+	    y = {},
+	    dragging = {};
 
 	// get dimensions and y domain per dimension
 	x.domain(dimensions = d3.keys(data[0]).filter(function(d) {
@@ -131,8 +136,8 @@ function parallelGraph(data) {
 	  		country = d.country;
 	  		barchart(d.country, "energy");
 
-	  		// navigate to other tab
-			$('.navbar-nav a[href="#country_tab"]').tab('show');	  		
+	  		// navigate to tab with barchart
+	  		$( "html, body").animate({scrollTop: $("#country_tab").offset().top }, 500);
 	  	});
 
 	// add a group element for each dimension
