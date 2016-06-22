@@ -226,24 +226,17 @@ Na vandaag nog to do:
 - on hover line grap: andere lines opacity groter.
 - zelfde voor scatterplot
 
-
 optioneel: zie gisteren. 
-
-
-BEZIG MET DE SLIDER EN YEAR GLOBAAL MAKEN ZODAT HET OPNIEUW AANROEPEN VAN DE PARALLELCO FUNCTION MET OF ZONDER OUTLIERS NIKS VERANDERT AAN HET YEAR!!! 
---> eerst slider goede value krijgen. 
---> dan handler voor buttons outliers
---> checken of alles nog werkt. 
 
 #### 22 juni
 Color scale scatterplot opgelost met een dictionary.
 Global variable year werkt. Slider year updaten gaat goed. 
 Bezig geweest met de pagina opmaak.
+Legenda barchart gefixt, met voor elke selectie een ander kleurenpallet. Economische sectoren die zowel bij uitstoot als bij afvalproductie te zien zijn houden dezelfde kleur. 
 
 Nog to do nu: 
 - verslag afschrijven
-- verhaaltjes over de data + bronvermelding
-- legenda barchart bug fixen
+- verhaal over de data 
 - slider mooi maken
 - line en dot linken naar interactie vanuit text
 - lijnen parallel kleuren naar emissie. 

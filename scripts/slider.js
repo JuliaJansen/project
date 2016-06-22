@@ -2,7 +2,7 @@
  *
  * Julia Jansen
  * Programmeerproject
- * Drawing slider and calling other functions
+ * calling slider and calling other functions
  */
 
 // calls slider

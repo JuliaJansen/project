@@ -11,10 +11,6 @@ var barchartmargin = {top: 70, right: 140, bottom: 20, left: 40},
 	width = 620 - barchartmargin.left - barchartmargin.right,
 	height = 300 - barchartmargin.top - barchartmargin.bottom;
 
-// color scale
-var barchartcolor = d3.scale.ordinal()
-	.range(["#98abc5", "#8a89a6", "#7b6888", "#ffcc00", "#99ff33", "#d0743c", "#ff8c00"]);
-
 // x scale and domain
 var x0 = d3.scale.ordinal()
     .rangeRoundBands([0, width], .08);
@@ -31,6 +27,18 @@ function barchart(country, variable) {
 	d3.select(".year").remove();
 	d3.select(".bartip").remove();
 	d3.select(".no_data").remove();
+
+	// set color scale for dataset
+	if (variable == "energy") {
+		var barchartcolor = d3.scale.ordinal()
+			.range(["#98abc5", "#8a89a6", "#7b6888", "#ffcc00", "#99ff33", "#d0743c", "#ff8c00"]);
+	} else if (variable == "emission") {
+		var barchartcolor = d3.scale.ordinal()
+			.range(["#99e600", "#BAA224", "#d0743c", "#ffcc00", "#2eb8b8", "#669999", "#999999"]);
+	} else {
+		var barchartcolor = d3.scale.ordinal()
+			.range(["#99e600", "#BAA224", "#d0743c", "#ffcc00", "#2eb8b8", "#b3cccc", "#e6e6e6"]);
+	};
 
 	// get the data
 	data = getBarchartData(country, variable);

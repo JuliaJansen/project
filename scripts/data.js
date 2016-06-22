@@ -15,10 +15,6 @@ var scatterData = {};
 var country = "Netherlands";
 var year;
 var choosedata = "outliers";
-var xMaxNoOutliers;
-var yMaxNoOutliers;
-var xMax;
-var yMax;
 
 window.onload = function() {
 
