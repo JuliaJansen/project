@@ -253,6 +253,7 @@ De laatste dag is begonnen. Net het verslag afgeschreven, tijdens het schrijven 
 
 Afstrepen maar:
 - y ax label barchart
+- cijfer in tooltip parallel rood
 - weergeven of het met of zonder outlier is
 - verslag afschrijven
 - verhaal over de data 

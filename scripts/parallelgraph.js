@@ -270,7 +270,7 @@ function parallelAxisText(d) {
   	} else if (d == "EnergyProduction") {
   		return "Energy Production  Tonnes of Oil equiv."; //<br>Tonnes of Oil equiv
   	} else if (d == "Emissions") {
-  		return "Carbon Emission CO2 equivalent"; 
+  		return "Carbon Emission Tonnes CO2 equivalent"; 
   	} else if (d == "Waste") {
   		return "Municipal Waste  Tonnes";
   	}

@@ -21,27 +21,30 @@ Further these examples were of a great help to me:
 ### Data sources
 The visualisations are based on data from OECD Stats, Eurostat and World Development Indicators, The World Bank. Find a link to all the datasets here.  
 
+- Population: 
+http://ec.europa.eu/eurostat/tgm/table.do?tab=table&init=1&plugin=1&language=en&pcode=tps00001
+
 - Energy Production:  
 http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=nrg_109a&lang=en  
 
 - Energy Use: 
-http://ec.europa.eu/eurostat/tgm/table.do?tab=table&init=1&language=en&pcode=tsdpc320&plugin=1
-http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=nrg_110a&lang=en  
-http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=nrg_101a&lang=en  
-http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=nrg_102a&lang=en  
-http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=nrg_103a&lang=en  
-http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=nrg_104a&lang=en  
-http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=nrg_106a&lang=en  
-http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=nrg_107a&lang=en  
-http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=nrg_108a&lang=en  
+Total energy use: http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=nrg_110a&lang=en  
+Solid Fuels: http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=nrg_101a&lang=en  
+Oil: http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=nrg_102a&lang=en  
+Gas: http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=nrg_103a&lang=en  
+Nuclear Energy: http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=nrg_104a&lang=en  
+Heat: http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=nrg_106a&lang=en  
+Renewable Energies: http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=nrg_107a&lang=en  
+Consumption of Waste: http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=nrg_108a&lang=en  
 
 - Emissions:  
-http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=env_ac_ainah_r2&lang=en
-http://data.worldbank.org/topic/environment  
+Total Emissions: http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=env_air_gge&lang=en
+Emissions per economic activity: http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=env_ac_ainah_r2&lang=en
 
 - Waste Generation:  
-https://data.oecd.org/waste/municipal-waste.htm  
-http://ec.europa.eu/eurostat/web/products-datasets/-/tsdpc250
+Municipal waste: https://data.oecd.org/waste/municipal-waste.htm 
+
+Hazardous waste per economic sector: http://ec.europa.eu/eurostat/web/products-datasets/-/tsdpc250
 
 ### LICENSE
 This is free and unencumbered software released into the public domain.
