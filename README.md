@@ -21,13 +21,13 @@ Further these examples were of a great help to me:
 ### Data sources
 The visualisations are based on data from OECD Stats, Eurostat and World Development Indicators, The World Bank. Find a link to all the datasets here.  
 
-- Population: 
+- Population:  
 http://ec.europa.eu/eurostat/tgm/table.do?tab=table&init=1&plugin=1&language=en&pcode=tps00001
 
 - Energy Production:  
 http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=nrg_109a&lang=en  
 
-- Energy Use: 
+- Energy Use:  
 Total energy use: http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=nrg_110a&lang=en  
 Solid Fuels: http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=nrg_101a&lang=en  
 Oil: http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=nrg_102a&lang=en  
