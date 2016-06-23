@@ -87,7 +87,7 @@ function parallelGraph() {
 	// get dimensions and y domain per dimension
 	x.domain(dimensions = d3.keys(data[0]).filter(function(d) {
 	 	return d != "country" && (y[d] = d3.scale.linear()
-	 		.domain(d3.extent(data, function(p) { return +p[d]; })) //console.log("p, p[d]", p, p[d]); 
+	 		.domain(d3.extent(data, function(p) { return +p[d]; })) 
 	 		.range([height, 0]));
 	}));
 
@@ -113,8 +113,9 @@ function parallelGraph() {
 	  	.style("stroke-width", "1.3px")
 	  	.on("mouseover", function(d) {
 	  		d3.select(this)
-	  			.style("stroke-width", "5.0px")
-	  			.moveToFront();
+	  			.style("stroke-width", "5.0px");
+
+	  		// show tooltip
 	  		energytip.show(d);
 			d3.select("#parallelgraph_title")
 				.text(function() {
@@ -123,6 +124,8 @@ function parallelGraph() {
 					} else {
 						return year + "     " + d.country;
 					}});
+
+			// highlight circle in scatteplot
 			var circle = scatterdots.filter(function(e) { return e.country === d.country; });
 			circle.transition().duration(50)
 				.attr("r", 7.5)
@@ -267,15 +270,6 @@ function parallelGraph() {
 	    	}
 		});
 	}
-
-	// add property to d3 selection
-	d3.selection.prototype.moveToFront = function() {
-		return this.each(function() {
-			var line = this.parentNode.appendChild(this);
-			line.className = "hover";
-		});
-	};
-
 };
 
 function parallelAxisText(d) {

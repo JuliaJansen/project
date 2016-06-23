@@ -2,7 +2,11 @@
 
 This project visualizes the energy production and use on the one hand and on the other hand emission and generation of waste for European countries. For the visualisation I used the D3 library and several examples on github.  
 
-*****screenshots*****
+### Screenshots
+![](doc/prtSc_intro.png)
+![](doc/prtSc_europe.png)
+![](doc/prtSc_country.png)
+![](doc/prtSc_outliers.png)
 
 ### Acknowledgements
 - Slider by https://github.com/sujeetsr/d3.slider

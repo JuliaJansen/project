@@ -135,7 +135,7 @@ function prepareData(error, paralleldata, energysavings, economicemissions,
 			"Agriculture" : +d.Agriculture,
 			"Mining" : +d. Mining,
 			"Manufacturing" : +d.Manufacturing,
-			"Energyproduction" : +d.Energyprod,
+			"Energy Production" : +d.Energyprod,
 			"Water Management" : +d.Water,
 			"Construction" : +d.Construction,
 			"Other" : +d.Other		

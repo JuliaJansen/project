@@ -204,6 +204,10 @@ ul {
   padding-bottom: 10px;
 }
 
+#morepadding {
+  padding-bottom: 35px;
+}
+
 /* plugin list in footer */
 #plugins {
   text-align: right;

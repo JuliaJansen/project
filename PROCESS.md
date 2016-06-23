@@ -251,9 +251,7 @@ De laatste dag is begonnen. Net het verslag afgeschreven, tijdens het schrijven 
 - y ax label barchart
 - weergeven of het met of zonder outlier is
 
-Afstrepen maar:
-- verslag afschrijven
-- verhaal over de data 
-- line en dot linken naar interactie vanuit text
-- lijnen parallel kleuren naar emissie. 
+Helaas lukt de interactie tussen tekst op de pagina en de on hover functie in een grafiek me nog niet! 
+
+Schluss ermee.
 

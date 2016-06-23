@@ -192,49 +192,6 @@ function barchart(country, variable) {
 }
 
 /* 
- * updates barchart
- */
-function updateBarchart(country, variable) {
-	// select the right dataset
-	data = getBarchartData(country, variable);
-	console.log("variable in update", variable);
-
-	var labels = d3.keys(data[0]).filter(function(key) { return key !== 'year'; });
-
-	console.log("labels", labels);
-
-	// prepare data
-	data.forEach(function(d) { 
-		d.categories = labels.map(function(name) { return {name: name, value: d[name]}; });
-	});
-
-	console.log("country", country);
-	console.log("data in update", data);
-
-	// define domains for x and y
-	x0.domain(data.map(function(d) { console.log("d.year in update", d.year); return d.year; }));
-	x1.domain(labels).rangeRoundBands([0, x0.rangeBand()]);
-	y.domain([0, d3.max(data, function(d) { console.log("d.value", d.value); return d3.max(d.categories, function(d) { return d.value; }); })]);
-
-    // Select the section we want to apply our changes to
-    var svg = d3.select("#barchart").transition();
-
-    // Make the changes
-    svg.selectAll(".year")   // change the bars
-        .duration(750)
-		.attr("transform", function(d, i) { console.log("x0(d.year), d.year, d.value", x0(d.year), d.year, d.value); return "translate(" + x0(d.year) + ",0)"; });    
-	svg.select(".x.axis") // change the x axis
-        .duration(750)
-        .call(xAxis);
-    svg.select(".y.axis") // change the y axis
-        .duration(750)
-        .call(yAxis);
-    svg.select(".legend")
-    	.duration(750)
-    	.attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
-}
-
-/* 
  * Updates barchart
  */
 function getBarchartData(country, variable) {

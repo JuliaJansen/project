@@ -9,7 +9,7 @@ In drie verschillende onderdelen wordt de samenhang tussen bovengenoemde variabe
 De scatterplot geeft specifiek inzicht in de samenhang tussen het gebruik van duurzame energie en CO2 uitstoot per hoofd van de bevolking. De barchart geeft voor energie gebruik weer hoe deze is opgebouwd uit verschillende energiebronnen. Over CO2 uitstoot en schadelijke afvalproductie geeft de barchart weer welke economische sectoren voor welk aandeel zorgen. 
 
 SCREENSHOT pagina 1
-![](doc/prtSc_datapage.png)
+![](doc/prtSc_europe.png)
 
 ## Technisch ontwerp
 #### Mappen & Bestands structuur
