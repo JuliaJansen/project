@@ -114,10 +114,17 @@ function barchart(country, variable) {
 			.call(yAxis)
 		  .append("text")
 		  	.attr("transform", "rotate(-90)")
-		  	.attr("y", -38)
+		  	.attr("y", -40)
 		  	.attr("dy", ".71em")
 		  	.style("text-anchor", "end")
-		  	.text("Energy Use (thousand tonnes of oil equivalent");
+		  	.text(function(d) { 
+		  		if (variable == "energy") {
+		  			return "Energy Use (thousand tonnes of oil equiv.)";
+		  		} else if (variable == "waste") {
+		  			return "Hazardous waste (thousand tonnes)";
+		  		} else if (variable =="emission") {
+		  			return "Carbon Emission (tonnes of CO2)";
+		  		}});
 
 		// add a g for each layer
 		var year = svg.selectAll(".year")

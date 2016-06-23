@@ -252,13 +252,8 @@ De laatste dag is begonnen. Net het verslag afgeschreven, tijdens het schrijven 
 - weergeven of het met of zonder outlier is
 
 Afstrepen maar:
-- y ax label barchart
-- cijfer in tooltip parallel rood
-- weergeven of het met of zonder outlier is
 - verslag afschrijven
 - verhaal over de data 
-- slider mooi maken
 - line en dot linken naar interactie vanuit text
 - lijnen parallel kleuren naar emissie. 
-- on hover line grap: andere lines opacity groter.
-- zelfde voor scatterplot
+

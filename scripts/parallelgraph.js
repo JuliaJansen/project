@@ -36,11 +36,11 @@ function parallelGraph() {
 		.style('position', 'absolute')
 		.style('z-index', 10)
 		.html(function(d) {
-	    	return "<span id=\"paralleltiptext\">Energy Production: " 
-	    	+ roundToTwo(d.EnergyProduction) + "T Oil eq.<br>Energy use: " 
-	    	+ roundToTwo(d.EnergyUse) + " T Oil eq.<br>Emission: "
-	    	+ roundToTwo(d.Emissions) + " T CO2 eq.<br>Municipal Waste: "
-	    	+ roundToTwo(d.Waste) + " T</span>"
+	    	return "<span id=\"paralleltiptext\">Energy Production: <span class=\"redtext\">" 
+	    	+ roundToTwo(d.EnergyProduction) + "</span> T Oil eq.<br>Energy use: <span class=\"redtext\">" 
+	    	+ roundToTwo(d.EnergyUse) + "</span> T Oil eq.<br>Emission: <span class=\"redtext\">"
+	    	+ roundToTwo(d.Emissions) + "</span> T CO2 eq.<br>Municipal Waste: <span class=\"redtext\">"
+	    	+ roundToTwo(d.Waste) + "</span> T</span>"
 	  	});
 
 	// append svg for graph
@@ -61,6 +61,20 @@ function parallelGraph() {
     	.attr("id", "parallelgraph_title")
     	.style("text-anchor", "right")
     	.text(function(d) { return year });
+
+    // create sign communicating outlier yes or no
+    svg.append("text")
+    	.attr("x", 320)
+    	.attr("y", -68)
+    	.attr("id", "outliersign")
+    	.style("text-anchor", "right")
+    	.text(function(d) { 
+    		if (choosedata == "noOutliers") {
+    			return "Iceland not shown";
+    		} else {
+    			return "All countries visible";
+    		}
+    	});
 
 	// get data of specific year
 	data = data[year];

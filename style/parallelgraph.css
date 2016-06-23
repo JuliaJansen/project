@@ -65,10 +65,18 @@ svg {
   letter-spacing: 3px;
 }
 
-/*#redtext {
-  color: red;
+#outliersign {
+  text-align: left;
+  color: #ff5050;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 2px;
 }
-*/
+
+.redtext {
+  color: #ff6666;
+}
+
 /*/* tooltips */
 div.graphTooltip
 div.countryLabel { 

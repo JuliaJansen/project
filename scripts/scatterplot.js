@@ -91,9 +91,13 @@ function scatterplot() {
 		.attr('class', 'scattertip')
 		.offset([-15, -151])
 		.html(function(d) {
-	    	return "<span class=\"scattertext\"><center>" + d.country + "</center><span class=\"scattertext\" id=\"renenergy-label\">Renewable energy: " 
-	    	+ roundToTwo(d.renEnergy) + " TOE</span><span class=\"scattertext\" id=\"emission-label\"><br>Emission: " 
-	    	+ roundToTwo(d.emission) + " T CO2</span>";
+	    	return "<span class=\"scattertext\"><center>" 
+	    	+ d.country 
+	    	+ "</center><span class=\"scattertext\" id=\"renenergy-label\">Renewable energy: <span class=\"redtext\">" 
+	    	+ roundToTwo(d.renEnergy) 
+	    	+ "</span> TOE</span><span class=\"scattertext\" id=\"emission-label\"><br>Emission: <span class=\"redtext\">" 
+	    	+ roundToTwo(d.emission) 
+	    	+ "</span> T CO2</span>";
 	  	});
 
 	// append svg for scatterplot
