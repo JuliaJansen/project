@@ -236,7 +236,6 @@ Legenda barchart gefixt, met voor elke selectie een ander kleurenpallet. Economi
 
 Nog to do nu: 
 - verslag afschrijven
-- y ax label barchart
 - verhaal over de data 
 - slider mooi maken
 - line en dot linken naar interactie vanuit text
@@ -246,3 +245,19 @@ Nog to do nu:
 
 OPTIONAL
 - "tooltips" om de gebruiker te laten zien hoe het moet werken
+
+#### *** 23 LAST DAY ***
+De laatste dag is begonnen. Net het verslag afgeschreven, tijdens het schrijven nog wat dingetjes bedacht die nog moeten gebeuren:
+- y ax label barchart
+- weergeven of het met of zonder outlier is
+
+Afstrepen maar:
+- y ax label barchart
+- weergeven of het met of zonder outlier is
+- verslag afschrijven
+- verhaal over de data 
+- slider mooi maken
+- line en dot linken naar interactie vanuit text
+- lijnen parallel kleuren naar emissie. 
+- on hover line grap: andere lines opacity groter.
+- zelfde voor scatterplot
