@@ -62,11 +62,12 @@ function scatterplot() {
 
 	// remove old svg
 	d3.select("#scatterplot-svg").remove();
+	d3.select(".scattertip").remove();
 
 	// set margins, width and height
-	var margin = {top: 95, right: 95, bottom: 35, left: 35},
+	var margin = {top: 75, right: 95, bottom: 35, left: 35},
 	width = 500 - margin.left - margin.right,
-	height = 380 - margin.top - margin.bottom;
+	height = 370 - margin.top - margin.bottom;
 
 	// define x scale
 	var x = d3.scale.linear()

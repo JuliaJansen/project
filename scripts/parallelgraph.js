@@ -7,9 +7,9 @@
  */
 
 // set parallelmargins, width and height
-var parallelmargin = {top: 75, right: 20, bottom: 15, left: 20},
+var parallelmargin = {top: 105, right: 20, bottom: 15, left: 20},
 	width = 480 - parallelmargin.left - parallelmargin.right,
-	height = 320 - parallelmargin.top - parallelmargin.bottom;
+	height = 310 - parallelmargin.top - parallelmargin.bottom;
 
 // lines axis, foreground and background
 var line = d3.svg.line(),

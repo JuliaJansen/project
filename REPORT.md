@@ -44,7 +44,7 @@ Ideeën voor de toekomst: met nog meer tijd om aan het project te werken zou ik 
 ##### Scatterplot
 De scatterplot laat net als de parallel coordinates data voor alle landen in één jaar zien. Omdat het gebruik van duurzame energie onder andere gestimuleerd wordt om CO2 uitstoot te verminderen is het interessant om deze data tegen elkaar uit te zetten en direct naast de parallel coordinates graph weer te geven. Het geeft de lezer wat meer richting in het zoeken naar verbanden tussen de variabelen in de parallel coordinates graph. 
 
-Wanneer de gebruiker over een punt *hovert* wordt het bolletje groter en zwartomlijnt voor extra nadruk. Bij zowel de scatterplot als de parallel coordinates grafiek wordt de lijn of het bolletje flink wat groter zodat het de gebruiker bij een kleine beweging niet direct de focus verliest: de bewegingsruimte binnen het gehighlighte element is groter. Tijdens het *hoveren* verschijnt ook een tooltip met de exacte waarde voor beide variabelen. Elk land heeft een eigen kleur, zodat het voor een lezer gemakkelijk is om één land te volgen wanneer met de slider over de jaren heen wordt bewogen. Omdat het om 36 landen gaat was het lastig om echt een mooi kleurenpallet bij elkaar te zoeken. De ingebouwde kleurenfuncties van d3 gaan niet verder dan 20 kleuren. 
+De assen van deze grafiek zijn vastgezet op de maximale waardes zodat het goed is te zien hoe de landen over de jaren heen veranderen. Wanneer de gebruiker over een punt *hovert* wordt het bolletje groter en zwartomlijnt voor extra nadruk. Bij zowel de scatterplot als de parallel coordinates grafiek wordt de lijn of het bolletje flink wat groter zodat het de gebruiker bij een kleine beweging niet direct de focus verliest: de bewegingsruimte binnen het gehighlighte element is groter. Tijdens het *hoveren* verschijnt ook een tooltip met de exacte waarde voor beide variabelen. Elk land heeft een eigen kleur, zodat het voor een lezer gemakkelijk is om één land te volgen wanneer met de slider over de jaren heen wordt bewogen. Omdat het om 36 landen gaat was het lastig om echt een mooi kleurenpallet bij elkaar te zoeken. De ingebouwde kleurenfuncties van d3 gaan niet verder dan 20 kleuren. 
 
 Ideeën voor de toekomst: ik heb er nu voor nu gekozen om alle data in de parallel coordinates graph en scatterplot per hoofd van de bevolking weer te geven. Het zou interessant zijn om de gebruiker de keuze te geven om ook het absolute totaal per land te laten zien. Dan wordt namelijk zichtbaar dat IJsland met zijn enorme energieverbruik en uistoot per hoofd van de bevolking, in absolute getallen laag scoort vanewege de kleine populatie. 
 
@@ -53,7 +53,7 @@ De barchart geeft voor één land weer hoe de waardes voor een bepaalde variabel
 
 Voor elk van de verschillende barchartdata wordt een ander kleurenpallet gebruikt. Ik heb gekozen voor verschillende kleuren, omdat het gaat om verschillende variabelen, geen ordinale variabelen. De economische sectoren bij uitstoot en afval behouden dezelfde kleur als ze in beide grafieken voorkomen. De kleuren zijn bovendien intuïtief gekozen bij wat ze moeten representeren. Als kleur voor duurzame energie is bijvoorbeeld voor lichtgroen gekozen wat past bij "groene" energie. Bovendien is een fel groen gekozen om het op te laten vallen tussen de andere energiebronnen en dus de aandacht van de kijker hiernaartoe te trekken. Dat is in lijn met het verhaal van de webpagina. 
 
-Idee voor de toekomst: met nog iets meer tijd zou ik bovenaan de barchart ook een zoekmenu'tje willen toevoegen waar de gebruiker kan zoeken naar een land uit de dataset. 
+Idee voor de toekomst: met nog iets meer tijd zou ik bovenaan de barchart ook een zoekmenu'tje willen toevoegen waar de gebruiker kan zoeken naar een land uit de dataset. Bovendien zou ik dan ook per variabele een mooi pop-up venstertje willen maken dat verschijnt wanneer er op een vakje van de legenda wordt geklikt. Daar wordt dan de precies gemeten definitie van die variabele beschreven.
 
 ## Uitdagingen in het proces
 ##### Steden vs. landen
@@ -67,6 +67,20 @@ Ik had het idee bij de barchart de gebruiker de keuze te geven tussen een *stack
 
 ##### Geen tooltip voor meerdere y-assen tegelijk
 De tooltip bij de parallel coordinates grafiek is anders dan gepland. Om de lijn door verschillende y-assen te tekenen is de schaal een array aan schalen voor elke y-as. Het is me nog niet gelukt om meerdere tooltips tegelijk weer tegeven op alle y-assen, omdat de y-as schaal die ik voor deze grafiek gebruik alleen een reeks inhoudt: de y-waardes voor alle assen. Deze waardes zijn ook niet simpelweg de x, en y-coordinaten maar waardes met letter er in. Het zou meer tijd (wat ik niet heb) vergen om precies uit te zoeken hoe ik deze waardes kan gebruiken voor de verschillende tooltips. 
+
+##### De outliers
+Al snel na het maken van de parallel coordinates werd duidelijk dat IJland een outlier was en daarom bij het sliden over de jaren heen de assen enorm beïnvloedde. Daardoor lijkt het visueel alsof alle andere landen veel dichter bij elkaar komen te liggen qua waardes. In de scatterplot liggen alle stipjes heel erg dicht op elkaar als IJland ook wordt weergegeven. IJsland uit de dataset halen zou ook zonde zijn, omdat het wel interessant is om te zien dat ze zo'n sterke outlier zijn. Uiteindelijk heb ik besloten om de gebruiker de optie te geven om de visualisaties met en zonder outlier te bekijken. Zo is ook goed te zien wat effect van de outlier op de data is.  
+
+IJland is ook een onverwachtse outlier qua emissie. Na uitzoeken in mijn dataset en in andere datasets blijkt dat de uitschietende waarde hoogstwaarschijnlijk gevolg is van het feit dat in de door mij gebruikte dataset niet alleen direct CO2 emissie van transport, verbranding van brandstof en aangekochte elektriciteit stroom en gas berekend worden, maar ook alle indirecte CO2 uitstoot: 
+"Purchased goods and services
+Business travel
+Employee commuting
+Waste disposal
+Use of sold products
+Transportation and distribution (up- and downstream)
+Investments"
+Omdat de IJlandse bevolking heel klein is, maar het toerisme relatief groot (per hoofd van de bevolking) is dat goed terug te zien in de uitstoot/capita. 
+
 
 ## Tot slot
 Al met al heb ik tijdens de afgelopen vier weken geleerd dat het prachtig zou zijn als er zoveel mogelijk data over steden voor iedereen beschikbaar zou zijn. Niet privacy gevoelige data natuurlijk, maar wel data die het mogelijk maken om verschillende gebieden en steden gemakkelijk met elkaar te vergelijken. 

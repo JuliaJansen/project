@@ -59,6 +59,7 @@
             <li class="active"><a href="#intro">I N T R O<span class="sr-only">(current)</span></a></li>
             <li><a href="#data">E U R O P E</a></li>
             <li><a href="#country_tab">C O U N T R Y </a></li>
+            <li><a href="#outliers_tab">O U T L I E R S</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#contact_tab">contact &amp resources</a></li>
@@ -72,39 +73,20 @@
     <div class="tab-content" id="mytabs">
       <div id="intro" class="tab-pane fade in active">
         <div class="container-fluid">
-          <div class="row newtab">
+          <div class="row">
             <div>
-              <h1>All connected: energy, emission and waste in Europe</h1>
+              <h1 id="main_title">ENERGY, EMISSION and WASTE<br>All connected to climate change, the biggest threat to humanity
+              </h1>
               <p id="welcometext">This project visualizes te connection between energy production, energy use, carbon emissions and generation of waste for European countries. <br><br></p>
             </div>
           </div>
-          <div class=row>
-            <div class="col-md-6">
-              <p class="infotext" id="small_text">For everything in our daily life we need <span class="emphasize_text" id="energy_text">energy</span>. A variety of energy sources makes our economy spin and keeps the world population alive. In the past decades we have gained both frightening and valuable knowledge about our relation with the energy sources that we have and use largely. Currently we emit a huge amount of<span class="emphasize_text" id="carbon_text"> carbon dioxide </span> into the atmosphere and produce <a href="http://nationalgeographic.org/encyclopedia/great-pacific-garbage-patch/">complete islands</a> of <span class="emphasize_text" id="waste_text">waste</span> by the way we produce and use energy.</p>
-            </div>
-            <div class="col-md-6 infotext">
-              <p>We leave behind an indelible mark on planet earth and climate change is a major thread to sustainable development.</p>              
-              <p>Luckily the use of renewable energy is rising and  we are fighting to bring down carbon emissions. But how are the countries of Europe dealing with their energy use and hazardous output? Scroll down and compare them all! <br>
-              
-              This visualization gives you the possibility to compare European countries on their production and use of energy on one hand and carbon emissions and generation of waste on the other. The text provides additional facts and guidance for the interactive aspects of the graphs. 
-
-            </div>
-          </div>
           <div class="row endtab">
-            <div class="col-md-4">
-              <img class="featurette-image img-responsive center-block" src="/doc/circle_energy.png"></img>
-              <h2> Input. </h2>
-              <p>Text about definition and why it is interesting Text about definition and why it is interesting Text about definition and why it is interesting Text about definition and why it is interesting</p>
+            <div class="col-md-6">
+              <p class="infotext" id="left">For everything in our daily life we need <span class="emphasize_text" id="energy_text">energy</span>. A variety of energy sources makes our economy spin and keeps the world population alive. In the past decades we have gained both frightening and valuable knowledge about our relation with the energy sources that we have and that we use. Currently we emit a huge amount of<span class="emphasize_text" id="carbon_text"> carbon dioxide </span> into the atmosphere and produce <a href="http://nationalgeographic.org/encyclopedia/great-pacific-garbage-patch/">complete islands</a> of <span class="emphasize_text" id="waste_text">waste</span> by the way we produce and use energy.</p>
             </div>
-            <div class="col-md-4">
-              <img class="featurette-image img-responsive center-block" src="/doc/circle_emissions.png"></img>
-              <h2> Output. </h2>
-              <p>Text about definition and why it is interesting Text about definition and why it is interesting Text about definition and why it is interesting Text about definition and why it is interesting</p>
+            <div class="col-md-6">
+              <p class="infotext" id="right">We leave behind an indelible mark on planet earth and climate change is a major thread to sustainable development.<br><span class="greentext">Luckily the use of renewable energy is rising and  we are fighting to bring down carbon emissions.</span><span class="emphasize_medium"> How are the countries of Europe dealing with their energy use and hazardous output? Scroll down and compare them all.</span></p>
             </div>
-            <div class="col-md-4">
-             <img class="featurette-image img-responsive center-block" src="/doc/circle_waste.png"></img>
-            <h2> Output. </h2>
-            <p>Text about definition and why it is interesting Text about definition and why it is interesting Text about definition and why it is interesting Text about definition and why it is interesting</p>
           </div>
         </div>
       </div>
@@ -113,13 +95,13 @@
     <div id="data">
       <div class="container-fluid">
         <div class="row newtab">
-          <h1>Big consumers, big polluters?</h1>
+          <h2>Big consumers, big polluters?</h2>
           <div class=col-md-6>
-            <p id="strikingtext">Find out how the use of energy, CO2 emission and generation of waste are connected in European countries. Every <a href="">line</a> and every dot represent a country. Only interested in countries that use particularly use little energy per capita? Select a low range on the energy-ax in the left graph and find out how those countries score on the other variables. </p>
+            <p class="strikingtext">Find out how production and use of energy, CO2 emission and generation of municipal waste are connected in European countries. Every line and every dot represent a country. Only interested in countries that use particularly little energy per capita? Select a low range on the energy-ax in the left graph and find out how those countries score on the other variables. Look at Iceland's skyrocketing values! For more information about the outliers, <a href="#outliers_tab">look here.</a></p>
           </div>
           <div class="col-md-6">
-            <p id="strikingtext">
-            In the scatterplot underneath emphasis is put on the use of renewable energy. A trend becomes visible: the higher the use of renewable energy per capita, the lower the CO2 emissions per capita. Hover over the circles and the corresponding line in the graph left becomes highlighted. Some countries are only visible in the linegraph due to missing data. 
+            <p class="strikingtext">
+            In the scatterplot emphasis is put on the use of renewable energy. A trend becomes visible: the higher the use of renewable energy per capita, the lower the CO2 emissions per capita. <span class="redtext">Hover over the elements</span> in the graphs and the corresponding line or dot in the other graph will be highlighted. Some countries are only visible in one of the graphs due to missing data. <span class="redtext">One country that catches your attention? C L I C K on the line/dot and discover more...</span>
             </p> 
           </div>
         </div>
@@ -148,8 +130,12 @@
       <div class="container-fluid">
         <div class="row newtab endtab">
           <div class="col-md-4">
-            <h2>The link between Renewable Energy and Emission</h3>
-            <p id="strikingtext">Here some text about a country (or more) for which the data shows interesting country. For example: Norway produces all of the energy it uses. How does that connect to the emissions and waste generation of Norway? A Sankey Diagram could be shown on the right, to follow the flow of different energy-sources to pollution. Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info Textextex textextextextextext textextext info info info.</p>
+            <h2>Energy Use</h2>
+            <p class="strikingtext">The energy use of a country is specified for every energy source. Renewable energy, showed in green, is causing the least harm to our environment. How is the country of your interest scoring?</p>
+            <h2>Emission</h2>
+            <p class="strikingtext">A country's carbon emission is specified by the emission of several economic sectors. Overall these sectors are the most polluting economic sectors.</p>
+            <h2>Hazardous Waste</h2>
+            <p class="strikingtext">Hazardous waste is waste that poses substantial or potential threats to public health or the environment. Again, the production is showed per economic sector.</p>
           </div>
           <div class="col-md-8">
             <div class="row">
@@ -168,6 +154,17 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div id="outliers_tab">
+      <div class="container-fluid">
+        <div class="row newtab endtab">
+          <div class="col-md-6">
+            <h2>Iceland</h2> 
+            <iframe width="448" height="252" src="https://www.youtube.com/embed/dIC0fFbEcwo" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div> 
       </div>
     </div>
 
