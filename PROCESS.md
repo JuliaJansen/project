@@ -110,7 +110,7 @@ Vandaag de data voor emissie en waste per economische activiteit omgeschreven na
 Het is nogal een gedoe omdat er zoveel veschillende economische activiteiten zijn, maar we komen er wel. 
 
 - Emission data: 
-** alle missende waardes van : veranderd in -1, zodat het te lezen is in javascript en ik een if-statement in kan bouwen voor de waarde -1. Bovendien zal het zo niet veel aan de assenschaal veranderen, omdat de waarde 0 al voorkomt.
+** alle missende waardes van : veranderd in '', zodat het te lezen is in javascript en ik een if-statement in kan bouwen voor de waarde ''. 
 
 ** 			Names of variables:  
 			"Agriculture_ forestry and fishing"  
@@ -236,6 +236,7 @@ Legenda barchart gefixt, met voor elke selectie een ander kleurenpallet. Economi
 
 Nog to do nu: 
 - verslag afschrijven
+- y ax label barchart
 - verhaal over de data 
 - slider mooi maken
 - line en dot linken naar interactie vanuit text

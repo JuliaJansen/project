@@ -16,7 +16,7 @@ svg {
 .foreground path {
   position: relative;
   fill: none;
-  stroke: #206040;
+  stroke: #527a7a; /*206040*/ /*527a7a*/
   stroke-width: 1px;
 }
 

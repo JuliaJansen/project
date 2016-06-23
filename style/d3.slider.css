@@ -14,7 +14,7 @@
 }
 
 .d3slider-rect-value {
-  fill: #325d81;
+  fill: #85adad;
   stroke: none;
 }
 
@@ -27,7 +27,7 @@
 .d3slider-axis path {
   display: none;
   fill: none;
-  stroke: #000;
+  stroke: #666666;
   shape-rendering: crispEdges;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .dragger line {
-  stroke: #001a00;
+  stroke: #001a00; 
   fill: none;
 }
 
